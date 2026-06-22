@@ -1,0 +1,13 @@
+{
+  "type": "pdf_index_split",
+  "total_parts": 6,
+  "total_entries": 478,
+  "parts": [
+    "pdf_index_part1.json",
+    "pdf_index_part2.json",
+    "pdf_index_part3.json",
+    "pdf_index_part4.json",
+    "pdf_index_part5.json",
+    "pdf_index_part6.json"
+  ]
+}
