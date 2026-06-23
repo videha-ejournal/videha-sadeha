@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="mai">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🥁 Rhythm / Metronome Tool · ताल अभ्यास · Videha Offline Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Tirhuta&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Noto Sans Tirhuta";src:url("assets/fonts/NotoSansTirhuta-Regular.woff2") format("woff2"),url("assets/fonts/NotoSansTirhuta-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+
+:root{--navy:#1F2A44;--red:#8B1A1A;--gold:#C77B2C;--cream:#FAF6EE;--paper:#fffdf8;--line:#D8CFC0;--ink:#1A1A1A;--green:#2f6b4f;--purple:#5b2d79;}
+*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;line-height:1.65;padding:18px} header{background:#fff;border:1px solid var(--line);border-left:6px solid var(--red);padding:18px 20px;border-radius:8px;margin-bottom:16px;box-shadow:0 3px 12px rgba(31,42,68,.06)} h1{margin:0;color:var(--navy);font-family:'Playfair Display','Noto Serif Devanagari',serif;font-size:clamp(1.35rem,3vw,2rem)} .sub{color:#6a5946;font-size:.9rem;margin-top:4px}.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;margin:14px 0;box-shadow:0 2px 10px rgba(31,42,68,.05)} h2{font-size:1.05rem;margin:0 0 12px;color:var(--red);border-bottom:1px solid var(--line);padding-bottom:8px}.row{display:flex;gap:12px;flex-wrap:wrap}.row>*{flex:1;min-width:190px} label{display:block;font-size:.78rem;color:#5a4a3a;font-weight:700;margin:8px 0 4px} input,textarea,select{width:100%;border:1.5px solid var(--line);border-radius:7px;background:#fffdf8;padding:9px 10px;font-family:inherit;font-size:.95rem} textarea{min-height:90px;resize:vertical} button,.btn{border:1.5px solid var(--red);background:#fff;color:var(--red);font-family:inherit;font-weight:700;border-radius:7px;padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin:4px 5px 4px 0} button:hover,.btn:hover{background:var(--red);color:#fff}.gold{border-color:var(--gold);color:#6b4a10}.gold:hover{background:var(--gold);color:#fff}.navy{border-color:var(--navy);color:var(--navy)}.navy:hover{background:var(--navy);color:#fff}.small{font-size:.78rem;color:#6d6258}.list{display:grid;gap:10px}.card{background:#fffaf2;border:1px solid var(--line);border-radius:8px;padding:10px}.preview{background:#fffdf8;border:1px dashed var(--gold);padding:14px;border-radius:8px;white-space:pre-wrap}.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.pill{display:inline-block;background:#f4ead8;color:var(--red);border:1px solid var(--line);border-radius:20px;padding:3px 9px;font-size:.78rem;margin:2px}.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.stage,.canvaswrap{background:#fff;border:2px solid var(--line);border-radius:10px;padding:10px;text-align:center} canvas{max-width:100%;background:#fffdf8;border:1px solid var(--line);border-radius:6px;touch-action:none}.note{background:#fff7e5;border-left:4px solid var(--gold);padding:10px 12px;margin:10px 0;border-radius:0 8px 8px 0}.tirhuta,[lang="tir"],.noto-sans-tirhuta-regular{font-family:'Noto Sans Tirhuta',sans-serif!important;line-height:1.9}@media print{button,.toolbar,.no-print{display:none!important} body{background:white}.panel,header{box-shadow:none}}
+
+
+</style>
+</head>
+<body>
+<header><h1>🥁 Rhythm / Metronome Tool · ताल अभ्यास</h1><div class="sub">Practice rhythm cycles for गीत, नृत्य and मंच rehearsal.</div><div class="small">VIDEHA · www.videha.co.in · Offline/browser-only</div></header>
+
+<div class="panel"><h2>Metronome</h2><div class="row"><div><label>BPM</label><input id="bpm" type="number" value="90" min="30" max="240"></div><div><label>Taal pattern</label><select id="pat"><option value="4">4 beat</option><option value="6">6 beat</option><option value="8">8 beat</option><option value="16">16 beat</option></select></div></div><div class="toolbar"><button onclick="start()">Start</button><button onclick="stop()">Stop</button></div><div id="beat" style="font-size:4rem;text-align:center;color:#8B1A1A">1</div><div class="note">Use headphones/speaker. Browser may ask for sound permission after the first click.</div></div>
+<script>
+function $(id){return document.getElementById(id)}
+function downloadText(name, text, type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},300)}
+function esc(s){return String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+let timer=null,ctx=null,count=0;function beep(accent){ctx=ctx||new AudioContext();let o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=accent?880:440;g.gain.value=.08;o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.08)}function tick(){let max=+$('pat').value;count=(count%max)+1;$('beat').textContent=count;beep(count===1)}function start(){stop();count=0;tick();timer=setInterval(tick,60000/(+$('bpm').value||90))}function stop(){if(timer)clearInterval(timer);timer=null}
+</script>
+</body></html>

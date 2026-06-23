@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="mai"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>➗ बाल गणित खेल</title>
+<style>
+:root{--navy:#1F2A44;--crimson:#8B1A1A;--gold:#C49A3C;--cream:#FAF6EE;--paper:#fffdf8;--ink:#1A1A1A;--line:#D8CFC0;--ok:#1d7a3e;--bad:#a32020;--muted:#665b4d}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Nirmala UI','Mangal',Georgia,serif;line-height:1.55}
+header{background:linear-gradient(100deg,var(--navy),var(--crimson));color:#fff;padding:22px 18px;text-align:center;border-bottom:4px double var(--gold)}
+h1{margin:.1rem 0;font-size:clamp(1.35rem,4vw,2.05rem)}.sub{color:#f8d88d;font-size:.9rem}
+.wrap{max-width:1040px;margin:0 auto;padding:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 16px rgba(31,42,68,.08);padding:16px;margin:0 0 16px}
+h2{font-size:1.12rem;color:var(--crimson);border-left:4px solid var(--gold);padding-left:10px;margin:0 0 12px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>*{flex:1;min-width:190px}label{font-weight:700;color:var(--navy);font-size:.88rem;display:block;margin:8px 0 4px}
+input,select,textarea{width:100%;padding:9px 10px;border:1.5px solid var(--line);border-radius:9px;font:inherit;background:#fffdf8;color:var(--ink)}textarea{min-height:90px;resize:vertical}
+button{font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:24px;background:var(--crimson);color:#fff;padding:9px 16px;margin:5px 5px 5px 0}button:hover{opacity:.9}button.sec{background:#fff;color:var(--crimson);border:1.5px solid var(--crimson)}button.gold{background:var(--gold);color:#3a2500}
+.card{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}.pill{display:inline-block;background:#f3ecdc;border:1px solid var(--line);border-radius:20px;padding:4px 10px;margin:4px;font-size:.86rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.mini{font-size:.86rem;color:var(--muted)}.good{color:var(--ok);font-weight:800}.bad{color:var(--bad);font-weight:800}
+canvas{max-width:100%;background:#fff;border:1px solid var(--line);border-radius:12px}.out{white-space:pre-wrap;background:#fffdf8;border:1px dashed var(--gold);border-radius:10px;padding:10px;min-height:40px}
+
+</style></head><body><header><h1>➗ बाल गणित खेल</h1><div class="sub">math mission · offline · अही पन्नापर</div></header><div class="wrap"><div class="panel"><h2>गणित मिशन</h2><div class="row"><div><label>स्तर</label><select id="level"><option value="easy">सरल</option><option value="mid">मध्यम</option><option value="hard">चुनौती</option></select></div><div><label>विषय</label><select id="topic"><option value="add">जोड़-घटाउ</option><option value="mul">पहाड़ा</option><option value="frac">भिन्न</option></select></div></div><button onclick="newQ()">नव प्रश्न</button><span class="pill">Score: <b id="score">0</b></span><div id="q" class="card" style="font-size:1.4rem"></div><div id="opts" class="grid"></div><div id="msg" class="out"></div></div></div><script>
+let ans=0, sc=0; function rnd(a,b){return Math.floor(Math.random()*(b-a+1))+a} function shuffle(a){return a.sort(()=>Math.random()-.5)}
+function newQ(){let l=level.value,t=topic.value,max=l==='easy'?20:l==='mid'?50:100; let text=''; if(t==='add'){let a=rnd(1,max),b=rnd(1,max); if(Math.random()<.5){ans=a+b;text=`${a} + ${b} = ?`}else{let c=a+b;ans=c-a;text=`${c} - ${a} = ?`}} else if(t==='mul'){let a=rnd(2,l==='hard'?20:12),b=rnd(2,12);ans=a*b;text=`${a} × ${b} = ?`} else {let d=[2,3,4,5,6,8][rnd(0,5)],n=rnd(1,d-1);ans=n/d;text=`${n}/${d} केँ दशमलवमे लिखू`}
+q.textContent=text; let base=(topic.value==='frac')?[ans, Math.round((ans+.1)*100)/100, Math.max(0,Math.round((ans-.1)*100)/100), Math.round((ans+.25)*100)/100]:[ans, ans+rnd(1,5), Math.max(0,ans-rnd(1,5)), ans+rnd(6,10)]; opts.innerHTML=''; shuffle([...new Set(base)]).slice(0,4).forEach(o=>{let b=document.createElement('button');b.className='sec';b.textContent=o;b.onclick=()=>check(o);opts.appendChild(b)})}
+function check(o){if(String(o)==String(ans)){sc++;score.textContent=sc;msg.innerHTML='<span class=good>वाह! सही उत्तर।</span>'}else msg.innerHTML='<span class=bad>फेर प्रयास करू। सही उत्तर: '+ans+'</span>';}
+newQ();
+</script></body></html>

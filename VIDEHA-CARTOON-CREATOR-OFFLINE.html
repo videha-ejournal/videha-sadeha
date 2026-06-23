@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="mai">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>विदेह बाल कार्टून Creator · Offline</title>
+<style>
+:root{--cream:#FAF6EE;--paper:#fffdf8;--navy:#1F2A44;--crimson:#8B1A1A;--gold:#C49A3C;--line:#D8CFC0;--ink:#23201B;--green:#2e7d32;--blue:#1e88e5}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Nirmala UI','Mangal',Georgia,serif;line-height:1.45}.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 42px}header{background:#fff;border-bottom:3px double var(--gold);text-align:center;padding:22px 12px 16px}header .eyebrow{font-size:12px;letter-spacing:.16em;color:#6e5c48;text-transform:uppercase}h1{margin:6px 0 2px;color:var(--navy);font-size:clamp(26px,5vw,42px);line-height:1.1}header .sub{color:var(--crimson);font-weight:700}.offline{display:inline-block;margin-top:10px;border:1px solid var(--green);color:var(--green);border-radius:22px;padding:5px 13px;background:#f2f8f2;font-size:12px}.grid{display:grid;grid-template-columns:330px 1fr;gap:14px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:12px}.panel h2{margin:0 0 10px;color:var(--crimson);font-size:1rem;border-left:4px solid var(--gold);padding-left:8px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}.row label{font-size:.82rem;color:#554b3f;font-weight:700;min-width:90px}select,input[type=text],input[type=number],textarea{font-family:inherit;border:1px solid var(--line);background:#fffdf8;border-radius:7px;padding:8px 9px;color:var(--ink);font-size:.9rem;min-width:0}select,input[type=text],textarea{width:100%}textarea{min-height:64px;resize:vertical}.mini{font-size:.78rem;color:#6e5c48}.btns{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--crimson);background:var(--crimson);color:#fff;border-radius:22px;padding:8px 13px;font-family:inherit;font-weight:700;cursor:pointer}.btn:hover{opacity:.9}.btn.secondary{background:transparent;color:var(--crimson)}.btn.navy{background:var(--navy);border-color:var(--navy)}.btn.gold{background:var(--gold);border-color:var(--gold);color:#2d2100}.btn.small{font-size:.8rem;padding:6px 10px}.canvasBox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}#stage{display:block;width:100%;height:auto;border:2px solid #d8cfb8;background:#fffdf8;border-radius:8px;touch-action:none;cursor:grab}#stage:active{cursor:grabbing}.toolbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:9px 0 0}.swatches{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}.sw{height:28px;border-radius:7px;border:1px solid #bba;cursor:pointer}.sw.sel{outline:3px solid var(--navy)}.range{width:100%}.layers{max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fffdf8}.layer{padding:6px 8px;border-bottom:1px solid #eee3cf;font-size:.82rem;display:flex;justify-content:space-between;gap:8px;cursor:pointer}.layer.active{background:#f5ecd8;color:var(--crimson);font-weight:700}.kbd{font-family:monospace;background:#f5ecd8;border:1px solid #e0d5c0;padding:1px 4px;border-radius:4px}@media(max-width:850px){.grid{grid-template-columns:1fr}.panel{padding:12px}.toolbar{display:block}.toolbar .btns{margin-top:8px}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Videha · Kids offline creativity tool</div><h1>बाल कार्टून Creator</h1><div class="sub">कहानी-दृश्य बनाउ · चित्र, पात्र, संवाद आ PNG निर्यात</div><div class="offline">offline · अही पन्नापर · कोनो upload नहि</div></header>
+<div class="wrap">
+<div class="grid">
+<aside>
+  <div class="panel"><h2>१. पृष्ठ / दृश्य</h2>
+    <div class="row"><label>आकार</label><select id="size"><option value="1000x650">Wide 1000×650</option><option value="800x800">Square 800×800</option><option value="1080x1350">Portrait 1080×1350</option><option value="1200x675">YouTube 1200×675</option></select></div>
+    <div class="row"><label>पृष्ठभूमि</label><select id="bg"><option value="village">मिथिला गाम</option><option value="school">विद्यालय</option><option value="river">नदी किनार</option><option value="night">चन्द्रमा राति</option><option value="blank">सादा कागज</option></select></div>
+    <div class="btns"><button class="btn small secondary" onclick="newScene()">नव दृश्य</button><button class="btn small secondary" onclick="drawScene()">लागू करू</button></div>
+  </div>
+
+  <div class="panel"><h2>२. पात्र / वस्तु जोड़ू</h2>
+    <div class="row"><label>प्रकार</label><select id="kind">
+      <option value="child">बालक</option><option value="girl">बालिका</option><option value="teacher">शिक्षक</option><option value="grandma">दादी</option><option value="bird">चिड़ै</option><option value="fish">माछ</option><option value="croc">गोहि</option><option value="tree">गाछ</option><option value="house">घर</option><option value="book">पोथी</option><option value="sun">सूर्य</option><option value="moon">चन्द्रमा</option><option value="flower">फूल</option><option value="boat">नाउ</option><option value="rainbow">इन्द्रधनुष</option>
+    </select></div>
+    <div class="row"><label>रंग</label><div class="swatches" id="swatches"></div></div>
+    <div class="row"><label>आकार</label><input id="scale" class="range" type="range" min="35" max="180" value="90"></div>
+    <button class="btn" onclick="addItem()">+ जोड़ू</button>
+  </div>
+
+  <div class="panel"><h2>३. संवाद / लिखावट</h2>
+    <textarea id="text" placeholder="एतऽ मैथिली संवाद लिखू…">हमर कार्टून!</textarea>
+    <div class="row"><label>शैली</label><select id="textKind"><option value="bubble">Speech bubble</option><option value="caption">Caption</option><option value="thought">Thought bubble</option><option value="label">Label</option></select></div>
+    <div class="row"><label>अक्षर</label><input id="fontSize" type="number" value="30" min="12" max="90" style="width:90px"><span class="mini">px</span></div>
+    <button class="btn" onclick="addText()">+ टेक्स्ट जोड़ू</button>
+  </div>
+
+  <div class="panel"><h2>४. चुनल वस्तु</h2>
+    <div class="btns"><button class="btn small secondary" onclick="moveLayer(1)">ऊपर</button><button class="btn small secondary" onclick="moveLayer(-1)">नीचाँ</button><button class="btn small secondary" onclick="duplicateSelected()">नकल</button><button class="btn small secondary" onclick="deleteSelected()">हटाउ</button></div>
+    <p class="mini">Canvas पर object drag करू। कोना पकड़ि resize करू। <span class="kbd">Delete</span> सँ हटत।</p>
+    <div class="layers" id="layers"></div>
+  </div>
+</aside>
+
+<main>
+  <div class="canvasBox">
+    <canvas id="stage" width="1000" height="650" aria-label="Cartoon canvas"></canvas>
+    <div class="toolbar">
+      <div class="btns"><button class="btn secondary" onclick="undo()">↶ Undo</button><button class="btn secondary" onclick="clearItems()">साफ करू</button><button class="btn secondary" onclick="sampleScene()">नमूना</button></div>
+      <div class="btns"><button class="btn navy" onclick="downloadPNG()">PNG डाउनलोड</button><button class="btn gold" onclick="downloadProject()">Project बचाउ</button><label class="btn secondary" style="display:inline-block">Project खोलू<input id="loadProject" type="file" accept="application/json" style="display:none"></label></div>
+    </div>
+  </div>
+  <p class="mini" style="margin:10px 4px 0">ई tool पूरा offline अछि। चित्र browser canvas पर बनैत अछि; अहाँ PNG वा project JSON अपन computer मे save कऽ सकैत छी।</p>
+</main>
+</div>
+</div>
+<script>
+const canvas=document.getElementById('stage'), ctx=canvas.getContext('2d');
+let items=[], selected=-1, bg='village', color='#8B1A1A', history=[];
+const colors=['#8B1A1A','#1F2A44','#C49A3C','#2e7d32','#1e88e5','#e91e63','#ff8f00','#6d4c41','#000000','#ffffff','#ffccbc','#c8e6c9','#bbdefb','#fff59d','#d1c4e9','#ffab91'];
+const names={child:'बालक',girl:'बालिका',teacher:'शिक्षक',grandma:'दादी',bird:'चिड़ै',fish:'माछ',croc:'गोहि',tree:'गाछ',house:'घर',book:'पोथी',sun:'सूर्य',moon:'चन्द्रमा',flower:'फूल',boat:'नाउ',rainbow:'इन्द्रधनुष',text:'टेक्स्ट'};
+function init(){const sw=document.getElementById('swatches');colors.forEach((c,i)=>{let d=document.createElement('button');d.className='sw'+(i==0?' sel':'');d.style.background=c;d.title=c;d.onclick=()=>{color=c;document.querySelectorAll('.sw').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');};sw.appendChild(d)});document.getElementById('bg').onchange=e=>{bg=e.target.value;drawScene()};document.getElementById('size').onchange=e=>{let [w,h]=e.target.value.split('x').map(Number);pushHist();canvas.width=w;canvas.height=h;fitItems();drawScene()};document.getElementById('loadProject').onchange=loadProject;sampleScene(false)}
+function pushHist(){history.push(JSON.stringify({items,selected,bg,w:canvas.width,h:canvas.height})); if(history.length>25)history.shift()}
+function undo(){if(!history.length)return;let s=JSON.parse(history.pop());items=s.items||[];selected=s.selected??-1;bg=s.bg||'village';canvas.width=s.w||1000;canvas.height=s.h||650;document.getElementById('bg').value=bg;drawScene()}
+function fitItems(){items.forEach(o=>{o.x=Math.min(o.x,canvas.width-60);o.y=Math.min(o.y,canvas.height-60)})}
+function newScene(){pushHist();items=[];selected=-1;drawScene()}
+function clearItems(){pushHist();items=[];selected=-1;drawScene()}
+function sampleScene(save=true){if(save)pushHist();items=[{type:'sun',x:820,y:95,s:80,c:'#ff8f00'},{type:'tree',x:120,y:430,s:135,c:'#2e7d32'},{type:'house',x:270,y:435,s:130,c:'#C49A3C'},{type:'child',x:510,y:465,s:90,c:'#1e88e5'},{type:'girl',x:640,y:465,s:90,c:'#e91e63'},{type:'bird',x:760,y:230,s:65,c:'#1F2A44'},{type:'text',kind:'bubble',x:420,y:145,s:170,c:'#ffffff',text:'चलू, मैथिलीमे कथा बनाबी!',font:28}];selected=-1;bg='village';document.getElementById('bg').value=bg;drawScene()}
+function addItem(){pushHist();let s=+document.getElementById('scale').value;items.push({type:document.getElementById('kind').value,x:canvas.width/2,y:canvas.height/2,s,c:color});selected=items.length-1;drawScene()}
+function addText(){pushHist();items.push({type:'text',kind:document.getElementById('textKind').value,x:canvas.width/2-130,y:100,s:220,c:color,text:document.getElementById('text').value||'...',font:+document.getElementById('fontSize').value||30});selected=items.length-1;drawScene()}
+function drawScene(){drawBg();items.forEach((o,i)=>drawObj(o,i===selected));renderLayers()}
+function drawBg(){let w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h); if(bg==='blank'){ctx.fillStyle='#fffdf8';ctx.fillRect(0,0,w,h);return} let sky=ctx.createLinearGradient(0,0,0,h*.65);sky.addColorStop(0,bg==='night'?'#1F2A44':'#bfe8ff');sky.addColorStop(1,bg==='night'?'#405070':'#f8fbff');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h);ctx.fillStyle=bg==='river'?'#80c7de':'#dcedc8';ctx.fillRect(0,h*.62,w,h*.38); if(bg==='river'){ctx.fillStyle='#4fc3f7';ctx.beginPath();ctx.moveTo(0,h*.70);ctx.bezierCurveTo(w*.25,h*.62,w*.55,h*.82,w,h*.68);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.closePath();ctx.fill();ctx.strokeStyle='rgba(255,255,255,.7)';for(let y=h*.75;y<h;y+=35){ctx.beginPath();ctx.moveTo(20,y);ctx.quadraticCurveTo(w*.5,y-30,w-20,y);ctx.stroke()}} if(bg==='school'){drawSchool(w,h)} if(bg==='village'){drawHuts(w,h)} if(bg==='night'){ctx.fillStyle='#fff7c0';ctx.beginPath();ctx.arc(w-125,95,48,0,7);ctx.fill();ctx.fillStyle='#1F2A44';ctx.beginPath();ctx.arc(w-103,82,48,0,7);ctx.fill()} }
+function drawSchool(w,h){ctx.fillStyle='#f4d09a';ctx.fillRect(w*.08,h*.33,w*.42,h*.28);ctx.fillStyle='#b05a33';ctx.beginPath();ctx.moveTo(w*.06,h*.33);ctx.lineTo(w*.29,h*.18);ctx.lineTo(w*.52,h*.33);ctx.closePath();ctx.fill();ctx.fillStyle='#1F2A44';ctx.font='bold 28px serif';ctx.fillText('विद्यालय',w*.20,h*.43)}
+function drawHuts(w,h){ctx.fillStyle='#e6bc79';ctx.fillRect(w*.12,h*.42,140,110);ctx.fillStyle='#6d4c41';ctx.beginPath();ctx.moveTo(w*.10,h*.42);ctx.lineTo(w*.19,h*.30);ctx.lineTo(w*.29,h*.42);ctx.closePath();ctx.fill();ctx.fillStyle='#e6bc79';ctx.fillRect(w*.68,h*.43,150,100);ctx.fillStyle='#6d4c41';ctx.beginPath();ctx.moveTo(w*.66,h*.43);ctx.lineTo(w*.755,h*.31);ctx.lineTo(w*.86,h*.43);ctx.closePath();ctx.fill()}
+function drawObj(o,sel){ctx.save();ctx.translate(o.x,o.y);let s=o.s/100;ctx.scale(s,s);ctx.lineWidth=3/s;ctx.strokeStyle='#23201B';ctx.fillStyle=o.c||'#8B1A1A'; if(o.type==='child'||o.type==='girl'||o.type==='teacher'||o.type==='grandma')person(o); else if(o.type==='bird')bird(o); else if(o.type==='fish')fish(o); else if(o.type==='croc')croc(o); else if(o.type==='tree')tree(o); else if(o.type==='house')house(o); else if(o.type==='book')book(o); else if(o.type==='sun')sun(o); else if(o.type==='moon')moon(o); else if(o.type==='flower')flower(o); else if(o.type==='boat')boat(o); else if(o.type==='rainbow')rainbow(o); else if(o.type==='text')textObj(o); ctx.restore(); if(sel)outline(o)}
+function person(o){let skin=o.type==='grandma'?'#d8a56b':'#f2b98a';ctx.fillStyle=skin;circle(0,-54,28);ctx.fillStyle=o.type==='teacher'?'#1F2A44':o.c;round(-32,-25,64,80,18,true);ctx.fillStyle='#23201B';circle(-10,-58,3);circle(10,-58,3);ctx.strokeStyle='#23201B';ctx.beginPath();ctx.arc(0,-48,10,0,Math.PI);ctx.stroke();ctx.strokeStyle='#23201B';line(-30,0,-70,35);line(30,0,70,35);line(-18,55,-38,100);line(18,55,38,100);ctx.fillStyle=o.type==='girl'?'#5d4037':'#33221c'; if(o.type==='girl'){circle(-22,-78,12);circle(22,-78,12)} else {ctx.fillRect(-22,-84,44,14)} if(o.type==='teacher'){ctx.fillStyle='#fff';ctx.fillRect(48,-20,36,48);ctx.strokeRect(48,-20,36,48)} if(o.type==='grandma'){ctx.strokeStyle='#fff';ctx.beginPath();ctx.arc(0,-72,27,Math.PI,0);ctx.stroke();}}
+function bird(o){ctx.fillStyle=o.c;ellipse(0,0,48,27);circle(35,-18,22);ctx.fillStyle='#ffb300';tri(55,-15,85,-5,55,5);ctx.fillStyle='#fff';circle(41,-23,6);ctx.fillStyle='#000';circle(43,-23,2);ctx.strokeStyle='#23201B';line(-15,22,-25,48);line(5,23,5,49);ctx.fillStyle='rgba(255,255,255,.45)';ellipse(-12,-4,25,12)}
+function fish(o){ctx.fillStyle=o.c;ellipse(0,0,55,28);tri(-55,0,-92,-28,-92,28);ctx.fillStyle='#fff';circle(28,-8,7);ctx.fillStyle='#000';circle(31,-8,3);ctx.strokeStyle='#fff';line(-5,-24,-5,24);line(-25,-18,-25,18)}
+function croc(o){ctx.fillStyle='#4f8f45';ellipse(0,0,95,28);ctx.fillStyle='#75aa60';ellipse(60,-2,55,22);ctx.fillStyle='#fff';circle(78,-15,7);circle(100,-12,7);ctx.fillStyle='#000';circle(79,-15,3);circle(101,-12,3);ctx.fillStyle='#4f8f45';tri(-88,0,-132,-20,-132,20);ctx.strokeStyle='#fff';for(let x=55;x<118;x+=14)line(x,18,x+5,7);}
+function tree(o){ctx.fillStyle='#6d4c41';round(-18,-15,36,105,10,true);ctx.fillStyle=o.c;circle(-40,-40,40);circle(0,-60,48);circle(43,-36,38);circle(0,-20,45)}
+function house(o){ctx.fillStyle='#f4d09a';ctx.fillRect(-60,-35,120,90);ctx.fillStyle=o.c;tri(-75,-35,0,-105,75,-35);ctx.fillStyle='#6d4c41';ctx.fillRect(-18,5,36,50);ctx.fillStyle='#90caf9';ctx.fillRect(-48,-15,24,22);ctx.fillRect(25,-15,24,22);ctx.strokeRect(-60,-35,120,90)}
+function book(o){ctx.fillStyle=o.c;round(-65,-45,130,90,10,true);ctx.strokeStyle='#fff';line(0,-40,0,40);ctx.fillStyle='rgba(255,255,255,.7)';for(let y=-25;y<30;y+=18){line(-48,y,-10,y);line(12,y,50,y)}}
+function sun(o){ctx.fillStyle=o.c;for(let a=0;a<Math.PI*2;a+=Math.PI/8){line(Math.cos(a)*45,Math.sin(a)*45,Math.cos(a)*75,Math.sin(a)*75)}circle(0,0,44)}
+function moon(o){ctx.fillStyle='#fff4b8';circle(0,0,50);ctx.fillStyle='#FAF6EE';circle(22,-10,50)}
+function flower(o){ctx.fillStyle=o.c;for(let a=0;a<Math.PI*2;a+=Math.PI/5){ctx.save();ctx.rotate(a);ellipse(0,-35,18,35);ctx.restore()}ctx.fillStyle='#ffeb3b';circle(0,0,20);ctx.strokeStyle='#2e7d32';line(0,20,0,95);ctx.fillStyle='#66bb6a';ellipse(-20,60,20,10);ellipse(20,75,20,10)}
+function boat(o){ctx.fillStyle=o.c;ctx.beginPath();ctx.moveTo(-75,10);ctx.lineTo(75,10);ctx.lineTo(40,50);ctx.lineTo(-42,50);ctx.closePath();ctx.fill();ctx.stroke();ctx.strokeStyle='#6d4c41';line(0,10,0,-80);ctx.fillStyle='#fff';tri(0,-78,0,0,58,0)}
+function rainbow(o){let cs=['#e53935','#fb8c00','#fdd835','#43a047','#1e88e5','#8e24aa'];ctx.lineWidth=12;cs.forEach((c,i)=>{ctx.strokeStyle=c;ctx.beginPath();ctx.arc(0,60,100-i*13,Math.PI,0);ctx.stroke()})}
+function textObj(o){ctx.font='bold '+(o.font||28)+'px Noto Serif Devanagari, Nirmala UI, Mangal, serif';ctx.textBaseline='top';let lines=wrapText(o.text||'', o.s||220);let h=lines.length*((o.font||28)+7)+28,w=o.s||220;if(o.kind==='caption'){ctx.fillStyle='rgba(31,42,68,.90)';round(-12,-12,w+24,h+10,8,true);ctx.fillStyle='#fff'} else {ctx.fillStyle=o.kind==='thought'?'#fffef7':'#fff';round(-16,-18,w+32,h+24,24,true);ctx.strokeStyle='#23201B';round(-16,-18,w+32,h+24,24,false); if(o.kind==='bubble'){tri(25,h+6,55,h+6,35,h+42);ctx.fillStyle='#fff';ctx.fill();ctx.stroke()} if(o.kind==='thought'){circle(30,h+28,10);circle(52,h+48,6)}ctx.fillStyle='#23201B'}lines.forEach((ln,i)=>ctx.fillText(ln,0,i*((o.font||28)+7)))}
+function wrapText(t,maxW){let words=(t||'').replace(/\s+/g,' ').trim().split(' '), lines=[], line=''; if(!words[0])return ['']; for(const w of words){let test=line?line+' '+w:w;if(ctx.measureText(test).width>maxW && line){lines.push(line);line=w}else line=test}lines.push(line);return lines.slice(0,8)}
+function outline(o){let b=bounds(o);ctx.save();ctx.strokeStyle='#8B1A1A';ctx.setLineDash([8,5]);ctx.lineWidth=2;ctx.strokeRect(b.x,b.y,b.w,b.h);ctx.setLineDash([]);ctx.fillStyle='#8B1A1A';ctx.fillRect(b.x+b.w-8,b.y+b.h-8,16,16);ctx.restore()}
+function bounds(o){let s=o.s||100;if(o.type==='text'){let w=(o.s||220)+45,h=((o.text||'').length>45?95:70)+((o.font||28));return{x:o.x-20,y:o.y-25,w,h}}return{x:o.x-s*1.05,y:o.y-s*1.25,w:s*2.1,h:s*2.5}}
+function hit(x,y){for(let i=items.length-1;i>=0;i--){let b=bounds(items[i]);if(x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h)return i}return -1}
+let drag=false, resizing=false, ox=0, oy=0, startS=0;
+function pointer(ev){let r=canvas.getBoundingClientRect(), t=ev.touches?ev.touches[0]:ev;return{x:(t.clientX-r.left)*canvas.width/r.width,y:(t.clientY-r.top)*canvas.height/r.height}}
+canvas.addEventListener('mousedown',down);canvas.addEventListener('touchstart',down,{passive:false});window.addEventListener('mousemove',move);window.addEventListener('touchmove',move,{passive:false});window.addEventListener('mouseup',up);window.addEventListener('touchend',up);
+function down(e){e.preventDefault();let p=pointer(e),i=hit(p.x,p.y);selected=i;if(i>=0){pushHist();let b=bounds(items[i]);resizing=(p.x>b.x+b.w-24&&p.y>b.y+b.h-24);ox=p.x-items[i].x;oy=p.y-items[i].y;startS=items[i].s||100;drag=true}drawScene()}
+function move(e){if(!drag||selected<0)return;e.preventDefault();let p=pointer(e),o=items[selected];if(resizing){let dx=p.x-o.x,dy=p.y-o.y;o.s=Math.max(25,Math.min(260,Math.sqrt(dx*dx+dy*dy)*.9))}else{o.x=p.x-ox;o.y=p.y-oy}drawScene()}
+function up(){drag=false;resizing=false}
+function renderLayers(){let box=document.getElementById('layers');box.innerHTML='';items.forEach((o,i)=>{let d=document.createElement('div');d.className='layer'+(i===selected?' active':'');d.onclick=()=>{selected=i;drawScene()};d.innerHTML='<span>'+ (i+1)+'. '+(names[o.type]||o.type)+'</span><span>›</span>';box.appendChild(d)})}
+function deleteSelected(){if(selected<0)return;pushHist();items.splice(selected,1);selected=-1;drawScene()}function duplicateSelected(){if(selected<0)return;pushHist();let o=JSON.parse(JSON.stringify(items[selected]));o.x+=35;o.y+=35;items.push(o);selected=items.length-1;drawScene()}function moveLayer(dir){if(selected<0)return;let ni=selected+dir;if(ni<0||ni>=items.length)return;pushHist();[items[selected],items[ni]]=[items[ni],items[selected]];selected=ni;drawScene()}
+window.addEventListener('keydown',e=>{if(e.key==='Delete')deleteSelected();if(e.ctrlKey&&e.key.toLowerCase()==='z')undo()});
+function downloadPNG(){drawScene();let a=document.createElement('a');a.download='videha-cartoon.png';a.href=canvas.toDataURL('image/png');a.click()}
+function downloadProject(){let data={app:'videha-cartoon-creator',bg,w:canvas.width,h:canvas.height,items};let a=document.createElement('a');a.download='videha-cartoon-project.json';a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.click()}
+function loadProject(e){let f=e.target.files&&e.target.files[0];if(!f)return;let rd=new FileReader();rd.onload=()=>{try{pushHist();let d=JSON.parse(rd.result);canvas.width=d.w||1000;canvas.height=d.h||650;bg=d.bg||'village';items=d.items||[];selected=-1;document.getElementById('bg').value=bg;drawScene()}catch(err){alert('Project नहि खुलल: '+err.message)}};rd.readAsText(f)}
+function circle(x,y,r){ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.stroke()}function ellipse(x,y,rx,ry){ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,Math.PI*2);ctx.fill();ctx.stroke()}function tri(a,b,c,d,e,f){ctx.beginPath();ctx.moveTo(a,b);ctx.lineTo(c,d);ctx.lineTo(e,f);ctx.closePath();ctx.fill();ctx.stroke()}function line(a,b,c,d){ctx.beginPath();ctx.moveTo(a,b);ctx.lineTo(c,d);ctx.stroke()}function round(x,y,w,h,r,fill){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y); if(fill)ctx.fill(); ctx.stroke()}
+init();
+</script>
+</body>
+</html>

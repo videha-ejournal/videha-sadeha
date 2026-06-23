@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="mai"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧭 बाल शब्द-अन्वेषक</title>
+<style>
+:root{--navy:#1F2A44;--crimson:#8B1A1A;--gold:#C49A3C;--cream:#FAF6EE;--paper:#fffdf8;--ink:#1A1A1A;--line:#D8CFC0;--ok:#1d7a3e;--bad:#a32020;--muted:#665b4d}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Nirmala UI','Mangal',Georgia,serif;line-height:1.55}
+header{background:linear-gradient(100deg,var(--navy),var(--crimson));color:#fff;padding:22px 18px;text-align:center;border-bottom:4px double var(--gold)}
+h1{margin:.1rem 0;font-size:clamp(1.35rem,4vw,2.05rem)}.sub{color:#f8d88d;font-size:.9rem}
+.wrap{max-width:1040px;margin:0 auto;padding:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 16px rgba(31,42,68,.08);padding:16px;margin:0 0 16px}
+h2{font-size:1.12rem;color:var(--crimson);border-left:4px solid var(--gold);padding-left:10px;margin:0 0 12px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>*{flex:1;min-width:190px}label{font-weight:700;color:var(--navy);font-size:.88rem;display:block;margin:8px 0 4px}
+input,select,textarea{width:100%;padding:9px 10px;border:1.5px solid var(--line);border-radius:9px;font:inherit;background:#fffdf8;color:var(--ink)}textarea{min-height:90px;resize:vertical}
+button{font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:24px;background:var(--crimson);color:#fff;padding:9px 16px;margin:5px 5px 5px 0}button:hover{opacity:.9}button.sec{background:#fff;color:var(--crimson);border:1.5px solid var(--crimson)}button.gold{background:var(--gold);color:#3a2500}
+.card{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}.pill{display:inline-block;background:#f3ecdc;border:1px solid var(--line);border-radius:20px;padding:4px 10px;margin:4px;font-size:.86rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.mini{font-size:.86rem;color:var(--muted)}.good{color:var(--ok);font-weight:800}.bad{color:var(--bad);font-weight:800}
+canvas{max-width:100%;background:#fff;border:1px solid var(--line);border-radius:12px}.out{white-space:pre-wrap;background:#fffdf8;border:1px dashed var(--gold);border-radius:10px;padding:10px;min-height:40px}
+
+</style></head><body><header><h1>🧭 बाल शब्द-अन्वेषक</h1><div class="sub">vocabulary adventure · offline · अही पन्नापर</div></header><div class="wrap"><div class="panel"><h2>शब्द-अन्वेषण</h2><p class="mini">शब्द चुनू, अर्थ देखू, वाक्य बनाउ, आ अपन शब्द-सूची डाउनलोड करू।</p><div class="row"><div><label>विषय</label><select id="cat"></select></div><div><label>शब्द</label><select id="word"></select></div></div><div id="info" class="card"></div><label>एहि शब्दसँ हमर वाक्य</label><input id="sent" placeholder="एतय वाक्य लिखू"><button onclick="add()">सूचीमे जोड़ू</button><button class="sec" onclick="download()">सूची डाउनलोड</button><div id="list" class="out"></div></div></div><script>
+const data={प्रकृति:[['गाछ','tree','पेड़/वृक्ष'],['नदी','river','बहैत जल'],['माछ','fish','जलचर जीव'],['मेघ','cloud','बादल']],विद्यालय:[['पोथी','book','पढ़बाक पुस्तक'],['पट्टी','slate','लिखबाक पट्टी'],['मीत','friend','सहचर'],['शिक्षक','teacher','गुरु']],भाव:[['हर्ष','joy','आनन्द'],['साहस','courage','हिम्मत'],['करुणा','compassion','दया'],['जिज्ञासा','curiosity','जानबाक इच्छा']]};
+let saved=[]; Object.keys(data).forEach(c=>cat.innerHTML+=`<option>${c}</option>`); cat.onchange=fill; word.onchange=show; fill();
+function fill(){word.innerHTML='';data[cat.value].forEach((x,i)=>word.innerHTML+=`<option value="${i}">${x[0]}</option>`);show()}
+function show(){let x=data[cat.value][word.value];info.innerHTML=`<b style="font-size:1.6rem">${x[0]}</b><br><span class=pill>English: ${x[1]}</span><span class=pill>अर्थ: ${x[2]}</span>`}
+function add(){let x=data[cat.value][word.value]; saved.push(`${x[0]} — ${sent.value||'________'}`); list.textContent=saved.join('\n'); sent.value=''}
+function download(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([saved.join('\n')],{type:'text/plain;charset=utf-8'}));a.download='bal-shabd-suchi.txt';a.click()}
+</script></body></html>
