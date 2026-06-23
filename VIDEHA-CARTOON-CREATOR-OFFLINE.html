@@ -8,8 +8,40 @@
 :root{--cream:#FAF6EE;--paper:#fffdf8;--navy:#1F2A44;--crimson:#8B1A1A;--gold:#C49A3C;--line:#D8CFC0;--ink:#23201B;--green:#2e7d32;--blue:#1e88e5}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Nirmala UI','Mangal',Georgia,serif;line-height:1.45}.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 42px}header{background:#fff;border-bottom:3px double var(--gold);text-align:center;padding:22px 12px 16px}header .eyebrow{font-size:12px;letter-spacing:.16em;color:#6e5c48;text-transform:uppercase}h1{margin:6px 0 2px;color:var(--navy);font-size:clamp(26px,5vw,42px);line-height:1.1}header .sub{color:var(--crimson);font-weight:700}.offline{display:inline-block;margin-top:10px;border:1px solid var(--green);color:var(--green);border-radius:22px;padding:5px 13px;background:#f2f8f2;font-size:12px}.grid{display:grid;grid-template-columns:330px 1fr;gap:14px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:12px}.panel h2{margin:0 0 10px;color:var(--crimson);font-size:1rem;border-left:4px solid var(--gold);padding-left:8px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}.row label{font-size:.82rem;color:#554b3f;font-weight:700;min-width:90px}select,input[type=text],input[type=number],textarea{font-family:inherit;border:1px solid var(--line);background:#fffdf8;border-radius:7px;padding:8px 9px;color:var(--ink);font-size:.9rem;min-width:0}select,input[type=text],textarea{width:100%}textarea{min-height:64px;resize:vertical}.mini{font-size:.78rem;color:#6e5c48}.btns{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--crimson);background:var(--crimson);color:#fff;border-radius:22px;padding:8px 13px;font-family:inherit;font-weight:700;cursor:pointer}.btn:hover{opacity:.9}.btn.secondary{background:transparent;color:var(--crimson)}.btn.navy{background:var(--navy);border-color:var(--navy)}.btn.gold{background:var(--gold);border-color:var(--gold);color:#2d2100}.btn.small{font-size:.8rem;padding:6px 10px}.canvasBox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}#stage{display:block;width:100%;height:auto;border:2px solid #d8cfb8;background:#fffdf8;border-radius:8px;touch-action:none;cursor:grab}#stage:active{cursor:grabbing}.toolbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:9px 0 0}.swatches{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}.sw{height:28px;border-radius:7px;border:1px solid #bba;cursor:pointer}.sw.sel{outline:3px solid var(--navy)}.range{width:100%}.layers{max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fffdf8}.layer{padding:6px 8px;border-bottom:1px solid #eee3cf;font-size:.82rem;display:flex;justify-content:space-between;gap:8px;cursor:pointer}.layer.active{background:#f5ecd8;color:var(--crimson);font-weight:700}.kbd{font-family:monospace;background:#f5ecd8;border:1px solid #e0d5c0;padding:1px 4px;border-radius:4px}@media(max-width:850px){.grid{grid-template-columns:1fr}.panel{padding:12px}.toolbar{display:block}.toolbar .btns{margin-top:8px}}
 </style>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
 </head>
 <body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+
 <header><div class="eyebrow">Videha · Kids offline creativity tool</div><h1>बाल कार्टून Creator</h1><div class="sub">कहानी-दृश्य बनाउ · चित्र, पात्र, संवाद आ PNG निर्यात</div><div class="offline">offline · अही पन्नापर · कोनो upload नहि</div></header>
 <div class="wrap">
 <div class="grid">
@@ -106,5 +138,10 @@ function loadProject(e){let f=e.target.files&&e.target.files[0];if(!f)return;let
 function circle(x,y,r){ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.stroke()}function ellipse(x,y,rx,ry){ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,Math.PI*2);ctx.fill();ctx.stroke()}function tri(a,b,c,d,e,f){ctx.beginPath();ctx.moveTo(a,b);ctx.lineTo(c,d);ctx.lineTo(e,f);ctx.closePath();ctx.fill();ctx.stroke()}function line(a,b,c,d){ctx.beginPath();ctx.moveTo(a,b);ctx.lineTo(c,d);ctx.stroke()}function round(x,y,w,h,r,fill){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y); if(fill)ctx.fill(); ctx.stroke()}
 init();
 </script>
+
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
 </body>
 </html>

@@ -12,8 +12,45 @@
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;line-height:1.65}.app{max-width:1100px;margin:auto;padding:18px}.hero{border:1px solid var(--line);border-left:5px solid var(--red);background:var(--paper);padding:18px 20px;margin-bottom:16px}.eyebrow{font-family:'Libre Baskerville',Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-size:.75rem}.hero h1{margin:.2rem 0;color:var(--red);font-size:clamp(1.4rem,4vw,2rem)}.sub{color:var(--soft);font-size:.92rem}.panel{background:var(--paper);border:1px solid var(--line);padding:16px;margin-bottom:14px}.panel h2{margin:0 0 10px;color:var(--navy);font-size:1.08rem;border-bottom:1px solid var(--line);padding-bottom:7px}label{display:block;font-weight:700;color:var(--red);font-size:.86rem;margin:.7rem 0 .25rem}input,textarea,select{width:100%;border:1px solid var(--line);background:#fff;padding:9px 10px;font-family:inherit;font-size:.95rem}textarea{min-height:90px;resize:vertical}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button,.btn{border:1px solid var(--red);background:transparent;color:var(--red);padding:8px 13px;font-family:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px}button:hover,.btn:hover{background:var(--red);color:#fff}.gold{border-color:var(--gold);color:#6c4b00}.gold:hover{background:var(--gold);color:white}.out{white-space:pre-wrap;background:#fff;border:1px solid var(--line);padding:12px;min-height:90px}.small{font-size:.82rem;color:var(--soft)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.mini-card{border:1px solid var(--line);background:#fff;padding:11px}.mini-card b{color:var(--red)}.tirhuta,.tirhuta-text,[lang="tir"]{font-family:"Noto Sans Tirhuta",sans-serif!important}.footer{text-align:center;color:var(--soft);font-size:.8rem;margin-top:18px;border-top:1px solid var(--line);padding-top:10px}@media(max-width:640px){.app{padding:10px}.grid{grid-template-columns:1fr}.btns{flex-direction:column}button,.btn{justify-content:center}}
 </style>
 <title>Interview / संवाद प्रश्नावली Builder</title>
-</head><body><main class="app"><section class="hero"><div class="eyebrow">Videha Stri Kona · Offline Tool</div><h1>Interview / संवाद प्रश्नावली Builder</h1><div class="sub">Prepare respectful interview questions for writers, artists, editors and scholars.</div></section>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
+</head><body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+<main class="app"><section class="hero"><div class="eyebrow">Videha Stri Kona · Offline Tool</div><h1>Interview / संवाद प्रश्नावली Builder</h1><div class="sub">Prepare respectful interview questions for writers, artists, editors and scholars.</div></section>
 
 <section class="panel"><h2>Questionnaire</h2><div class="grid"><div><label>व्यक्ति/लेखिका</label><input id="person"></div><div><label>केन्द्र</label><select id="focus"><option>लेखन-यात्रा</option><option>नारी विमर्श</option><option>बाल साहित्य</option><option>अनुवाद</option><option>कला/संगीत</option><option>सम्पादन</option></select></div><div><label>प्रश्न संख्या</label><input id="count" type="number" min="5" max="30" value="12"></div></div><label>विशेष विषय</label><input id="topic" placeholder="जैसे: स्मृति, मिथिला, भाषा, देह, श्रम"><div class="btns"><button onclick="make()">Generate</button><button class="gold" onclick="dl()">TXT डाउनलोड</button></div></section><section class="panel"><h2>प्रश्नावली</h2><div id="out" class="out"></div></section><script>
 const banks=['रचना-यात्राक आरम्भ कोना भेल?','मैथिली भाषा अहाँक लेखनमे कोन रूपेँ उपस्थित अछि?','नारी-स्वरक मुख्य चुनौती की बुझाइत अछि?','परिवार, समाज आ सृजनक सम्बन्ध पर अहाँक विचार?','अहाँक प्रिय लेखिका/लेखक आ कारण?','अनुवाद/मूल लेखनमे मुख्य अन्तर की?','युवा पाठक/लेखक लेल अहाँक सलाह?','कोन कृति लिखबाक अनुभव विशेष रहल?','मिथिलाक सांस्कृतिक स्मृति अहाँक रचनामे कोना अबैत अछि?','भविष्यक परियोजना की अछि?','पाठकसँ अहाँ कोन संवाद चाहैत छी?','ई-कॉपी/डिजिटल मंचक महत्व की अछि?','स्त्री-शिक्षा आ साहित्यक सम्बन्ध पर अहाँक मत?','आलोचना आ पाठकीय प्रतिक्रिया अहाँ कोना लैत छी?','भाषा-संरक्षणमे साहित्यक भूमिका की?'];function make(){let n=+count.value||12;out.innerText=`${person.value||'अतिथि'} — ${focus.value} प्रश्नावली\nविषय: ${topic.value}\n\n`+banks.slice(0,n).map((q,i)=>`${i+1}. ${q}`).join('\n')}function dl(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out.innerText],{type:'text/plain;charset=utf-8'}));a.download='interview-questionnaire.txt';a.click()}
-</script><p class="footer">© Gajendra Thakur · Videha eJournal · www.videha.co.in · पूर्णतः browser-only/offline</p></main></body></html>
+</script><p class="footer">© Gajendra Thakur · Videha eJournal · www.videha.co.in · पूर्णतः browser-only/offline</p></main>
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
+</body></html>

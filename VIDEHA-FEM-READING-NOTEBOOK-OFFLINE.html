@@ -12,8 +12,45 @@
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;line-height:1.65}.app{max-width:1100px;margin:auto;padding:18px}.hero{border:1px solid var(--line);border-left:5px solid var(--red);background:var(--paper);padding:18px 20px;margin-bottom:16px}.eyebrow{font-family:'Libre Baskerville',Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-size:.75rem}.hero h1{margin:.2rem 0;color:var(--red);font-size:clamp(1.4rem,4vw,2rem)}.sub{color:var(--soft);font-size:.92rem}.panel{background:var(--paper);border:1px solid var(--line);padding:16px;margin-bottom:14px}.panel h2{margin:0 0 10px;color:var(--navy);font-size:1.08rem;border-bottom:1px solid var(--line);padding-bottom:7px}label{display:block;font-weight:700;color:var(--red);font-size:.86rem;margin:.7rem 0 .25rem}input,textarea,select{width:100%;border:1px solid var(--line);background:#fff;padding:9px 10px;font-family:inherit;font-size:.95rem}textarea{min-height:90px;resize:vertical}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button,.btn{border:1px solid var(--red);background:transparent;color:var(--red);padding:8px 13px;font-family:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px}button:hover,.btn:hover{background:var(--red);color:#fff}.gold{border-color:var(--gold);color:#6c4b00}.gold:hover{background:var(--gold);color:white}.out{white-space:pre-wrap;background:#fff;border:1px solid var(--line);padding:12px;min-height:90px}.small{font-size:.82rem;color:var(--soft)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.mini-card{border:1px solid var(--line);background:#fff;padding:11px}.mini-card b{color:var(--red)}.tirhuta,.tirhuta-text,[lang="tir"]{font-family:"Noto Sans Tirhuta",sans-serif!important}.footer{text-align:center;color:var(--soft);font-size:.8rem;margin-top:18px;border-top:1px solid var(--line);padding-top:10px}@media(max-width:640px){.app{padding:10px}.grid{grid-template-columns:1fr}.btns{flex-direction:column}button,.btn{justify-content:center}}
 </style>
 <title>स्त्री-लेखन Reading Notebook</title>
-</head><body><main class="app"><section class="hero"><div class="eyebrow">Videha Stri Kona · Offline Tool</div><h1>स्त्री-लेखन Reading Notebook</h1><div class="sub">Track books, reading notes, quotes, questions and themes.</div></section>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
+</head><body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+<main class="app"><section class="hero"><div class="eyebrow">Videha Stri Kona · Offline Tool</div><h1>स्त्री-लेखन Reading Notebook</h1><div class="sub">Track books, reading notes, quotes, questions and themes.</div></section>
 
 <section class="panel"><h2>नोट जोड़ू</h2><div class="grid"><div><label>लेखिका</label><input id="author"></div><div><label>कृति</label><input id="book"></div><div><label>विधा</label><select id="genre"><option>कविता</option><option>कथा</option><option>उपन्यास</option><option>नाटक</option><option>निबन्ध</option><option>आत्मकथा</option></select></div><div><label>Rating</label><select id="rating"><option>★★★★★</option><option>★★★★</option><option>★★★</option><option>★★</option><option>★</option></select></div></div><label>नोट / उद्धरण / प्रश्न</label><textarea id="note"></textarea><div class="btns"><button onclick="addNote()">Add</button><button class="gold" onclick="saveAll()">JSON Save</button><button onclick="exportMd()">Markdown</button></div></section><section class="panel"><h2>Notebook</h2><div id="list" class="cards"></div></section><script>
 let data=JSON.parse(localStorage.femReadingNotes||'[]');function v(i){return document.getElementById(i).value.trim()}function render(){list.innerHTML=data.map((x,i)=>`<div class=mini-card><b>${x.book}</b><br>${x.author} · ${x.genre} · ${x.rating}<p>${x.note}</p><button onclick="data.splice(${i},1);render()">हटाउ</button></div>`).join('')||'<p class=small>अखन नोट नहि अछि।</p>';localStorage.femReadingNotes=JSON.stringify(data)}function addNote(){data.push({author:v('author'),book:v('book'),genre:v('genre'),rating:v('rating'),note:v('note')});render()}function dl(n,t,type='text/plain'){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:type+';charset=utf-8'}));a.download=n;a.click()}function saveAll(){dl('stri-reading-notebook.json',JSON.stringify(data,null,2),'application/json')}function exportMd(){dl('stri-reading-notebook.md',data.map(x=>`## ${x.book}\n**${x.author}** · ${x.genre} · ${x.rating}\n\n${x.note}\n`).join('\n'))}render();
-</script><p class="footer">© Gajendra Thakur · Videha eJournal · www.videha.co.in · पूर्णतः browser-only/offline</p></main></body></html>
+</script><p class="footer">© Gajendra Thakur · Videha eJournal · www.videha.co.in · पूर्णतः browser-only/offline</p></main>
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
+</body></html>

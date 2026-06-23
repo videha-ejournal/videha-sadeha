@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="mai">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Libre+Baskerville:wght@400;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>विदेह दृष्टिबाधित पाठक/ब्रेल/TTS औजार</title>
+<style>
+:root{--cream:#FAF6EE;--paper:#FFFCF6;--field:#EFE9DC;--rule:#D8CFC0;--ink:#23201B;--soft:#544D42;--red:#8B1A1A;--gold:#C49A3C;--blue:#1F2A44;--focus:#0b63ce;}
+*{box-sizing:border-box} body{margin:0;background:var(--field);color:var(--ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;line-height:1.75;font-size:18px}.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:.6rem;border:2px solid var(--focus);z-index:99}.skip:focus{left:.5rem}.wrap{max-width:1180px;margin:0 auto;padding:1rem}.top{background:var(--cream);border:1px solid var(--rule);border-left:6px solid var(--red);padding:1rem 1.2rem;margin:1rem 0}.eyebrow{font-family:'Libre Baskerville',serif;letter-spacing:.05em;color:var(--soft);font-size:.78rem;text-transform:uppercase}h1{font-family:'Playfair Display','Noto Serif Devanagari',serif;color:var(--red);font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.2;margin:.25rem 0}.note{background:#fff7e5;border-left:4px solid var(--gold);padding:.75rem 1rem;margin:.8rem 0;color:#4f402e}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1rem}.panel{background:var(--cream);border:1px solid var(--rule);padding:1rem}.panel h2{font-family:'Playfair Display','Noto Serif Devanagari',serif;color:var(--red);font-size:1.25rem;margin:.2rem 0 .7rem}.toolbar{display:flex;flex-wrap:wrap;gap:.45rem;margin:.55rem 0}.btn{border:1px solid var(--red);background:transparent;color:var(--red);padding:.5rem .75rem;font-weight:700;font-family:'Noto Serif Devanagari','Libre Baskerville',serif;cursor:pointer}.btn:hover,.btn:focus{background:var(--red);color:#fff;outline:3px solid transparent}.btn.alt{border-color:var(--blue);color:var(--blue)}.btn.alt:hover,.btn.alt:focus{background:var(--blue);color:#fff}.btn.gold{border-color:#8a640e;color:#6f500b}.btn.gold:hover,.btn.gold:focus{background:#8a640e;color:#fff}label{display:block;font-weight:700;margin:.6rem 0 .25rem;color:var(--blue)}textarea,input,select{width:100%;background:#fff;border:1px solid var(--rule);font:inherit;color:var(--ink);padding:.65rem}textarea{min-height:250px;resize:vertical}.out{min-height:250px;white-space:pre-wrap;background:#fff;border:1px solid var(--rule);padding:.85rem;overflow:auto}.braille{font-family:'Noto Sans Symbols2','Segoe UI Symbol',sans-serif;font-size:2rem;line-height:1.55;letter-spacing:.05em}.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.status{border-left:4px solid var(--blue);background:#fff;padding:.55rem .8rem;margin:.55rem 0;color:var(--blue);font-weight:700}.large-read{background:#fff;border:1px solid var(--rule);padding:1rem;margin-top:.7rem}.focus-guide{position:fixed;left:0;right:0;height:3.2rem;border-top:2px solid rgba(139,26,26,.55);border-bottom:2px solid rgba(139,26,26,.55);pointer-events:none;z-index:999;display:none}.focus-on .focus-guide{display:block}.contrast body,.contrast{background:#000!important;color:#fff!important}.contrast .panel,.contrast .top,.contrast .large-read,.contrast textarea,.contrast input,.contrast select,.contrast .out{background:#000!important;color:#fff!important;border-color:#fff!important}.contrast .btn{border-color:#fff!important;color:#fff!important}.sr-only{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important}.kbd{font-family:monospace;border:1px solid var(--rule);background:#fff;padding:.05rem .25rem}@media(max-width:850px){.grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr 1fr}body{font-size:16px}}@media print{.toolbar,.controls,.note,.skip{display:none}.panel,.top{border:0}.grid{display:block}body{background:#fff}.out,.large-read,textarea{border:0}}
+</style>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
+</head>
+<body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+
+<a class="skip" href="#main">मुख्य औजारपर जाउ</a><div class="focus-guide" aria-hidden="true"></div>
+<main id="main" class="wrap">
+<header class="top"><div class="eyebrow">Videha Accessibility Tool · Browser-only</div><h1>दृष्टिबाधित पाठक/ब्रेल/TTS औजार</h1><p>मैथिली/देवनागरी पाठ पढ़बाक, सुनबाक, ब्रेल-रूप देखबाक, पैघ अक्षरमे प्रस्तुत करबाक आ सरल पाठ फाइल बनयबाक offline/browser-only सहायक।</p><p class="note"><b>ध्यान:</b> ब्रेल रूपान्तरण शिक्षण/सहायक प्रारूप अछि; प्रमाणित छापाखाना-ब्रेल लेल अन्तिम जाँच आवश्यक अछि। TTS आवाज browser/operating-system पर निर्भर करैत अछि।</p></header>
+<section class="grid">
+<div class="panel" aria-labelledby="txtHead"><h2 id="txtHead">१. पाठ राखू / सुनू</h2><label for="inputText">देवनागरी/मैथिली पाठ</label><textarea id="inputText" spellcheck="false" placeholder="एतय पाठ चिपकाउ अथवा टाइप करू..."></textarea><div class="toolbar"><button class="btn" onclick="speakText()">🔊 सुनू</button><button class="btn" onclick="pauseSpeech()">⏸ ठहरू</button><button class="btn" onclick="resumeSpeech()">▶ फेर चलाउ</button><button class="btn" onclick="stopSpeech()">⏹ रोकू</button><button class="btn alt" onclick="makeReader()">📖 पैघ-पाठ बनाउ</button><button class="btn alt" onclick="clearAll()">साफ करू</button></div><div class="controls"><div><label for="voice">आवाज</label><select id="voice"></select></div><div><label for="rate">गति <span id="rateVal">0.9</span></label><input id="rate" type="range" min="0.5" max="1.5" step="0.05" value="0.9" oninput="rateVal.textContent=this.value"></div><div><label for="pitch">स्वर <span id="pitchVal">1</span></label><input id="pitch" type="range" min="0.5" max="1.5" step="0.05" value="1" oninput="pitchVal.textContent=this.value"></div></div><div class="toolbar"><button class="btn gold" onclick="increaseFont()">अक्षर पैघ</button><button class="btn gold" onclick="decreaseFont()">अक्षर छोट</button><button class="btn gold" onclick="toggleContrast()">उच्च contrast</button><button class="btn gold" onclick="toggleGuide()">Reading guide</button><button class="btn alt" onclick="downloadText('videha-readable-text.txt',inputText.value)">TXT डाउनलोड</button></div><div class="status" id="status" role="status" aria-live="polite">तैयार।</div></div>
+<div class="panel" aria-labelledby="brailleHead"><h2 id="brailleHead">२. ब्रेल रूपान्तरण</h2><div class="toolbar"><button class="btn" onclick="toBraille()">⠃ ब्रेल बनाउ</button><button class="btn alt" onclick="copyOut('brailleOut')">ब्रेल कॉपी</button><button class="btn alt" onclick="downloadText('videha-braille-unicode.txt',brailleOut.textContent)">ब्रेल TXT डाउनलोड</button><button class="btn alt" onclick="downloadText('videha-braille-source.txt',inputText.value)">मूल पाठ डाउनलोड</button></div><label for="brailleOut">Unicode Braille output</label><div id="brailleOut" class="out braille" tabindex="0" aria-label="ब्रेल output"></div><p class="note">स्वर, व्यंजन, मात्रा, अङ्क आ मूल विराम-चिह्नक साधारण भारती-ब्रेल mapping देल गेल अछि। संयुक्ताक्षर लेल हलन्त/मात्रा संकेत क्रम देखाओल जाइत अछि।</p></div>
+</section>
+<section class="panel" aria-labelledby="readerHead"><h2 id="readerHead">३. पैघ अक्षर / screen-reader friendly reading copy</h2><div class="large-read" id="readerOut" tabindex="0" aria-label="पैघ अक्षरमे पाठ">एतय पैघ-पाठ देखाओल जाएत।</div><div class="toolbar"><button class="btn" onclick="copyReader()">पैघ-पाठ कॉपी</button><button class="btn alt" onclick="window.print()">प्रिन्ट / PDF</button><button class="btn alt" onclick="saveDraft()">Draft save</button><button class="btn alt" onclick="loadDraft()">Draft load</button></div></section>
+</main>
+<script>
+const inputText=document.getElementById('inputText'), statusBox=document.getElementById('status'), brailleOut=document.getElementById('brailleOut'), readerOut=document.getElementById('readerOut');
+function setStatus(t){statusBox.textContent=t;}
+let voices=[];function loadVoices(){voices=speechSynthesis? speechSynthesis.getVoices():[];let sel=document.getElementById('voice');sel.innerHTML='';voices.sort((a,b)=>(a.lang||'').localeCompare(b.lang||''));voices.forEach((v,i)=>{let o=document.createElement('option');o.value=i;o.textContent=`${v.name} (${v.lang})`;if(/hi|mr|ne|mai|sa|bn/i.test(v.lang))o.selected=true;sel.appendChild(o);});if(!voices.length){let o=document.createElement('option');o.textContent='System default voice';sel.appendChild(o)}}if('speechSynthesis'in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}
+function speakText(){let t=(inputText.value||readerOut.innerText||'').trim();if(!t){setStatus('पहिने पाठ राखू।');return;}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);let i=document.getElementById('voice').value;if(voices[i])u.voice=voices[i];u.lang=(voices[i]&&voices[i].lang)||'hi-IN';u.rate=parseFloat(document.getElementById('rate').value);u.pitch=parseFloat(document.getElementById('pitch').value);u.onstart=()=>setStatus('पाठ सुनायल जा रहल अछि...');u.onend=()=>setStatus('वाचन समाप्त।');u.onerror=()=>setStatus('TTS चलल नहि — browser आवाज समर्थन जाँचू।');speechSynthesis.speak(u)}
+function pauseSpeech(){speechSynthesis.pause();setStatus('वाचन ठहरल।')}function resumeSpeech(){speechSynthesis.resume();setStatus('वाचन फेर शुरू।')}function stopSpeech(){speechSynthesis.cancel();setStatus('वाचन रोकल गेल।')}
+const independent={"अ":"⠁","आ":"⠜","इ":"⠊","ई":"⠔","उ":"⠥","ऊ":"⠳","ऋ":"⠐⠗","ए":"⠑","ऐ":"⠌","ओ":"⠕","औ":"⠪","अं":"⠁⠈","अः":"⠁⠠"};
+const consonants={"क":"⠅","ख":"⠨⠅","ग":"⠛","घ":"⠣⠛","ङ":"⠬","च":"⠉","छ":"⠡⠉","ज":"⠚","झ":"⠴⠚","ञ":"⠒","ट":"⠾","ठ":"⠺","ड":"⠫","ढ":"⠿","ण":"⠼","त":"⠞","थ":"⠹","द":"⠙","ध":"⠮","न":"⠝","प":"⠏","फ":"⠖","ब":"⠃","भ":"⠘⠃","म":"⠍","य":"⠽","र":"⠗","ल":"⠇","व":"⠧","श":"⠩","ष":"⠯","स":"⠎","ह":"⠓","ळ":"⠸⠇","क्ष":"⠟","ज्ञ":"⠵"};
+const matras={"ा":"⠜","ि":"⠊","ी":"⠔","ु":"⠥","ू":"⠳","ृ":"⠐⠗","े":"⠑","ै":"⠌","ो":"⠕","ौ":"⠪","ं":"⠈","ः":"⠠","ँ":"⠈"};
+const nums={"0":"⠼⠚","1":"⠼⠁","2":"⠼⠃","3":"⠼⠉","4":"⠼⠙","5":"⠼⠑","6":"⠼⠋","7":"⠼⠛","8":"⠼⠓","9":"⠼⠊","०":"⠼⠚","१":"⠼⠁","२":"⠼⠃","३":"⠼⠉","४":"⠼⠙","५":"⠼⠑","६":"⠼⠋","७":"⠼⠛","८":"⠼⠓","९":"⠼⠊"};
+const punct={" ":" ","\n":"\n","।":"⠲",".":"⠲",",":"⠂",";":"⠆",":":"⠒","?":"⠦","!":"⠖","-":"⠤","—":"⠤","'":"⠄",'"':'⠶',"(":"⠶",")":"⠶","/":"⠌"};
+function toBraille(){let t=inputText.value.normalize('NFC');let out='';for(let i=0;i<t.length;i++){let pair=t.slice(i,i+2);if(consonants[pair]){out+=consonants[pair];i++;continue}let ch=t[i];if(independent[ch])out+=independent[ch];else if(consonants[ch])out+=consonants[ch];else if(matras[ch])out+=matras[ch];else if(ch==='्')out+='⠈';else if(ch==='़')out+='⠐';else if(nums[ch])out+=nums[ch];else if(punct[ch]!==undefined)out+=punct[ch];else out+=ch;}brailleOut.textContent=out;setStatus('ब्रेल रूपान्तरण तैयार।')}
+function makeReader(){let t=inputText.value.trim();readerOut.innerText=t||'एतय पैघ-पाठ देखाओल जाएत।';readerOut.focus();setStatus('पैघ-पाठ तैयार।')}
+function copyOut(id){navigator.clipboard.writeText(document.getElementById(id).innerText||'');setStatus('कॉपी भेल।')}function copyReader(){navigator.clipboard.writeText(readerOut.innerText||'');setStatus('पैघ-पाठ कॉपी भेल।')}
+function downloadText(name,text){let blob=new Blob([text||''],{type:'text/plain;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);setStatus('फाइल डाउनलोड भेल।')}
+function clearAll(){inputText.value='';brailleOut.textContent='';readerOut.textContent='एतय पैघ-पाठ देखाओल जाएत।';setStatus('साफ भेल।')}function increaseFont(){document.body.style.fontSize=((parseFloat(getComputedStyle(document.body).fontSize)||18)+2)+'px'}function decreaseFont(){document.body.style.fontSize=Math.max(14,(parseFloat(getComputedStyle(document.body).fontSize)||18)-2)+'px'}function toggleContrast(){document.documentElement.classList.toggle('contrast')}function toggleGuide(){document.documentElement.classList.toggle('focus-on')}document.addEventListener('mousemove',e=>{document.querySelector('.focus-guide').style.top=Math.max(0,e.clientY-25)+'px'});
+function saveDraft(){localStorage.setItem('videhaBrailleTTS',inputText.value);setStatus('Draft browser मे सुरक्षित।')}function loadDraft(){inputText.value=localStorage.getItem('videhaBrailleTTS')||'';setStatus(inputText.value?'Draft load भेल।':'कोनो draft भेटल नहि।')}
+</script>
+
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
+</body>
+</html>

@@ -15,8 +15,40 @@
 
 
 </style>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
 </head>
 <body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+
 <header><h1>🎨 Mithila Art Pattern Designer · मिथिला चित्रकला रेखांकन</h1><div class="sub">Draw simple Mithila-inspired borders, fish, flowers and motifs; export PNG.</div><div class="small">VIDEHA · www.videha.co.in · Offline/browser-only</div></header>
 
 <div class="panel"><h2>Canvas</h2><div class="toolbar"><button onclick="mode='draw'">Free draw</button><button onclick="fish()">Fish motif</button><button onclick="flower()">Flower</button><button onclick="border()">Border</button><input type="color" id="color" value="#8B1A1A" style="width:60px"><button onclick="clearC()">Clear</button><button class="gold" onclick="savePNG()">Download PNG</button></div><div class="canvaswrap"><canvas id="cv" width="900" height="600"></canvas></div></div>
@@ -30,4 +62,9 @@ function fish(){ctx.strokeStyle=$('color').value;ctx.lineWidth=4;ctx.beginPath()
 function flower(){ctx.strokeStyle=$('color').value;ctx.lineWidth=4;let x=450,y=300;for(let i=0;i<12;i++){ctx.beginPath();ctx.ellipse(x+Math.cos(i*Math.PI/6)*60,y+Math.sin(i*Math.PI/6)*60,45,18,i*Math.PI/6,0,7);ctx.stroke()}ctx.beginPath();ctx.arc(x,y,25,0,7);ctx.stroke()}
 function border(){ctx.strokeStyle=$('color').value;ctx.lineWidth=3;for(let x=30;x<870;x+=40){ctx.strokeRect(x,25,28,28);ctx.strokeRect(x,547,28,28)}for(let y=30;y<570;y+=40){ctx.strokeRect(25,y,28,28);ctx.strokeRect(847,y,28,28)}}function clearC(){ctx.clearRect(0,0,cv.width,cv.height)}function savePNG(){let a=document.createElement('a');a.download='mithila-art-pattern.png';a.href=cv.toDataURL('image/png');a.click()}border();
 </script>
+
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
 </body></html>

@@ -15,7 +15,44 @@ button{font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:24px;b
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.mini{font-size:.86rem;color:var(--muted)}.good{color:var(--ok);font-weight:800}.bad{color:var(--bad);font-weight:800}
 canvas{max-width:100%;background:#fff;border:1px solid var(--line);border-radius:12px}.out{white-space:pre-wrap;background:#fffdf8;border:1px dashed var(--gold);border-radius:10px;padding:10px;min-height:40px}
 
-</style></head><body><header><h1>📚 किशोर Research Notebook</h1><div class="sub">sources, notes, thesis · offline · अही पन्नापर</div></header><div class="wrap"><div class="panel"><h2>Research Notebook</h2><div class="row"><div><label>विषय</label><input id="topic" value="मिथिलाक लोकचित्रकला"></div><div><label>थीसिस/मुख्य प्रश्न</label><input id="thesis" value="लोकचित्रकला मिथिलाक सांस्कृतिक स्मृति केना बचबैत अछि?"></div></div><label>स्रोत</label><input id="source" placeholder="पोथी/लेख/URL/व्यक्ति"><label>नोट</label><textarea id="note"></textarea><button onclick="add()">Note जोड़ू</button><button onclick="build()">Research Sheet बनाउ</button><button class="sec" onclick="download()">Markdown डाउनलोड</button><div id="list" class="out"></div></div></div><script>
+</style>
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
+</head><body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+<header><h1>📚 किशोर Research Notebook</h1><div class="sub">sources, notes, thesis · offline · अही पन्नापर</div></header><div class="wrap"><div class="panel"><h2>Research Notebook</h2><div class="row"><div><label>विषय</label><input id="topic" value="मिथिलाक लोकचित्रकला"></div><div><label>थीसिस/मुख्य प्रश्न</label><input id="thesis" value="लोकचित्रकला मिथिलाक सांस्कृतिक स्मृति केना बचबैत अछि?"></div></div><label>स्रोत</label><input id="source" placeholder="पोथी/लेख/URL/व्यक्ति"><label>नोट</label><textarea id="note"></textarea><button onclick="add()">Note जोड़ू</button><button onclick="build()">Research Sheet बनाउ</button><button class="sec" onclick="download()">Markdown डाउनलोड</button><div id="list" class="out"></div></div></div><script>
 let notes=[];function add(){notes.push({s:source.value,n:note.value});source.value='';note.value='';build()}function build(){list.textContent=`# ${topic.value}\n\nथीसिस/प्रश्न: ${thesis.value}\n\n## नोट्स\n`+notes.map((x,i)=>`### ${i+1}. ${x.s||'स्रोत'}\n${x.n}`).join('\n\n')+`\n\n## सम्भावित निष्कर्ष\n- ...\n\n## शेष प्रश्न\n- ...`}
 function download(){build();let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([list.textContent],{type:'text/markdown;charset=utf-8'}));a.download='kishor-research-notebook.md';a.click()}build();
-</script></body></html>
+</script>
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
+</body></html>

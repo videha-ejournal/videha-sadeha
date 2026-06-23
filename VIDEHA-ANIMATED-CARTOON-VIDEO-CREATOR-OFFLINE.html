@@ -16,8 +16,40 @@ select,input[type=text],input[type=number],textarea{width:100%;border:1px solid 
 footer{text-align:center;color:#6e5c48;font-size:.78rem;border-top:1px solid var(--line);padding:18px;margin-top:18px}.note{background:#f3ecdc;border-left:3px solid var(--gold);padding:8px 10px;font-size:.8rem;color:#5a4a3a;margin:9px 0;border-radius:0 8px 8px 0}
 @media(max-width:980px){.grid{grid-template-columns:1fr}.panel{order:0}.stageWrap{order:-1}.chips{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.chips{grid-template-columns:1fr 1fr}.btn{font-size:.78rem;padding:6px 9px}}
 </style>
+
+<style id="videha-tool-branding-style">
+/* Videha shared header/footer branding */
+.videha-tool-topbar,.videha-tool-footer{
+  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
+  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
+}
+.videha-tool-topbar{
+  border-bottom:3px solid #8B1A1A; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
+.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
+.videha-tool-return{
+  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
+  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
+}
+.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
+.videha-tool-footer{
+  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
+}
+.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
+@media(max-width:720px){
+  .videha-tool-topbar{align-items:flex-start;}
+  .videha-tool-return{width:100%; text-align:center;}
+}
+</style>
 </head>
 <body>
+<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
+  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</header>
+
 <header><div class="eyebrow">Videha · Kids offline browser studio</div><h1>Animated Cartoon / Video Creator<span>चलचित्र कार्टून बनाउ · create short animated stories</span></h1><div class="badge"><span class="dot"></span>100% offline · कोनो upload नहि · video browser मे बनैत अछि</div></header>
 <div class="wrap">
 <div class="grid">
@@ -92,4 +124,9 @@ $('saveJson').onclick=()=>{let data={version:1,bg:$('bg').value,duration:nowDura
 if(!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){this.beginPath();this.moveTo(x+r,y);this.lineTo(x+w-r,y);this.quadraticCurveTo(x+w,y,x+w,y+r);this.lineTo(x+w,y+h-r);this.quadraticCurveTo(x+w,y+h,x+w-r,y+h);this.lineTo(x+r,y+h);this.quadraticCurveTo(x,y+h,x,y+h-r);this.lineTo(x,y+r);this.quadraticCurveTo(x,y,x+r,y);return this;}}
 addObj('boy');addObj('girl');addObj('bubble');let b=objects[0];b.x=160;b.y=350;b.ex=390;b.ey=330;b.text='';let g=objects[1];g.x=800;g.y=350;g.ex=560;g.ey=330;let q=objects[2];q.x=480;q.y=130;q.ex=480;q.ey=120;q.text='स्वागत! अपन कार्टून बनाउ।';selected=q.id;renderList();drawEdit();
 </script>
+
+<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
+  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
+  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+</footer>
 </body></html>
