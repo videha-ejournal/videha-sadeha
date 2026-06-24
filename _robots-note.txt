@@ -1,0 +1,8 @@
+robots.txt works only at the origin root.
+
+For this project URL, do NOT rely on a robots.txt placed inside this subfolder.
+The active GitHub Pages robots file must be uploaded to:
+https://videha-ejournal.github.io/robots.txt
+
+This project sitemap is still correct at:
+https://videha-ejournal.github.io/videha-sadeha/sitemap.xml

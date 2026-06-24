@@ -1,0 +1,33 @@
+{
+  "name": "Videha Sadeha Archive",
+  "short_name": "Sadeha",
+  "description": "विदेह सदेह PDF archive, searchable index and browser-only Maithili tools.",
+  "lang": "mai",
+  "dir": "auto",
+  "start_url": "/videha-sadeha/",
+  "scope": "/videha-sadeha/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FAF6EE",
+  "theme_color": "#8B1A1A",
+  "categories": [
+    "education",
+    "books",
+    "magazines",
+    "culture"
+  ],
+  "icons": [
+    {
+      "src": "https://www.videha.co.in/assets/img/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://www.videha.co.in/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
