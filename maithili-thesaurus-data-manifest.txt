@@ -1,0 +1,11 @@
+maithili-thesaurus-data-core.js
+english_maithili-001.js
+english_maithili-002.js
+english_maithili-003.js
+english_maithili-004.js
+english_maithili-005.js
+synonyms-001.js
+antonyms-001.js
+it_glossary-001.js
+technical_pending-001.js
+maithili_english-001.js
