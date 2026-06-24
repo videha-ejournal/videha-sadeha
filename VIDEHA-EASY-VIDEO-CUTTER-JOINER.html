@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="no-js" lang="mai">
+<head>
+<meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सरल video cutter-joiner — विदेह</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="assets/css/videha.css" rel="stylesheet">
+<style>
+:root{--vd-cream:#FAF6EE;--vd-field:#EFE9DC;--vd-rule:#D8CFC0;--vd-rule-soft:#E7DECB;--vd-crimson:#8B1A1A;--vd-gold:#C49A3C;--vd-indigo:#1F2A44;--vd-ink:#23201B;--vd-ink-soft:#544D42;}
+body{background:var(--vd-field)!important;color:var(--vd-ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif!important;}
+.videha-main-content{background:transparent!important;max-width:1120px;margin:0 auto;padding:20px 14px 38px;}
+.boxOutline{background:var(--vd-cream)!important;border:1px solid var(--vd-rule)!important;border-radius:2px!important;box-shadow:0 1px 0 #fff inset,0 6px 22px rgba(35,32,27,.07)!important;padding:26px;}
+.clrStrip{background:linear-gradient(90deg,#C77B2C 0%,#8B1A1A 50%,#1F2A44 100%)!important;color:#FAF6EE!important;padding:10px 16px!important;margin:6px 0 12px!important;border:0!important;border-radius:2px!important;}
+.clrStrip center{color:#FAF6EE!important;font-weight:700;font-size:1.12rem;}
+.tool-title{font-family:'Playfair Display','Noto Serif Devanagari',Georgia,serif;color:var(--vd-crimson);font-size:1.55rem;line-height:1.3;margin:.25rem 0 .4rem;}
+.tool-sub{color:var(--vd-ink-soft);font-size:.92rem;line-height:1.75;border-left:3px solid var(--vd-gold);padding-left:.8rem;background:#fff9ef;padding-top:.45rem;padding-bottom:.45rem;}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0;}
+.card{background:#FFFCF6;border:1px solid var(--vd-rule);border-left:3px solid var(--vd-crimson);padding:13px 14px;margin:12px 0;}
+.card h2,.card h3{font-family:'Playfair Display','Noto Serif Devanagari',Georgia,serif;color:var(--vd-crimson);margin:.1rem 0 .65rem;line-height:1.3;}
+label{display:block;font-weight:700;color:var(--vd-indigo);font-size:.88rem;margin:.55rem 0 .2rem;}
+input,textarea,select{width:100%;background:#fffef8;border:1px solid var(--vd-rule);border-radius:0;color:var(--vd-ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif!important;font-size:.92rem;padding:8px;line-height:1.55;}
+textarea{min-height:110px;resize:vertical;}
+button,.btn,a.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:transparent;color:var(--vd-crimson)!important;border:1px solid var(--vd-crimson);border-radius:0;padding:7px 11px;font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;font-weight:700;font-size:.84rem;cursor:pointer;text-decoration:none;margin:4px 4px 4px 0;}
+button:hover,.btn:hover{background:var(--vd-crimson);color:#fff!important;}
+.out{white-space:pre-wrap;background:#fff;border:1px solid var(--vd-rule);padding:12px;min-height:120px;font-size:.9rem;line-height:1.75;overflow:auto;}
+table{width:100%;border-collapse:collapse;background:#fffef8;margin:.7rem 0;font-size:.86rem;}th,td{border:1px solid var(--vd-rule-soft);padding:7px;vertical-align:top;}th{background:#F3ECDC;color:var(--vd-indigo);font-weight:700;}
+.note{background:#FFF7E7;border-left:3px solid var(--vd-gold);padding:9px 11px;color:var(--vd-ink-soft);font-size:.84rem;line-height:1.65;margin:.6rem 0;}
+.warn{background:#fff1f1;border-left-color:var(--vd-crimson);}.small{font-size:.8rem;color:var(--vd-ink-soft);}.actions{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.6rem 0;}.pill{display:inline-block;border:1px solid var(--vd-rule);padding:2px 8px;margin:2px;background:#FAF6EE;color:var(--vd-indigo);font-size:.78rem;}audio,video{width:100%;max-width:720px;background:#111;margin:.5rem 0;}canvas{max-width:100%;border:1px solid var(--vd-rule);background:#fff;}
+.status{font-size:.82rem;color:var(--vd-ink-soft);padding:.4rem 0;}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}@media(max-width:760px){.boxOutline{padding:16px 12px}.two-col,.three-col{grid-template-columns:1fr}.tool-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+
+<a class="videha-skip" href="#videha-main">मुख्य सामग्रीपर जाउ · Skip to main content</a>
+<div class="videha-topbar">VIDEHA ISSN 2229-547X &nbsp;·&nbsp; First Maithili Fortnightly eJournal &nbsp;·&nbsp; Since 2000 &nbsp;·&nbsp; <a href="https://www.videha.co.in">www.videha.co.in</a></div>
+<div class="videha-utilbar"><span>विदेह — प्रथम मैथिली पाक्षिक ई पत्रिका</span><div class="videha-utilbar-social"><a href="https://x.com/videha" target="_blank" rel="noopener">Twitter / X</a><a href="https://www.facebook.com/groups/videha/" target="_blank" rel="noopener">Facebook</a><a href="archive.htm">Archive</a></div></div>
+<header class="videha-masthead"><a aria-label="विदेह — मैथिली पाक्षिक ई-पत्रिका" class="videha-masthead-emblem" href="index.htm"><img alt="विदेह प्रथम मैथिली पाक्षिक ई पत्रिका" class="videha-tirhuta-img" src="assets/img/videha-tirhuta-wordmark.png"/></a></header>
+<nav class="videha-nav" role="navigation"><button aria-label="Menu" class="videha-nav-toggle" onclick="this.parentNode.querySelector('.videha-nav-inner').classList.toggle('open')">☰</button><div class="videha-nav-inner">
+<a href="index.htm">विदेह नूतन अंक</a><a href="videha.htm">विदेहक पुरान अंक</a><a href="pothi.htm">विदेह पोथी</a><a href="kids.htm">शिशु उत्सव</a><a href="Audio_Video.htm">दृश्य-श्रव्य नाट्य उत्सव</a><a href="femcorner.htm">स्त्री कोना</a><a href="videha-elearning.htm">विदेह ई-लर्निङ्ग</a><a href="ratna.htm">मिथिला रत्न</a><a href="discovery.htm">मिथिलाक खोज</a><a href="gajenthakur.htm">Parallel History</a><a href="videha-converters.htm">Videha Converters</a><a href="archive.htm">पेटार / Archive</a>
+</div></nav>
+
+<main class="videha-main-content"><div class="clrStrip"><center>विदेह दृश्य-श्रव्य उत्पादन औजार</center></div><div class="container boxOutline"><span id="videha-main" tabindex="-1"></span><h1 class="tool-title">सरल video cutter-joiner</h1><p class="tool-sub">Video clips लेल cut/join edit decision list, command, आ supported browser मे basic trim recorder।</p>
+<section class="card"><h2>Video cutter / joiner — mobile friendly</h2><p class="note">Browser मे video encoding सीमित अछि। ई tool precise cut/join EDL, FFmpeg command, आ supported browser मे single-clip trimmed WebM recorder दैत अछि।</p><input type="file" id="vfiles" accept="video/*" multiple onchange="loadVideos()"><table id="vtable"><thead><tr><th>File</th><th>Start</th><th>End</th><th>Note</th></tr></thead><tbody></tbody></table><video id="preview" controls></video><div class="actions"><button onclick="previewSelected()">पहिल clip preview</button><button onclick="recordTrim()">Selected first clip trim-record</button><button onclick="makeVideoEDL()">EDL + command बनाउ</button><button onclick="downloadText('videha-video-edl.csv',makeCsv(),'text/csv;charset=utf-8')">CSV डाउनलोड</button></div><p class="status" id="status"></p><pre class="out" id="out"></pre></section>
+</div></main>
+<footer class="videha-footer-simple">© Gajendra Thakur, Editor — Videha eJournal · <a href="Audio_Video.htm">← दृश्य-श्रव्य नाट्य उत्सव पर वापस जाउ</a></footer>
+<script>
+function qs(id){return document.getElementById(id)}
+function val(id){var e=qs(id);return e?e.value:''}
+function setOut(id,txt){var e=qs(id); if(e) e.textContent=txt}
+function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]})}
+function downloadText(filename, text, type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:type||'text/plain;charset=utf-8'}));a.download=filename;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},300)}
+function copyOut(id){navigator.clipboard&&navigator.clipboard.writeText(qs(id).textContent||'')}
+function printPage(){window.print()}
+function today(){return new Date().toLocaleString('hi-IN')}
+function csvEscape(x){x=String(x||'');return /[",\n]/.test(x)?'"'+x.replace(/"/g,'""')+'"':x}
+
+
+let vids=[];
+function loadVideos(){vids=[...qs('vfiles').files].map(f=>({file:f,url:URL.createObjectURL(f)}));let tb=qs('vtable').querySelector('tbody');tb.innerHTML='';vids.forEach(v=>{let tr=document.createElement('tr');tr.innerHTML='<td>'+esc(v.file.name)+'</td><td contenteditable>0</td><td contenteditable></td><td contenteditable></td>';tb.appendChild(tr)});qs('status').textContent=vids.length+' videos loaded'}
+function rowData(){return [...qs('vtable').querySelectorAll('tbody tr')].map((tr,i)=>{let t=[...tr.children].map(td=>td.textContent.trim());return {file:vids[i]?.file.name||'',start:t[1]||'0',end:t[2]||'',note:t[3]||''}})}
+function makeCsv(){let rows=[['file','start','end','note'],...rowData().map(r=>[r.file,r.start,r.end,r.note])];return rows.map(r=>r.map(csvEscape).join(',')).join('\n')}
+function previewSelected(){if(!vids[0])return;qs('preview').src=vids[0].url}
+function makeVideoEDL(){let rows=rowData();let ff=rows.map((r,i)=>'ffmpeg -i "'+r.file+'" -ss '+r.start+(r.end?' -to '+r.end:'')+' -c copy part'+(i+1)+'.mp4').join('\n')+'\n# then create files.txt and run:\nffmpeg -f concat -safe 0 -i files.txt -c copy videha-final.mp4';setOut('out','विदेह Video Cut/Join EDL\n\n'+makeCsv()+'\n\nFFmpeg helper commands:\n'+ff+'\n\nMobile editor note: एहि CSV केँ shot order मानि CapCut/Kinemaster/VN मे clips काटि जोड़ू।')}
+async function recordTrim(){if(!vids[0]){alert('video चुनू');return;}let data=rowData()[0];let video=qs('preview');video.src=vids[0].url;await video.play().catch(()=>{});video.pause();video.currentTime=parseFloat(data.start)||0;await new Promise(r=>setTimeout(r,500));if(!video.captureStream){qs('status').textContent='captureStream unsupported; EDL use करू।';return;}let stream=video.captureStream();let rec=new MediaRecorder(stream);let chunks=[];rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};rec.onstop=()=>{let blob=new Blob(chunks,{type:'video/webm'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='videha-trimmed-clip.webm';a.textContent='Trimmed WebM डाउनलोड';a.className='btn';qs('status').innerHTML='Trim ready ';qs('status').appendChild(a)};let end=parseFloat(data.end)||video.duration;rec.start();video.play();let stopAt=()=>{if(video.currentTime>=end||video.ended){rec.stop();video.pause();video.removeEventListener('timeupdate',stopAt)}};video.addEventListener('timeupdate',stopAt)}
+</script>
+</body></html>
