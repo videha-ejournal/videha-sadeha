@@ -1,0 +1,24 @@
+VIDEHA DICTIONARY COMPLETE SPLIT RE-UPLOAD REPORT
+Generated: 2026-06-24T15:31:35Z
+
+Files:
+README-UPLOAD-EXACTLY.txt	1275 bytes
+UPLOAD-FILE-LIST-AND-REPORT.txt	90 bytes
+VIDEHA-DICTIONARY-DATA-CHECK.html	1957 bytes
+dictionary-data/antonyms-001.js	256948 bytes
+dictionary-data/english_maithili-001.js	7126514 bytes
+dictionary-data/english_maithili-002.js	7229254 bytes
+dictionary-data/english_maithili-003.js	7204462 bytes
+dictionary-data/english_maithili-004.js	7066579 bytes
+dictionary-data/english_maithili-005.js	1115949 bytes
+dictionary-data/it_glossary-001.js	252132 bytes
+dictionary-data/maithili-thesaurus-data-core.js	1505 bytes
+dictionary-data/maithili-thesaurus-data-manifest.txt	252 bytes
+dictionary-data/maithili_english-001.js	5456086 bytes
+dictionary-data/synonyms-001.js	413032 bytes
+dictionary-data/technical_pending-001.js	738511 bytes
+dictionary-petar-reviewed-seed.js	83 bytes
+maithili-thesaurus.html	18520 bytes
+
+Total size:
+36M	/mnt/data/videha-dictionary-complete-split-reupload
