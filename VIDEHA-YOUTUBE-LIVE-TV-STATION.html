@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="mai">
+<head>
+<meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>विदेह YouTube Live TV Station — Playlists · Courses · Podcasts</title>
+<meta name="description" content="चार विदेह YouTube channels केँ playlist, course, podcast आ live TV schedule रूपमे सजाबय लेल standalone browser tool.">
+<link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="assets/css/videha.css" rel="stylesheet">
+<style>
+:root{--vd-cream:#FAF6EE;--vd-field:#EFE9DC;--vd-rule:#D8CFC0;--vd-rule-soft:#E7DECB;--vd-crimson:#8B1A1A;--vd-gold:#C49A3C;--vd-indigo:#1F2A44;--vd-ink:#23201B;--vd-ink-soft:#544D42;}
+body{background:var(--vd-field)!important;color:var(--vd-ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif!important;margin:0;}
+.videha-main-content{background:transparent!important;max-width:1120px;margin:0 auto;padding:20px 14px 38px;}
+.boxOutline{background:var(--vd-cream)!important;border:1px solid var(--vd-rule)!important;border-radius:2px!important;box-shadow:0 1px 0 #fff inset,0 6px 22px rgba(35,32,27,.07)!important;padding:26px;}
+.clrStrip{background:linear-gradient(90deg,#C77B2C 0%,#8B1A1A 50%,#1F2A44 100%)!important;color:#FAF6EE!important;padding:10px 16px!important;margin:6px 0 12px!important;border:0!important;border-radius:2px!important;}
+.clrStrip center{color:#FAF6EE!important;font-weight:700;font-size:1.12rem;}
+.tool-title{font-family:'Playfair Display','Noto Serif Devanagari',Georgia,serif;color:var(--vd-crimson);font-size:1.65rem;line-height:1.3;margin:.25rem 0 .4rem;}
+.tool-sub{color:var(--vd-ink-soft);font-size:.92rem;line-height:1.75;border-left:3px solid var(--vd-gold);padding:.45rem .8rem;background:#fff9ef;}
+.channel-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0;border-bottom:1px solid var(--vd-rule);padding-bottom:8px;}
+.channel-tabs button{background:#FFFCF6;color:var(--vd-crimson);border:1px solid var(--vd-rule);border-radius:0;padding:8px 11px;font-family:'Noto Serif Devanagari','Libre Baskerville',serif;font-weight:700;cursor:pointer;}
+.channel-tabs button.active,.channel-tabs button:hover{background:var(--vd-crimson);border-color:var(--vd-crimson);color:#fff;}
+.card{background:#FFFCF6;border:1px solid var(--vd-rule);border-left:3px solid var(--vd-crimson);padding:13px 14px;margin:12px 0;}
+.card h2,.card h3{font-family:'Playfair Display','Noto Serif Devanagari',Georgia,serif;color:var(--vd-crimson);margin:.1rem 0 .65rem;line-height:1.3;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0;}.wide{grid-column:1/-1;}
+label{display:block;font-weight:700;color:var(--vd-indigo);font-size:.88rem;margin:.55rem 0 .2rem;}
+input,textarea,select{width:100%;background:#fffef8;border:1px solid var(--vd-rule);border-radius:0;color:var(--vd-ink);font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif!important;font-size:.92rem;padding:8px;line-height:1.55;box-sizing:border-box;}
+textarea{min-height:105px;resize:vertical;}
+button,.btn,a.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:transparent;color:var(--vd-crimson)!important;border:1px solid var(--vd-crimson);border-radius:0;padding:7px 11px;font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;font-weight:700;font-size:.84rem;cursor:pointer;text-decoration:none;margin:4px 4px 4px 0;}
+button:hover,.btn:hover{background:var(--vd-crimson);color:#fff!important;}
+.note{background:#FFF7E7;border-left:3px solid var(--vd-gold);padding:9px 11px;color:var(--vd-ink-soft);font-size:.84rem;line-height:1.65;margin:.6rem 0;}
+.warn{background:#fff1f1;border-left-color:var(--vd-crimson);}.small{font-size:.8rem;color:var(--vd-ink-soft);}.actions{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.6rem 0;}
+.pill{display:inline-block;border:1px solid var(--vd-rule);padding:2px 8px;margin:2px;background:#FAF6EE;color:var(--vd-indigo);font-size:.78rem;}
+.player{position:relative;width:100%;background:#111;border:1px solid var(--vd-rule);min-height:260px;}
+.player iframe{width:100%;aspect-ratio:16/9;border:0;display:block;background:#111;}
+.player-empty{display:flex;align-items:center;justify-content:center;color:#fff;min-height:260px;font-size:.95rem;text-align:center;padding:14px;}
+table{width:100%;border-collapse:collapse;background:#fffef8;margin:.7rem 0;font-size:.86rem;}th,td{border:1px solid var(--vd-rule-soft);padding:7px;vertical-align:top;}th{background:#F3ECDC;color:var(--vd-indigo);font-weight:700;}
+.out{white-space:pre-wrap;background:#fff;border:1px solid var(--vd-rule);padding:12px;min-height:120px;font-size:.9rem;line-height:1.75;overflow:auto;}
+.channel-card{border:1px solid var(--vd-rule);padding:10px;background:#fffef8;}.channel-title{font-weight:800;color:var(--vd-indigo);font-size:1rem;}.channel-url{font-size:.78rem;overflow-wrap:anywhere;color:var(--vd-ink-soft);}
+.showcase-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px;}.showcase-item{background:#fff;border:1px solid var(--vd-rule-soft);padding:9px;}.showcase-item b{color:var(--vd-indigo);}
+footer.videha-footer-simple{background:#1F2A44;color:#F6EEDC;text-align:center;padding:22px 20px;font-family:'Libre Baskerville',Georgia,serif;font-size:13.5px;letter-spacing:.04em;border-top:3px double #C77B2C;margin-top:40px;}footer a{color:#F6EEDC!important;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}@media(max-width:760px){.boxOutline{padding:16px 12px}.grid,.two-col{grid-template-columns:1fr}.player{min-height:220px}.player-empty{min-height:220px}}
+</style>
+</head>
+<body>
+<a class="videha-skip" href="#videha-main">मुख्य सामग्रीपर जाउ · Skip to main content</a>
+<div class="videha-topbar">VIDEHA ISSN 2229-547X &nbsp;·&nbsp; First Maithili Fortnightly eJournal &nbsp;·&nbsp; Since 2000 &nbsp;·&nbsp; <a href="https://www.videha.co.in">www.videha.co.in</a></div>
+<div class="videha-utilbar"><span>विदेह — प्रथम मैथिली पाक्षिक ई पत्रिका</span><div class="videha-utilbar-social"><a href="https://x.com/videha" target="_blank" rel="noopener">Twitter / X</a><a href="https://www.facebook.com/groups/videha/" target="_blank" rel="noopener">Facebook</a><a href="archive.htm">Archive</a></div></div>
+<header class="videha-masthead"><a aria-label="विदेह — मैथिली पाक्षिक ई-पत्रिका" class="videha-masthead-emblem" href="index.htm"><img alt="विदेह प्रथम मैथिली पाक्षिक ई पत्रिका" class="videha-tirhuta-img" src="assets/img/videha-tirhuta-wordmark.png"/></a></header>
+<nav class="videha-nav" role="navigation"><button aria-label="Menu" class="videha-nav-toggle" onclick="this.parentNode.querySelector('.videha-nav-inner').classList.toggle('open')">☰</button><div class="videha-nav-inner">
+<a href="index.htm">विदेह नूतन अंक</a><a href="videha.htm">विदेहक पुरान अंक</a><a href="pothi.htm">विदेह पोथी</a><a href="kids.htm">शिशु उत्सव</a><a href="Audio_Video.htm">दृश्य-श्रव्य नाट्य उत्सव</a><a href="femcorner.htm">स्त्री कोना</a><a href="videha-elearning.htm">विदेह ई-लर्निङ्ग</a><a href="ratna.htm">मिथिला रत्न</a><a href="discovery.htm">मिथिलाक खोज</a><a href="gajenthakur.htm">Parallel History</a><a href="videha-converters.htm">Videha Converters</a><a href="archive.htm">पेटार / Archive</a>
+</div></nav>
+<main class="videha-main-content"><div class="clrStrip"><center>विदेह YouTube Live TV Station</center></div><div class="container boxOutline"><span id="videha-main" tabindex="-1"></span>
+<h1 class="tool-title">विदेह Live TV Station · YouTube Showcase</h1>
+<p class="tool-sub">चार YouTube channel केँ एक “live TV station” रूपमे सजाउ: playlists, courses, podcasts, episode blocks, daily schedule, and embeddable video/playlist player. ई tool YouTube API नहि माँगैत अछि; channel/playlist/video URL paste कएलासँ iframe player बनैत अछि।</p>
+<div class="note warn"><b>नोट:</b> YouTube channel page केँ सीधा iframe मे embed नहि कएल जा सकैत; video/playlist embed होइत अछि। Channel tabs, playlist/course/podcast links, schedule आ copy-ready TV rundown एहि tool सँ बनत।</div>
+<div class="channel-tabs" id="channelTabs"></div>
+<section class="grid">
+  <article class="card wide"><h2 id="activeName">Channel</h2><div id="activeMeta" class="small"></div><div class="actions" id="activeActions"></div></article>
+  <article class="card"><h3>Channel Quick Links</h3><div id="channelCards"></div></article>
+  <article class="card"><h3>Player बनाउ</h3><label>YouTube video / playlist URL</label><input id="ytUrl" placeholder="https://www.youtube.com/watch?v=... अथवा playlist URL"><div class="actions"><button onclick="loadYouTube()">Player मे देखू</button><button onclick="useActiveChannel()">Active channel link राखू</button><button onclick="clearPlayer()">हटाउ</button></div><div class="small">Video URL, youtu.be URL, shorts URL, live URL वा playlist URL paste करू।</div></article>
+  <article class="card wide"><h3>On-Air Preview</h3><div class="player" id="player"><div class="player-empty">एतय YouTube video अथवा playlist player देखाएत।</div></div></article>
+  <article class="card wide"><h3>Playlists · Courses · Podcasts Showcase</h3><div class="showcase-list" id="showcaseList"></div><div class="note">हर card मे channel playlist, videos, live/streams, courses search, podcasts search आ custom playlist paste/export विकल्प अछि।</div></article>
+</section>
+<section class="grid">
+<article class="card"><h2>कार्यक्रम जोड़ू</h2>
+<div class="two-col"><div><label>समय</label><input id="pTime" value="20:00"></div><div><label>Channel</label><select id="pChannel"></select></div></div>
+<label>कार्यक्रम शीर्षक</label><input id="pTitle" placeholder="उदाहरण: मिथिला इतिहास पाठ / नाटक पाठ / podcast">
+<label>प्रकार</label><select id="pType"><option>Course</option><option>Podcast</option><option>Playlist</option><option>Live/Stream</option><option>Drama</option><option>Interview</option><option>Archive</option></select>
+<label>YouTube URL</label><input id="pUrl" placeholder="video/playlist/channel URL">
+<label>घोषणा / Anchor line</label><textarea id="pNote" placeholder="आज विदेह Live TV पर ..."></textarea>
+<div class="actions"><button onclick="addProgram()">Schedule मे जोड़ू</button><button onclick="demoSchedule()">Sample schedule</button><button onclick="clearSchedule()">Schedule साफ करू</button></div>
+</article>
+<article class="card"><h2>Live TV Controls</h2><label>Station name</label><input id="stationName" value="विदेह Live TV"><label>आजुक थीम</label><input id="themeName" value="मैथिली भाषा, साहित्य, नाटक आ ई-लर्निङ्ग"><div class="actions"><button onclick="buildRundown()">Rundown बनाउ</button><button onclick="downloadRundown()">TXT डाउनलोड</button><button onclick="downloadHTML()">HTML schedule डाउनलोड</button><button onclick="window.print()">Print</button></div><div class="note">ई TV station scheduling console अछि; live streaming स्वयं YouTube Studio/OBS/mobile app सँ करब, एहि tool सँ playlist/course/podcast lineup तैयार करब।</div></article>
+<article class="card wide"><h2>Schedule</h2><table id="scheduleTable"><thead><tr><th>समय</th><th>Channel</th><th>प्रकार</th><th>शीर्षक</th><th>URL</th><th>घोषणा</th><th>Action</th></tr></thead><tbody></tbody></table></article>
+<article class="card wide"><h2>Copy-ready TV Rundown</h2><div class="out" id="rundownOut"></div></article>
+</section>
+</div></main>
+<footer class="videha-footer-simple">© Gajendra Thakur, Editor — Videha eJournal · <a href="Audio_Video.htm">← दृश्य-श्रव्य नाट्य उत्सव पर वापस जाउ</a></footer>
+<script>
+const channels=[
+ {key:'accessible',name:'Accessible Videha',mai:'एक्सेसिबल विदेह',url:'https://www.youtube.com/@accessible_videha',tag:'accessibility · audio/video · inclusive learning'},
+ {key:'ejournal',name:'Videha eJournal',mai:'विदेह ई-जर्नल',url:'https://www.youtube.com/@videha_ejournal',tag:'eJournal · literature · interviews · archive'},
+ {key:'gajendra',name:'Gajendra Thakur',mai:'गजेन्द्र ठाकुर',url:'https://www.youtube.com/@ggajendra71',tag:'author · editor · talks · readings'},
+ {key:'elearning',name:'Videha eLearning',mai:'विदेह ई-लर्निङ्ग',url:'https://www.youtube.com/@videha-elearning',tag:'courses · quiz · syllabus · learning'}
+];
+let active=channels[0]; let schedule=JSON.parse(localStorage.getItem('videhaLiveTVSchedule')||'[]');
+function qs(id){return document.getElementById(id)}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function init(){renderTabs();renderChannels();renderShowcase();renderChannelSelect();renderSchedule();buildRundown();}
+function renderTabs(){qs('channelTabs').innerHTML=channels.map(c=>`<button class="${c.key===active.key?'active':''}" onclick="setChannel('${c.key}')">${esc(c.mai)}</button>`).join('')}
+function setChannel(k){active=channels.find(c=>c.key===k)||channels[0];renderTabs();renderActive();}
+function renderActive(){qs('activeName').textContent=active.mai+' · '+active.name;qs('activeMeta').textContent=active.tag+' · '+active.url;qs('activeActions').innerHTML=`<a class="btn" href="${active.url}" target="_blank" rel="noopener">Channel खोलू</a><a class="btn" href="${active.url}/videos" target="_blank" rel="noopener">Videos</a><a class="btn" href="${active.url}/playlists" target="_blank" rel="noopener">Playlists</a><a class="btn" href="${active.url}/streams" target="_blank" rel="noopener">Live/Streams</a><a class="btn" href="${active.url}/search?query=course" target="_blank" rel="noopener">Courses खोजू</a><a class="btn" href="${active.url}/search?query=podcast" target="_blank" rel="noopener">Podcasts खोजू</a>`;}
+function renderChannels(){qs('channelCards').innerHTML=channels.map(c=>`<div class="channel-card"><div class="channel-title">${esc(c.mai)}</div><div class="small">${esc(c.tag)}</div><div class="channel-url">${esc(c.url)}</div><div class="actions"><a class="btn" href="${c.url}" target="_blank" rel="noopener">Channel</a><a class="btn" href="${c.url}/playlists" target="_blank" rel="noopener">Playlists</a><a class="btn" href="${c.url}/videos" target="_blank" rel="noopener">Videos</a></div></div>`).join('');renderActive();}
+function renderShowcase(){qs('showcaseList').innerHTML=channels.map(c=>`<div class="showcase-item"><b>${esc(c.mai)}</b><div class="small">${esc(c.tag)}</div><div class="actions"><a class="btn" href="${c.url}/playlists" target="_blank" rel="noopener">Playlists</a><a class="btn" href="${c.url}/search?query=course" target="_blank" rel="noopener">Courses</a><a class="btn" href="${c.url}/search?query=podcast" target="_blank" rel="noopener">Podcasts</a><a class="btn" href="${c.url}/streams" target="_blank" rel="noopener">Live</a></div><label>एहि channel केर playlist URL paste करू</label><input data-playlist-for="${c.key}" placeholder="Playlist URL"><button onclick="loadCardPlaylist('${c.key}')">Player मे चलाउ</button></div>`).join('')}
+function renderChannelSelect(){qs('pChannel').innerHTML=channels.map(c=>`<option value="${c.key}">${c.mai}</option>`).join('')}
+function useActiveChannel(){qs('ytUrl').value=active.url;}
+function parseYouTube(url){url=String(url||'').trim(); if(!url) return null; let pl=url.match(/[?&]list=([A-Za-z0-9_-]+)/); if(pl) return {type:'playlist',id:pl[1]}; let vid=url.match(/[?&]v=([A-Za-z0-9_-]{6,})/)||url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/)||url.match(/\/shorts\/([A-Za-z0-9_-]{6,})/)||url.match(/\/live\/([A-Za-z0-9_-]{6,})/)||url.match(/\/embed\/([A-Za-z0-9_-]{6,})/); if(vid) return {type:'video',id:vid[1]}; return {type:'link',url:url};}
+function loadYouTube(){let u=qs('ytUrl').value;let p=parseYouTube(u);let html=''; if(!p){clearPlayer();return;} if(p.type==='playlist') html=`<iframe allowfullscreen loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(p.id)}" title="YouTube playlist"></iframe>`; else if(p.type==='video') html=`<iframe allowfullscreen loading="lazy" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(p.id)}" title="YouTube video"></iframe>`; else html=`<div class="player-empty">Channel page iframe मे embed नहि होइत। <a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">YouTube पर खोलू</a><br>Video अथवा playlist URL paste करू।</div>`; qs('player').innerHTML=html;}
+function loadCardPlaylist(k){let inp=document.querySelector('input[data-playlist-for="'+k+'"]'); if(inp){qs('ytUrl').value=inp.value; loadYouTube(); qs('player').scrollIntoView({behavior:'smooth'});} }
+function clearPlayer(){qs('player').innerHTML='<div class="player-empty">एतय YouTube video अथवा playlist player देखाएत।</div>';}
+function addProgram(){let c=channels.find(x=>x.key===qs('pChannel').value)||channels[0];schedule.push({time:qs('pTime').value,channel:c.mai,type:qs('pType').value,title:qs('pTitle').value,url:qs('pUrl').value,note:qs('pNote').value});save();renderSchedule();buildRundown();}
+function delProgram(i){schedule.splice(i,1);save();renderSchedule();buildRundown();}
+function save(){localStorage.setItem('videhaLiveTVSchedule',JSON.stringify(schedule));}
+function renderSchedule(){let tb=qs('scheduleTable').querySelector('tbody');tb.innerHTML=schedule.map((p,i)=>`<tr><td>${esc(p.time)}</td><td>${esc(p.channel)}</td><td>${esc(p.type)}</td><td>${esc(p.title)}</td><td>${p.url?'<a href="'+esc(p.url)+'" target="_blank">Link</a>':''}</td><td>${esc(p.note)}</td><td><button onclick="delProgram(${i})">हटाउ</button></td></tr>`).join('')||'<tr><td colspan="7">Schedule खाली अछि।</td></tr>';}
+function clearSchedule(){if(confirm('Schedule साफ करी?')){schedule=[];save();renderSchedule();buildRundown();}}
+function demoSchedule(){schedule=[{time:'07:00',channel:'विदेह ई-लर्निङ्ग',type:'Course',title:'मैथिली भाषा पाठ / UPSC-UGC तैयारी',url:'https://www.youtube.com/@videha-elearning/playlists',note:'आजुक पाठमे भाषा-साहित्यक मूल बिंदु।'},{time:'12:00',channel:'विदेह ई-जर्नल',type:'Playlist',title:'विदेह साहित्यिक पाठ / वार्ता',url:'https://www.youtube.com/@videha_ejournal/playlists',note:'साहित्य, लेखक, अंक आ विशेष कार्यक्रम।'},{time:'17:00',channel:'एक्सेसिबल विदेह',type:'Accessibility',title:'दृश्य-श्रव्य सुगमता कार्यक्रम',url:'https://www.youtube.com/@accessible_videha/playlists',note:'श्रव्य, उपशीर्षक आ accessible सामग्री।'},{time:'20:00',channel:'गजेन्द्र ठाकुर',type:'Podcast',title:'सम्पादकीय वार्ता / रचना-पाठ',url:'https://www.youtube.com/@ggajendra71/videos',note:'दिनक मुख्य चर्चा आ रचना।'}];save();renderSchedule();buildRundown();}
+function buildRundown(){let name=qs('stationName').value||'विदेह Live TV';let theme=qs('themeName').value||'';let lines=[name,'थीम: '+theme,'तिथि: '+new Date().toLocaleString('hi-IN'),'','CHANNELS:'];channels.forEach(c=>lines.push('• '+c.mai+' — '+c.url));lines.push('','PROGRAMME RUNDOWN:'); if(!schedule.length) lines.push('Schedule खाली अछि।'); schedule.forEach((p,i)=>{lines.push(`${i+1}. ${p.time} | ${p.channel} | ${p.type}`);lines.push('   शीर्षक: '+p.title); if(p.url) lines.push('   URL: '+p.url); if(p.note) lines.push('   Anchor: '+p.note);}); lines.push('','YouTube Studio/OBS/mobile live app सँ live stream करैत एहि rundown अनुसार playlist/course/podcast चलाउ।'); qs('rundownOut').textContent=lines.join('\n');}
+function downloadText(filename,text){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download=filename;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},300)}
+function downloadRundown(){buildRundown();downloadText('videha-live-tv-rundown.txt',qs('rundownOut').textContent)}
+function downloadHTML(){buildRundown();let rows=schedule.map(p=>`<tr><td>${esc(p.time)}</td><td>${esc(p.channel)}</td><td>${esc(p.type)}</td><td>${esc(p.title)}</td><td>${p.url?'<a href="'+esc(p.url)+'">Link</a>':''}</td><td>${esc(p.note)}</td></tr>`).join('');let doc=`<!doctype html><meta charset="utf-8"><title>विदेह Live TV Schedule</title><style>body{font-family:serif;background:#FAF6EE;color:#23201B}table{border-collapse:collapse;width:100%}td,th{border:1px solid #D8CFC0;padding:7px}th{background:#F3ECDC}</style><h1>${esc(qs('stationName').value)}</h1><p>${esc(qs('themeName').value)}</p><table><tr><th>समय</th><th>Channel</th><th>प्रकार</th><th>शीर्षक</th><th>URL</th><th>घोषणा</th></tr>${rows}</table>`;let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([doc],{type:'text/html;charset=utf-8'}));a.download='videha-live-tv-schedule.html';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},300)}
+init();
+</script>
+</body></html>
