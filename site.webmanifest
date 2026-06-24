@@ -1,33 +1,57 @@
 {
   "name": "Videha Sadeha Archive",
   "short_name": "Sadeha",
-  "description": "विदेह सदेह PDF archive, searchable index and browser-only Maithili tools.",
+  "description": "Videha Sadeha free Maithili archive with PDF search, full-text indexes, and offline accessibility tools.",
   "lang": "mai",
-  "dir": "auto",
+  "dir": "ltr",
   "start_url": "/videha-sadeha/",
   "scope": "/videha-sadeha/",
-  "display": "standalone",
-  "orientation": "any",
-  "background_color": "#FAF6EE",
+  "display": "minimal-ui",
+  "background_color": "#f1ead6",
   "theme_color": "#8B1A1A",
   "categories": [
     "education",
     "books",
-    "magazines",
-    "culture"
+    "accessibility",
+    "reference",
+    "utilities"
   ],
   "icons": [
     {
       "src": "https://www.videha.co.in/assets/img/favicon.png",
       "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "https://www.videha.co.in/assets/img/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sadeha Index",
+      "short_name": "Index",
+      "url": "/videha-sadeha/sadeha-index.html",
+      "description": "Open the Sadeha archive index."
+    },
+    {
+      "name": "Braille TTS Reader",
+      "short_name": "Braille TTS",
+      "url": "/videha-sadeha/VIDEHA-ACCESSIBILITY-BRAILLE-TTS-READER-OFFLINE.html",
+      "description": "Offline accessibility reader for Braille/TTS use."
+    },
+    {
+      "name": "Document TTS Reader",
+      "short_name": "Doc TTS",
+      "url": "/videha-sadeha/VIDEHA-ACCESSIBILITY-ADULT-DOCUMENT-TTS-READER-OFFLINE.html",
+      "description": "Offline document text-to-speech reader."
+    },
+    {
+      "name": "PDF Tool",
+      "short_name": "PDF Tool",
+      "url": "/videha-sadeha/VIDEHA-PDF-TOOL-v9.html",
+      "description": "Offline PDF accessibility utility."
     }
   ]
 }
