@@ -383,10 +383,26 @@ document.addEventListener('DOMContentLoaded', function(){
       else if(x.url && /archive\.org\/(details|embed)\//.test(x.url)){ label='Archive चलाउ'; secondary='Archive'; }
       else if(x.url && /archive\.org/.test(x.url)){ label='Archive खोलू'; secondary='Archive'; }
       else if(!x.url){ label='YouTube खोजू'; }
-      var safeUrl = x.url ? esc(x.url) : '';
-      var act = x.url ? '<button type="button" class="vd-btn" onclick="vdLoadCatalog(\''+safeUrl+'\')">'+label+'</button><a class="vd-btn secondary" target="_blank" rel="noopener" href="'+safeUrl+'">'+secondary+'</a>' : '<button type="button" class="vd-btn" onclick="vdOpenSearch(\''+esc(x.query || x.title)+'\')">'+label+'</button>';
+      var rawUrl = x.url || '';
+      var safeUrl = rawUrl ? esc(rawUrl) : '';
+      var safeQuery = esc(x.query || x.title || '');
+      var act = '';
+      if(rawUrl && /archive\.org/.test(rawUrl) && !/archive\.org\/(details|embed)\//.test(rawUrl)){
+        /* Archive search/collection pages should be true links, not popup JS. */
+        act = '<a class="vd-btn" target="_blank" rel="noopener noreferrer" href="'+safeUrl+'">'+label+'</a><a class="vd-btn secondary" target="_blank" rel="noopener noreferrer" href="'+safeUrl+'">'+secondary+'</a>';
+      } else if(rawUrl){
+        act = '<button type="button" class="vd-btn" data-vd-catalog-url="'+safeUrl+'">'+label+'</button><a class="vd-btn secondary" target="_blank" rel="noopener noreferrer" href="'+safeUrl+'">'+secondary+'</a>';
+      } else {
+        act = '<button type="button" class="vd-btn" data-vd-search="'+safeQuery+'">'+label+'</button>';
+      }
       return '<div class="vd-item"><div class="vd-item-title">'+esc(x.title)+'</div><div class="vd-item-meta">'+esc([x.type,x.lang,x.licence].filter(Boolean).join(' · '))+'</div><div class="vd-item-meta">'+esc(x.note||'')+'</div><div class="vd-actions">'+act+'</div></div>';
     }).join('');
+    list.querySelectorAll('button[data-vd-catalog-url]').forEach(function(btn){
+      btn.addEventListener('click', function(){ vdLoadCatalog(btn.getAttribute('data-vd-catalog-url') || ''); });
+    });
+    list.querySelectorAll('button[data-vd-search]').forEach(function(btn){
+      btn.addEventListener('click', function(){ vdOpenSearch(btn.getAttribute('data-vd-search') || '', 'youtube'); });
+    });
   }
   if($('cue-body') && !$('cue-body').children.length){ vdAddCue('0','4','',''); vdAddCue('4','8','',''); }
   if($('stop-recording')) $('stop-recording').disabled=true; if($('download-recording')) $('download-recording').disabled=true;
