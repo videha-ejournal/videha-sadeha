@@ -1,21 +1,8 @@
-Videha Dictionary Petar OCR batch processing report
-
-Processed now:
-- Batch 001: PDF pages 1-5, split into left/right OCR records: 10
-- Batch 002: PDF pages 6-10, split into left/right OCR records: 10
-
-Method:
-- Rendered original scanned PDF pages at 200 DPI.
-- Split each landscape PDF page into left/right book pages.
-- Ran Tesseract OCR with Devanagari+English language data.
-- Created preliminary OCR review data. OCR must be checked against page images before adding to the dictionary.
-
-Files:
-- VIDEHA-DICTIONARY-PETAR-OCR-BATCH-REVIEW.html
-- dictionary-petar-ocr-batch-001.js
-- dictionary-petar-ocr-batch-002.js
-- dictionary-petar-ocr-batch-001.txt
-- dictionary-petar-ocr-batch-002.txt
-
-Upload path:
-Place these files in the videha-sadeha repository root. The review HTML expects dictionary-petar-pages/page-001.jpg etc. to already be uploaded from the earlier dictionary package.
+VIDEHA Petar OCR corrected final batch package
+Corrected batch: 101
+Continuous pages: 501-503
+Source PDF: 451_BatchDictionary material videha petar.pdf
+Source PDF local pages: 51-53
+Records: 6 (3 pages split into left/right records)
+Status: final remaining Petar pages processed with real Devanagari OCR text.
+Review HTML loads Batch 001-101 in order.
