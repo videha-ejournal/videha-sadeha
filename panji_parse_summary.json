@@ -1,0 +1,12 @@
+{
+  "version": "v4-volume-ii-update",
+  "total_records": 56369,
+  "base_v3_records": 46844,
+  "spreadsheet_reference_rows_added": 9525,
+  "unique_mool_mulagram_candidates": 27727,
+  "volume_ii_records_included": 34125,
+  "volume_i_khand3_nagaram_records": 7150,
+  "github_prefix": "https://videha-ejournal.github.io/videha-sadeha/",
+  "videha_site_prefix": "https://www.videha.co.in/",
+  "note": "punji-01..08 duplicate uploads were identical to existing v3 source files by hash, so records are relabelled as Volume II rather than duplicated."
+}
