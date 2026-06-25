@@ -1,0 +1,12 @@
+Videha dictionary build report
+
+Excel data file: maithili-thesaurus-data.js
+PDF review pages rendered: 503
+PDF images folder: dictionary-petar-pages/
+Data size: 35.15 MB
+Image folder size: 59.72 MB
+Counts: {"english_maithili":208610,"synonyms":6620,"antonyms":3955,"it_glossary":2285,"technical_pending":33411,"maithili_english":32159}
+
+Technical sheet rows with English/POS and pending Maithili meanings are included in the Technical Pending tab.
+Local add/edit/export provision is built into maithili-thesaurus.html.
+Safer PDF review workflow is built into VIDEHA-DICTIONARY-PETAR-PDF-REVIEW.html.

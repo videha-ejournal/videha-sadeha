@@ -1,0 +1,22 @@
+Videha navigation link fix
+All standard Videha navigation links were changed from GitHub-relative .htm paths to https://www.videha.co.in/ absolute URLs.
+Tool-to-tool local links such as VIDEHA-*.html were preserved.
+
+Updated files:
+- index.htm
+- VIDEHA-AI-DRAMA-ANIMATION-PLANNER.html
+- VIDEHA-AI-DRAMA-AUDIO-PLAY-PLANNER.html
+- VIDEHA-AUTHORIZED-VOICE-BANK.html
+- VIDEHA-EASY-AUDIO-CUTTER-JOINER.html
+- VIDEHA-EASY-VIDEO-CUTTER-JOINER.html
+- VIDEHA-MAITHILI-FILM-RADIO-AI-TOOLS.html
+- VIDEHA-MAITHILI-MOBILE-FILM-STUDIO.html
+- VIDEHA-MAITHILI-RADIO-PLAY-STUDIO.html
+- VIDEHA-MOBILE-AUDIO-RECORDER.html
+- VIDEHA-RADIO-STATION-CONSOLE.html
+- VIDEHA-RADIO.html
+- VIDEHA-SIMPLE-AUDIO-EDITOR-PRODUCER.html
+- VIDEHA-SIMPLE-VIDEO-EDITOR-PRODUCER.html
+- VIDEHA-TELEVISION.html
+- VIDEHA-TV-STATION-CONSOLE.html
+- VIDEHA-YOUTUBE-LIVE-TV-STATION.html
