@@ -1,43 +1,12 @@
 {
-  "version": "v3",
-  "total_records": 46844,
-  "previous_v2_records": 39694,
-  "new_volume_ii_records": 7150,
-  "unique_mool_mulagram_candidates": 24796,
-  "new_sources": [
-    "Vol-3Final03-a(1).doc",
-    "Vol-3Final03-b(1).doc",
-    "Vol-3Final03-c(1).doc",
-    "Vol-3Final03-d(1).doc",
-    "Vol-3Final03-e(1).doc"
-  ],
-  "source_record_counts": {
-    "Final_1-65.doc": 1965,
-    "Final_66-347.doc": 2181,
-    "Final_348-690.doc": 1423,
-    "punji-01-Diwali2014.doc": 1989,
-    "punji-02-Diwali2014.doc": 2873,
-    "punji-03-Diwali2014.doc": 3466,
-    "punji-04-Diwali2014.doc": 5006,
-    "punji-05-Diwali2014.doc": 5497,
-    "punji-06-Diwali2014.doc": 5090,
-    "punji-07-Diwali2014.doc": 8842,
-    "punji-08-Diwali2014.doc": 1362,
-    "Vol-3Final03-a(1).doc": 1726,
-    "Vol-3Final03-b(1).doc": 677,
-    "Vol-3Final03-c(1).doc": 1276,
-    "Vol-3Final03-d(1).doc": 1749,
-    "Vol-3Final03-e(1).doc": 1722
-  },
-  "token_glossary": {
-    "दौ": "maternal grandfather / nānā name in Panji notation",
-    "सँ": "mūla / mūla-grāma identifier marker",
-    "द्दौ / दु": "dauhitra-dau; mother’s maternal grandfather / matṛ-mātāmaha notation",
-    "सुतो / सुतौ": "son(s) / male issue",
-    "सुता": "daughter(s), issue, or linked descendant group depending on context",
-    "अपरा": "another/additional branch",
-    "म.म.उ.": "Mahāmahopādhyāya",
-    "वैया.": "Vaiyākaraṇa / grammarian",
-    "ज्यो.": "Jyotiṣa scholar / astrologer-astronomer"
-  }
+  "version": "v4-volume-ii-update",
+  "total_records": 56369,
+  "base_v3_records": 46844,
+  "spreadsheet_reference_rows_added": 9525,
+  "unique_mool_mulagram_candidates": 27727,
+  "volume_ii_records_included": 34125,
+  "volume_i_khand3_nagaram_records": 7150,
+  "github_prefix": "https://videha-ejournal.github.io/videha-sadeha/",
+  "videha_site_prefix": "https://www.videha.co.in/",
+  "note": "punji-01..08 duplicate uploads were identical to existing v3 source files by hash, so records are relabelled as Volume II rather than duplicated."
 }
