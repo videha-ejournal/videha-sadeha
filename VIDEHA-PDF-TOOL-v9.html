@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>विदेह PDF टूल v9 · Smart Offline PDF Tools</title>
+<title>विदेह PDF टूल v22 · Videha Header/Footer · Compress · Parse · OCR</title>
+<link rel="stylesheet" href="assets/css/videha.css">
 <style>
   :root{
     --cream:#FAF6EE; --paper:#FFFFFF; --navy:#1F2A44; --crimson:#8B1A1A;
@@ -43,7 +44,7 @@
   .mast .offline-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
 
   /* Tabs */
-  .tabs{display:flex;justify-content:center;gap:0;margin:1.6rem 0 1.4rem;border-bottom:1px solid var(--line)}
+  .tabs{display:flex;justify-content:center;gap:0;margin:1.6rem 0 1.4rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
   .tab{
     appearance:none;border:none;background:none;cursor:pointer;
     font-family:inherit;font-size:15.5px;color:var(--navy);
@@ -130,9 +131,53 @@
   }
   .summary.show{display:block}
   .summary b{color:var(--crimson)}
+  .localhost-warn{font-size:.82rem;color:#8a3a00;background:#fff1e0;border:1px solid var(--ochre);border-radius:10px;padding:.8rem .95rem;margin-top:1rem;line-height:1.6}
+  .localhost-warn b{color:var(--crimson)}
 
   footer{text-align:center;font-size:.78rem;color:var(--muted);padding:2rem 1rem;border-top:1px solid var(--line);margin-top:2rem}
   footer a{color:var(--crimson)}
+
+
+  /* Videha site shell: embedded header/footer CSS + optional assets/css/videha.css support */
+  @font-face{
+    font-family:'Noto Sans Tirhuta Local';
+    src:url('assets/fonts/NotoSansTirhuta-Regular.woff2') format('woff2');
+    font-display:swap;
+  }
+  .videha-site-header{
+    background:linear-gradient(180deg,#7f1717 0%,#9d2323 100%);
+    color:#fff;border-bottom:4px double #d6a647;
+    box-shadow:0 2px 12px rgba(0,0,0,.18);
+  }
+  .videha-brandbar{max-width:1120px;margin:0 auto;padding:13px 18px 10px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .videha-wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:240px}
+  .videha-seal{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff8e8;color:#8B1A1A;border:2px solid #e3bf68;font-weight:800;font-size:21px;box-shadow:inset 0 0 0 2px rgba(139,26,26,.12)}
+  .videha-title{font-size:clamp(24px,4vw,39px);font-weight:800;line-height:1;letter-spacing:.02em}
+  .videha-subtitle{font-size:12px;line-height:1.35;color:#ffe6b5;margin-top:4px;letter-spacing:.04em}
+  .videha-utility{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;font-size:12px}
+  .videha-pill{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.08)}
+  .videha-pill:hover{background:#fff;color:#8B1A1A}
+  .videha-menu{max-width:1120px;margin:0 auto;padding:0 18px 12px}
+  .videha-menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.46);border-radius:22px;padding:6px 12px;background:rgba(255,255,255,.08);font-weight:700;color:#fff}
+  .videha-menu summary::-webkit-details-marker{display:none}
+  .videha-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .videha-nav a{font-size:13px;line-height:1;text-decoration:none;color:#fff;background:rgba(31,42,68,.22);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:8px 11px;transition:background .15s,color .15s,border-color .15s}
+  .videha-nav a:hover,.videha-nav a:focus{background:#fff;color:#8B1A1A;border-color:#fff;outline:none}
+  .tirhuta,.videha-tirhuta{font-family:'Noto Sans Tirhuta Local','Noto Sans Tirhuta','Nirmala UI',serif}
+  .mast{position:relative;overflow:hidden}
+  .mast:before,.mast:after{content:'';position:absolute;top:0;bottom:0;width:64px;opacity:.16;background:repeating-linear-gradient(45deg,var(--ochre) 0 2px,transparent 2px 8px)}
+  .mast:before{left:0}.mast:after{right:0}
+  .mast > *{position:relative;z-index:1}
+  .videha-site-footer{background:#1F2A44;color:#f6ead1;border-top:4px double #C77B2C;margin-top:2rem;padding:0;text-align:center;font-size:.84rem}
+  .videha-footer-inner{max-width:1120px;margin:0 auto;padding:1.5rem 18px 1.35rem}
+  .videha-footer-title{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:.25rem}
+  .videha-footer-line{color:#ead8b5;margin:.25rem 0}
+  .videha-footer-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:.85rem}
+  .videha-footer-links a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.06)}
+  .videha-footer-links a:hover{background:#fff;color:#1F2A44}
+  .videha-footer-note{font-size:.76rem;color:#cbbf9f;margin-top:.8rem}
+  @media (min-width:760px){.videha-menu summary{display:none}.videha-menu{padding-top:0}.videha-nav{margin-top:0;justify-content:center}.videha-site-footer{text-align:center}}
+  @media (max-width:759px){.videha-brandbar{align-items:flex-start}.videha-utility{justify-content:flex-start}.videha-menu:not([open]) .videha-nav{display:none}.videha-nav{display:flex;flex-direction:column}.videha-nav a{border-radius:10px}.mast:before,.mast:after{display:none}}
 
   @media (max-width:560px){
     .row label.k{min-width:100%}
@@ -140,85 +185,45 @@
     .tab{padding:11px 16px;font-size:14px}
   }
 </style>
-
-<style id="videha-tool-branding-style">
-/* Videha shared header/footer branding */
-.videha-tool-topbar,.videha-tool-footer{
-  box-sizing:border-box; width:100%; background:#FAF6EE; color:#23201B;
-  border-color:#D8CFC0; font-family:'Noto Serif Devanagari','Libre Baskerville',Georgia,serif;
-}
-.videha-tool-topbar{
-  border-bottom:3px solid #8B1A1A; padding:12px 18px;
-  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
-}
-.videha-tool-brand{font-weight:800; letter-spacing:.01em; color:#8B1A1A;}
-.videha-tool-site{color:#1F2A44; text-decoration:none; border-bottom:1px solid #C77B2C;}
-.videha-tool-return{
-  color:#8B1A1A!important; background:#FFFCF6; border:1px solid #8B1A1A;
-  padding:6px 10px; text-decoration:none; font-weight:700; line-height:1.4;
-}
-.videha-tool-return:hover,.videha-tool-return:focus{background:#8B1A1A;color:#fff!important;}
-.videha-tool-footer{
-  margin-top:28px; border-top:1px solid #D8CFC0; padding:14px 18px; text-align:center; line-height:1.8;
-}
-.videha-tool-footer .videha-tool-return{display:inline-block; margin-top:8px;}
-@media(max-width:720px){
-  .videha-tool-topbar{align-items:flex-start;}
-  .videha-tool-return{width:100%; text-align:center;}
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/videha.css" data-videha-uniform="true">
 </head>
 <body>
-<!-- Videha standard header/nav added for uniform GitHub tool & quiz pages -->
-<div class="videha-topbar">
-  VIDEHA ISSN 2229-547X &nbsp;·&nbsp; First Maithili Fortnightly eJournal &nbsp;·&nbsp; Since 2000 &nbsp;·&nbsp;
-  <a href="https://www.videha.co.in/">www.videha.co.in</a>
-</div>
-<div class="videha-utilbar">
-  <span>विदेह — प्रथम मैथिली पाक्षिक ई पत्रिका</span>
-  <div class="videha-utilbar-social">
-    <a href="https://x.com/videha" target="_blank" rel="noopener">Twitter / X</a>
-    <a href="https://www.facebook.com/groups/videha/" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://www.videha.co.in/archive.htm">Archive</a>
-  </div>
-</div>
-<header class="videha-masthead" role="banner">
-  <a aria-label="विदेह — मैथिली पाक्षिक ई-पत्रिका" class="videha-masthead-title" href="https://www.videha.co.in/index.htm" style="display:inline-block;text-decoration:none;border-bottom:0;">विदेह</a>
-  <div class="videha-masthead-rule" aria-hidden="true"></div>
-  <p class="videha-masthead-sub">प्रथम मैथिली पाक्षिक ई-पत्रिका · First Maithili Fortnightly eJournal</p>
-</header>
-<nav class="videha-nav" role="navigation" aria-label="Videha site navigation">
-  <button aria-label="Menu" class="videha-nav-toggle" onclick="this.parentNode.querySelector('.videha-nav-inner').classList.toggle('open')" type="button">☰</button>
-  <div class="videha-nav-inner">
-    <a href="https://www.videha.co.in/index.htm">विदेह नूतन अंक</a>
-    <a href="https://www.videha.co.in/videha.htm">विदेहक पुरान अंक</a>
-    <a href="https://www.videha.co.in/pothi.htm">विदेह पोथी</a>
-    <a href="https://www.videha.co.in/kids.htm">शिशु उत्सव</a>
-    <a href="https://www.videha.co.in/Audio_Video.htm">दृश्य-श्रव्य नाट्य उत्सव</a>
-    <a href="https://www.videha.co.in/femcorner.htm">स्त्री कोना</a>
-    <a href="https://www.videha.co.in/videha-elearning.htm">विदेह ई-लर्निङ्ग</a>
-    <a href="https://www.videha.co.in/ratna.htm">मिथिला रत्न</a>
-    <a href="https://www.videha.co.in/discovery.htm">मिथिलाक खोज</a>
-    <a href="https://www.videha.co.in/gajenthakur.htm">Parallel History</a>
-    <a href="https://www.videha.co.in/videha-converters.htm">Videha Converters</a>
-    <a href="https://www.videha.co.in/archive.htm">पेटार / Archive</a>
-  </div>
-</nav>
 
-<header class="videha-tool-topbar" role="banner" aria-label="Videha eJournal header">
-  <div class="videha-tool-brand">Videha — First Maithili Fortnightly eJournal&nbsp; | &nbsp;<a class="videha-tool-site" href="https://www.videha.co.in/">www.videha.co.in</a></div>
-  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
+<header class="videha-site-header" aria-label="Videha site header">
+  <div class="videha-brandbar">
+    <a class="videha-wordmark" href="https://www.videha.co.in/" target="_blank" rel="noopener" aria-label="Videha home">
+      <span class="videha-seal">वि</span>
+      <span>
+        <span class="videha-title">विदेह</span>
+        <span class="videha-subtitle">First Maithili Fortnightly eJournal · ISSN 2229-547X</span>
+      </span>
+    </a>
+    <div class="videha-utility" aria-label="Quick links">
+      <a class="videha-pill" href="https://www.videha.co.in/" target="_blank" rel="noopener">www.videha.co.in</a>
+      <a class="videha-pill" href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
+      <a class="videha-pill" href="https://videha-ejournal.github.io/videha-sadeha/" target="_blank" rel="noopener">सदेह औजार</a>
+    </div>
+  </div>
+  <details class="videha-menu" open>
+    <summary>☰ विदेह मेनू</summary>
+    <nav class="videha-nav" aria-label="Videha navigation">
+      <a href="https://www.videha.co.in/" target="_blank" rel="noopener">विदेह नूतन अंक</a>
+      <a href="https://www.videha.co.in/videha_archive.htm" target="_blank" rel="noopener">विदेहक पुरान अंक</a>
+      <a href="https://www.videha.co.in/kids.htm" target="_blank" rel="noopener">शिशु उत्सव</a>
+      <a href="https://www.videha.co.in/Audio_Video.htm" target="_blank" rel="noopener">दृश्य-श्रव्य</a>
+      <a href="https://videha-ejournal.github.io/videha-sadeha/VIDEHA-MAITHILI-NATYA-UTSAV.html" target="_blank" rel="noopener">नाट्य उत्सव</a>
+      <a href="https://www.videha.co.in/femcorner.htm" target="_blank" rel="noopener">स्त्री कोना</a>
+      <a href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
+      <a href="https://videha-ejournal.github.io/videha-sadeha/panji-mool-index.html" target="_blank" rel="noopener">पंजी-मूल</a>
+      <a href="https://videha-ejournal.github.io/videha-sadeha/maithili-thesaurus.html" target="_blank" rel="noopener">मैथिली थिसारस</a>
+      <a href="https://videha-ejournal.github.io/videha-sadeha/maithili-translator.html" target="_blank" rel="noopener">मैथिली अनुवादक</a>
+    </nav>
+  </details>
 </header>
-
 
 <header class="mast">
   <div class="eyebrow">Videha · विदेह — offline browser utility</div>
-  <h1>PDF टूल<span class="en">Smart Compress PDFs · Convert PDF to PNG/JPG</span></h1>
-  <div style="margin-top:.6rem;font-size:13px;color:#8B1A1A;font-weight:700">✦ VERSION 9 · smart no-increase compression · text-safe mode ✦</div>
+  <h1>PDF टूल<span class="en">Smart Compress PDFs · Convert PDF to PNG/JPG · Parse Crop/Zone · OCR Crop/Zone</span></h1>
+  <div style="margin-top:.6rem;font-size:13px;color:#8B1A1A;font-weight:700">✦ VERSION 22 · Videha header/footer · compression · conversion · parse crop/zone · OCR crop/zone ✦</div>
   <div class="offline-badge"><span class="dot"></span> 100% offline — कोनो फाइल अपलोड नहि होइत · nothing leaves your device</div>
 </header>
 
@@ -226,6 +231,8 @@
   <div class="tabs">
     <button class="tab active" data-tab="compress">🗜️ PDF संकुचन · Compress</button>
     <button class="tab" data-tab="convert">🖼️ PDF → PNG/JPG</button>
+    <button class="tab" data-tab="parse">🔎 पाठ पार्सिंग · Parse Text</button>
+    <button class="tab" data-tab="ocr">👁️ स्कैन OCR · OCR Scans</button>
   </div>
 
   <!-- ════════ COMPRESS PANEL ════════ -->
@@ -242,10 +249,9 @@
         <label class="k" for="modeC">मोड · Mode</label>
         <select id="modeC" style="min-width:260px">
           <option value="smart" selected>Smart scan compress — never larger</option>
-          <option value="preserve">Searchable-safe — keep text / no raster</option>
           <option value="raster">Force image recompress — scans only</option>
         </select>
-        <span class="hint" style="margin:0;flex:1;min-width:220px">Smart मोड output पैघ भेल तँ असली PDF राखैत अछि। Searchable-safe मोड text/search नहि बिगाड़ैत, मुदा browser मे साधारणतः size कम नहि करैत।</span>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">Smart/Force मोड scan/image PDF छोट करबाक कोशिश करैत अछि। Searchable text बचाबय लेल ध्यान राखू: raster compression text केँ image बना सकैत अछि।</span>
       </div>
       <div class="row">
         <label class="k" for="qC">गुणवत्ता · Quality</label>
@@ -267,8 +273,8 @@
         <span class="hint" style="margin:0">रंगीन हटा कऽ आओर छोट करू · drop colour for smaller scans (good for text scans)</span>
       </div>
       <div class="warn-rasterize" id="modeCnote">
-        ✅ <b>Smart mode</b>: scan/image PDF केँ छोट करबाक कोशिश करैत अछि, मुदा output पैघ भेल तँ असली PDF राखैत अछि — आब फाइल size बढ़त नहि।<br>
-        <span style="color:var(--muted)">Searchable text बचाबय लेल “Searchable-safe” चुनू। Scan-only compression लेल Smart/Force image recompress उपयोग करू।</span>
+        ✅ <b>Smart mode</b>: scan/image PDF केँ छोट करबाक कोशिश करैत अछि। Output पैघ भेल तँ असली PDF राखैत अछि — फाइल size बढ़त नहि।<br>
+        <span style="color:var(--muted)">ध्यान: ई browser tool OCR नहि जोड़ैत। Searchable PDF पर compression करब त text image भऽ सकैत अछि।</span>
       </div>
     </div>
 
@@ -328,11 +334,231 @@
     <div class="summary" id="sumV"></div>
     <div class="files" id="listV"></div>
   </section>
+
+  <!-- ════════ PARSE PANEL ════════ -->
+  <section class="panel" id="panel-parse">
+    <div class="drop" id="dropP">
+      <div class="big">🔎</div>
+      <div class="lead">देवनागरी/तिरहुता/English PDF सँ पाठ निकालू · Extract Devanagari/Tirhuta/English text</div>
+      <div class="sub">केवल embedded/selectable text निकालैत अछि — scanned image PDF लेल OCR नहि</div>
+      <input type="file" id="fileP" accept="application/pdf" multiple>
+    </div>
+
+    <div class="controls">
+      <div class="row">
+        <label class="k" for="parsePresetP">पार्स preset · Parse preset</label>
+        <select id="parsePresetP" style="min-width:260px">
+          <option value="book" selected>Clean book/text page · साफ किताब-पन्ना</option>
+          <option value="mixed">Mixed English + Devanagari · मिश्रित पाठ</option>
+          <option value="cover">Cover/graphics embedded text · cover/page design</option>
+          <option value="raw">Raw PDF text order · बिना सफाई</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">Cover/graphics पन्ना छोड़बाक लेल Pages मे <b>2-</b> लिखू। ई OCR नहि, केवल embedded/selectable text सुधारि निकालैत अछि।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="scriptP">लिपि · Script</label>
+        <select id="scriptP" style="min-width:260px">
+          <option value="both" selected>Devanagari + Tirhuta only</option>
+          <option value="english">English only · English मात्र</option>
+          <option value="devaenglish">Devanagari + English only</option>
+          <option value="indicenglish">Devanagari + Tirhuta + English only</option>
+          <option value="devanagari">Devanagari only · देवनागरी मात्र</option>
+          <option value="tirhuta">Tirhuta only · तिरहुता मात्र</option>
+          <option value="all">All embedded text · सभ पाठ</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">ई OCR नहि अछि। PDF मे text layer रहत तँ निकालत; केवल image-scan PDF मे खाली/अल्प text भेटि सकैत अछि।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="pagesP">पन्ना · Pages</label>
+        <input type="text" id="pagesP" placeholder="all · 2- skip cover · e.g. 1-3,5,8" style="flex:1;min-width:160px">
+        <span class="hint" style="margin:0">खाली = सभ पन्ना; <b>2-</b> = दोसर पन्ना सँ अन्त धरि; <b>-5</b> = पहिल पाँच पन्ना</span>
+      </div>
+      <div class="row">
+        <label class="k" for="layoutP">क्रम · Layout</label>
+        <select id="layoutP" style="min-width:220px">
+          <option value="auto" selected>Auto reading order · स्वतः</option>
+          <option value="single">Single block / one column</option>
+          <option value="two">Two columns</option>
+          <option value="raw">Raw internal PDF order</option>
+        </select>
+        <span class="hint" style="margin:0">गलत लाइन-क्रम/column mixing हो तँ बदलू।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="cropP">पार्स क्षेत्र · Parse Crop/Zone</label>
+        <select id="cropP" style="min-width:300px">
+          <option value="full" selected>Full page text layer · पूरा पन्ना</option>
+          <option value="inner">Remove outer border/margins · बाहरी किनार हटाउ</option>
+          <option value="leftHalf">Left half only · बामा आधा</option>
+          <option value="rightHalf">Right half only · दहिना आधा</option>
+          <option value="topHalf">Top half only · ऊपर आधा</option>
+          <option value="bottomHalf">Bottom half only · नीचा आधा</option>
+          <option value="custom">Custom percent crop — अपन सीमा</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">Embedded/selectable text केँ पन्नाक क्षेत्र अनुसार छाँटत। Cover/design पन्ना लेल left/right/top/bottom उपयोगी।</span>
+      </div>
+      <div class="row" id="cropCustomRowP" style="display:none">
+        <label class="k">Custom parse crop %</label>
+        <input type="number" id="cropTopP" value="5" min="0" max="90" step="1" title="Top %" style="width:72px"><span class="hint" style="margin:0">Top</span>
+        <input type="number" id="cropRightP" value="5" min="0" max="90" step="1" title="Right %" style="width:72px"><span class="hint" style="margin:0">Right</span>
+        <input type="number" id="cropBottomP" value="5" min="0" max="90" step="1" title="Bottom %" style="width:72px"><span class="hint" style="margin:0">Bottom</span>
+        <input type="number" id="cropLeftP" value="5" min="0" max="90" step="1" title="Left %" style="width:72px"><span class="hint" style="margin:0">Left</span>
+      </div>
+      <div class="row">
+        <label class="k" for="cleanP">सफाई · Clean</label>
+        <input type="checkbox" id="cleanP" checked style="accent-color:var(--crimson);width:18px;height:18px;cursor:pointer">
+        <span class="hint" style="margin:0">extra spaces/blank lines साफ करू · normalize spaces and blank lines</span>
+      </div>
+      <div class="row">
+        <label class="k" for="junkP">Junk हटाउ</label>
+        <input type="checkbox" id="junkP" checked style="accent-color:var(--crimson);width:18px;height:18px;cursor:pointer">
+        <span class="hint" style="margin:0">border/QR/barcode/decorative repeated lines हटाबय केर कोशिश · remove decorative junk lines</span>
+      </div>
+      <div class="warn-rasterize" id="parseNote">
+        🔎 <b>Parsing mode</b>: searchable/selectable PDF सँ Unicode text निकालत। देवनागरी U+0900–097F, तिरहुता U+11480–114DF, आ English/Latin A–Z पहचानैत अछि।<br>
+        <span style="color:var(--muted)">Cover/design पन्ना मे embedded text रहितो क्रम बिगड़ि सकैत अछि; एहि लेल preset, layout, Pages=2-, Parse Crop/Zone, आ Junk हटाउ जोड़ल गेल अछि। Scan-only PDF केँ searchable बनाबय लेल OCR चाही।</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="runP" disabled>🔎 पाठ निकालू · Parse text</button>
+      <button class="btn navy" id="zipP" disabled>⬇️ सब TXT ZIP मे · Download all TXT ZIP</button>
+      <button class="btn ghost" id="clearP" disabled>साफ करू · Clear</button>
+    </div>
+    <div class="summary" id="sumP"></div>
+    <div class="files" id="listP"></div>
+  </section> 
+
+  <!-- ════════ OCR PANEL ════════ -->
+  <section class="panel" id="panel-ocr">
+    <div class="drop" id="dropO">
+      <div class="big">👁️</div>
+      <div class="lead">स्कैन PDF/चित्र सँ OCR पाठ निकालू · OCR scanned PDF/images</div>
+      <div class="sub">देवनागरी · तिरहुता · English — local OCR engine/model रहला पर offline चलत</div>
+      <input type="file" id="fileO" accept="application/pdf,image/*" multiple>
+    </div>
+
+    <div class="controls">
+      <div class="warn-rasterize" style="margin-top:0;margin-bottom:1rem">
+        ⚠️ <b>OCR गुणवत्ता चेतावनी</b>: cover, poster, photo-background, border, QR/barcode, decorative page पर OCR बहुत खराब हो सकैत अछि। साफ किताब-पन्ना/typed text page पर चलाउ। Cover/graphics लेल पहिले page range सँ ओ पन्ना छोड़ू वा नीचे “Sparse/cover text” preset चुनू।
+      </div>
+      <div class="row">
+        <label class="k" for="ocrPresetO">OCR प्रकार · Preset</label>
+        <select id="ocrPresetO" style="min-width:300px">
+          <option value="book" selected>Clean book/text page — fastest/best</option>
+          <option value="mixed">Mixed English + Devanagari page</option>
+          <option value="cover">Cover/poster/graphics — slow, uncertain</option>
+          <option value="raw">Raw/no preprocessing</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">पहिल विकल्प साफ पन्ना लेल अछि। Cover मे सजावट/रेखा/चित्र केँ अक्षर बुझि OCR बिगड़ैत अछि।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="ocrLangO">OCR भाषा · Language</label>
+        <select id="ocrLangO" style="min-width:300px">
+          <option value="eng">English · eng</option>
+          <option value="hin">Devanagari language · hin</option>
+          <option value="Devanagari">Devanagari script model · Devanagari</option>
+          <option value="eng+hin" selected>English + Devanagari language · eng+hin</option>
+          <option value="eng+Devanagari">English + Devanagari script · eng+Devanagari</option>
+          <option value="tirhuta">Tirhuta custom model · tirhuta traineddata required</option>
+          <option value="eng+hin+tirhuta">English + Devanagari + Tirhuta custom · eng+hin+tirhuta</option>
+          <option value="custom">Custom Tesseract language code</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">Mixed page पर केवल “hin” नहि चुनू; English + Devanagari चुनू। Tirhuta लेल genuine <b>tirhuta.traineddata.gz</b> चाही — <b>tir</b> Tigrinya अछि।</span>
+      </div>
+      <div class="row" id="ocrCustomRow" style="display:none">
+        <label class="k" for="ocrCustomO">Custom code</label>
+        <input type="text" id="ocrCustomO" value="eng+hin" style="flex:1;min-width:180px" placeholder="e.g. eng+hin, Devanagari, or tirhuta">
+        <span class="hint" style="margin:0">Same code as traineddata filename(s), without .traineddata.gz</span>
+      </div>
+      <div class="row">
+        <label class="k" for="pagesO">पन्ना · Pages</label>
+        <input type="text" id="pagesO" placeholder="all  ·  e.g. 2-10,15" style="flex:1;min-width:160px">
+        <span class="hint" style="margin:0">Cover छोड़य लेल 2- लिखू। खाली छोड़ू = सभ पन्ना।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="dpiO">OCR विभेदन · DPI</label>
+        <div class="slider-wrap">
+          <input type="range" id="dpiO" min="96" max="240" value="150" step="10">
+          <span class="val" id="dpiOval">150 DPI</span>
+        </div>
+      </div>
+      <div class="row">
+        <label class="k" for="preO">छवि-सफाई · Image prep</label>
+        <select id="preO" style="min-width:260px">
+          <option value="grayContrast" selected>Grayscale + contrast</option>
+          <option value="threshold">Black/white threshold</option>
+          <option value="auto">Auto clean</option>
+          <option value="none">None</option>
+          <option value="invertThreshold">Invert + threshold</option>
+        </select>
+        <span class="hint" style="margin:0">साफ printed page पर threshold नीक; cover/graphics पर none/gray नीक।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="psmO">लेआउट · PSM</label>
+        <select id="psmO" style="min-width:260px">
+          <option value="6" selected>Single block of text · 6</option>
+          <option value="3">Auto page segmentation · 3</option>
+          <option value="4">Single column · 4</option>
+          <option value="11">Sparse text / cover text · 11</option>
+          <option value="13">Raw line · 13</option>
+        </select>
+        <span class="hint" style="margin:0">Book page लेल 6/4; cover/poster लेल 11 कोशिश करू।</span>
+      </div>
+      <div class="row">
+        <label class="k" for="cropO">OCR क्षेत्र · Crop/Zone</label>
+        <select id="cropO" style="min-width:300px">
+          <option value="full" selected>Full page — पूरा पन्ना</option>
+          <option value="inner">Remove outer border/margins — भीतरक भाग</option>
+          <option value="leftHalf">Left half only — बायाँ भाग</option>
+          <option value="rightHalf">Right half only — दाहिना भाग</option>
+          <option value="topHalf">Top half only — ऊपर भाग</option>
+          <option value="bottomHalf">Bottom half only — नीचा भाग</option>
+          <option value="custom">Custom percent crop — अपन सीमा</option>
+        </select>
+        <span class="hint" style="margin:0;flex:1;min-width:220px">Cover/poster मे सजावट आ QR/barcode हटाबय लेल केवल असली text क्षेत्र OCR करू। Whole cover OCR करब बेसीतर खराब होयत।</span>
+      </div>
+      <div class="row" id="cropCustomRowO" style="display:none">
+        <label class="k">Custom crop %</label>
+        <input type="number" id="cropTopO" value="5" min="0" max="90" step="1" title="Top %" style="width:72px"><span class="hint" style="margin:0">Top</span>
+        <input type="number" id="cropRightO" value="5" min="0" max="90" step="1" title="Right %" style="width:72px"><span class="hint" style="margin:0">Right</span>
+        <input type="number" id="cropBottomO" value="5" min="0" max="90" step="1" title="Bottom %" style="width:72px"><span class="hint" style="margin:0">Bottom</span>
+        <input type="number" id="cropLeftO" value="5" min="0" max="90" step="1" title="Left %" style="width:72px"><span class="hint" style="margin:0">Left</span>
+      </div>
+      <div class="row">
+        <label class="k" for="cleanO">सफाई · Clean</label>
+        <input type="checkbox" id="cleanO" checked style="accent-color:var(--crimson);width:18px;height:18px;cursor:pointer">
+        <span class="hint" style="margin:0">OCR output मे blank lines/extra spaces साफ करू</span>
+      </div>
+      <div class="warn-rasterize" id="ocrNote">
+        👁️ <b>Improved offline OCR</b>: v20 मे reusable OCR worker, image-preprocessing, layout presets, आ Crop/Zone जोड़ल गेल अछि। Cover/poster पर पूरा पन्ना नहि, केवल text क्षेत्र OCR करू।<br>
+        <span style="color:var(--muted)">Expected local files: assets/ocr/tesseract.min.js, worker.min.js, tesseract-core.wasm.js, and assets/ocr/lang/eng.traineddata.gz / hin.traineddata.gz / Devanagari.traineddata.gz. For Tirhuta use custom assets/ocr/lang/tirhuta.traineddata.gz.</span><br>
+        <span style="color:var(--crimson);font-weight:700">OCR लेल localhost सँ खोलू। Direct file:// खोलला पर worker/WASM fail भऽ सकैत अछि।</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="runO" disabled>👁️ OCR चलाउ · Run OCR</button>
+      <button class="btn navy" id="zipO" disabled>⬇️ सब OCR ZIP मे · Download all OCR ZIP</button>
+      <button class="btn ghost" id="clearO" disabled>साफ करू · Clear</button>
+    </div>
+    <div class="summary" id="sumO"></div>
+    <div class="files" id="listO"></div>
+  </section>
+
 </div>
 
-<footer>
-  © <span id="yr"></span> Gajendra Thakur · Videha — First Maithili Fortnightly eJournal ISSN 2229-547X<br>
-  सब प्रक्रिया अहाँक ब्राउज़र मे — offline. <a href="https://videha.co.in" target="_blank" rel="noopener">videha.co.in</a>
+<footer class="videha-site-footer">
+  <div class="videha-footer-inner">
+    <div class="videha-footer-title">विदेह · Videha — First Maithili Fortnightly eJournal</div>
+    <div class="videha-footer-line">© <span id="yr"></span> Gajendra Thakur, Editor — Videha eJournal · ISSN 2229-547X</div>
+    <div class="videha-footer-line">ई PDF औजार 100% offline/local browser workflow लेल बनाओल गेल अछि — कोनो फाइल सर्वर पर अपलोड नहि होइत।</div>
+    <div class="videha-footer-links">
+      <a href="https://www.videha.co.in/" target="_blank" rel="noopener">videha.co.in</a>
+      <a href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
+      <a href="https://videha-ejournal.github.io/videha-sadeha/" target="_blank" rel="noopener">Videha Sadeha Tools</a>
+    </div>
+    <div class="videha-footer-note">OCR लेल online GitHub Pages पर HTTPS पर्याप्त अछि; local computer पर OCR चलएबाक लेल localhost BAT प्रयोग करू।</div>
+  </div>
 </footer>
 
 <!-- ░░░ BUNDLED LIBRARIES (inlined for true offline use) ░░░ -->
@@ -822,6 +1048,11 @@ window.addEventListener('error', function(ev){
         'font:14px monospace;padding:10px 14px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.3)';
       document.body.appendChild(bar);
     }
+    var msg=(ev.message||'unknown');
+    if(msg==='Script error.' && location.protocol==='file:'){
+      bar.textContent='⚠️ OCR worker/browser security error:\nChrome/Edge file:// mode blocked an OCR script/worker. Your assets folder may be correct.\nRun OPEN_VIDEHA_OCR_LOCALHOST.bat from this folder and open the page at http://127.0.0.1:8765/ instead.';
+      return;
+    }
     bar.textContent='⚠️ JS ERROR (please screenshot this line):\n'+(ev.message||ev.error||'unknown')+
       '\n  at '+(ev.filename||'')+':'+(ev.lineno||'?');
   }catch(e){}
@@ -847,6 +1078,21 @@ window.addEventListener('unhandledrejection', function(ev){
    ════════════════════════════════════════════════════════════════ */
 (function(){
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function showFileProtocolOcrWarning(){
+    if(location.protocol!=='file:') return;
+    var note=document.getElementById('ocrNote');
+    if(!note || document.getElementById('ocrFileWarn')) return;
+    var box=document.createElement('div');
+    box.id='ocrFileWarn';
+    box.className='localhost-warn';
+    box.innerHTML='⚠️ <b>OCR लेल file:// नहि, localhost चाही</b><br>'+ 
+      'अहाँक folder सही लागैत अछि, मुदा Chrome/Edge file:// mode मे OCR worker/WASM रोकि सकैत अछि। '+
+      'एहि HTML केँ direct double-click नहि, <b>OPEN_VIDEHA_OCR_LOCALHOST.bat</b> सँ खोलू। '+
+      'Compression/Convert/Parse file:// पर चलि सकैत अछि; OCR लेल localhost जरूरी अछि।';
+    note.parentNode.insertBefore(box, note.nextSibling);
+  }
+  showFileProtocolOcrWarning();
 
   // ---- tabs ----
   document.querySelectorAll('.tab').forEach(function(t){
@@ -903,8 +1149,22 @@ window.addEventListener('unhandledrejection', function(ev){
     str.split(',').forEach(function(part){
       part = part.trim(); if(!part) return;
       var m = part.match(/^(\d+)\s*-\s*(\d+)$/);
-      if(m){ var a=+m[1], b=+m[2]; if(a>b){var t=a;a=b;b=t;} for(var i=a;i<=b;i++) if(i>=1&&i<=total) out[i]=1; }
-      else if(/^\d+$/.test(part)){ var n=+part; if(n>=1&&n<=total) out[n]=1; }
+      if(m){
+        var a=+m[1], b=+m[2]; if(a>b){var t=a;a=b;b=t;}
+        for(var i=a;i<=b;i++) if(i>=1&&i<=total) out[i]=1;
+        return;
+      }
+      var m2 = part.match(/^(\d+)\s*-\s*$/); // 2- means page 2 through the end
+      if(m2){
+        var start=+m2[1]; for(var j=start;j<=total;j++) if(j>=1) out[j]=1;
+        return;
+      }
+      var m3 = part.match(/^\s*-\s*(\d+)$/); // -5 means first page through page 5
+      if(m3){
+        var end=+m3[1]; for(var k=1;k<=end;k++) if(k<=total) out[k]=1;
+        return;
+      }
+      if(/^\d+$/.test(part)){ var n=+part; if(n>=1&&n<=total) out[n]=1; }
     });
     var arr = Object.keys(out).map(Number).sort(function(a,b){return a-b;});
     return arr.length ? arr : null;
@@ -975,18 +1235,28 @@ window.addEventListener('unhandledrejection', function(ev){
   qC.addEventListener('input',function(){qCval.textContent=qLabel(qC.value);});
   dpiC.addEventListener('input',function(){dpiCval.textContent=dpiC.value+' DPI';});
   qCval.textContent=qLabel(qC.value);
+  dpiCval.textContent=dpiC.value+' DPI';
+
+  function setCompressionControlsDisabled(disabled){
+    [qC,dpiC,gC].forEach(function(el){ if(el) el.disabled=disabled; });
+    var rows=[qC&&qC.closest('.row'), dpiC&&dpiC.closest('.row'), gC&&gC.closest('.row')];
+    rows.forEach(function(row){ if(row) row.style.opacity = disabled ? '.45' : '1'; });
+  }
+
   function updateModeCNote(){
     var n=document.getElementById('modeCnote'), m=modeC.value;
+    var run=document.getElementById('runC');
     if(!n) return;
-    if(m==='preserve'){
-      n.innerHTML='🔎 <b>Searchable-safe mode</b>: ई मोड PDF केँ चित्र नहि बनबैत, तेँ text/search/copy बाँचल रहत। Browser-only offline मे ई साधारणतः फाइल छोट नहि करैत; output original-preserved रूपेँ देल जाएत।<br><span style="color:var(--muted)">For real lossless PDF-object compression use desktop tools like qpdf/Ghostscript outside the browser.</span>';
-    } else if(m==='raster'){
-      n.innerHTML='⚠️ <b>Force image recompress</b>: हर पन्ना image बनि कऽ नव PDF बनत। ई scan PDFs लेल उपयोगी, मुदा searchable text image भऽ जाएत; output पैघो भऽ सकैत अछि।';
+    setCompressionControlsDisabled(false);
+    if(run) run.textContent='🗜️ संकुचित करू · Compress all';
+    if(m==='raster'){
+      n.innerHTML='⚠️ <b>Force image recompress</b>: हर पन्ना image बनि कऽ नव PDF बनत। ई scan PDFs लेल उपयोगी; quality/DPI slider लागू होइत अछि। Searchable text image भऽ जाएत आ output पैघो भऽ सकैत अछि।';
     } else {
-      n.innerHTML='✅ <b>Smart scan compress</b>: scan/image PDF केँ छोट करबाक कोशिश करैत अछि; output पैघ भेल तँ असली PDF राखैत अछि — फाइल size बढ़त नहि।<br><span style="color:var(--muted)">Searchable text बचाबय लेल Searchable-safe चुनू।</span>';
+      n.innerHTML='✅ <b>Smart scan compress</b>: scan/image PDF छोट करबाक कोशिश करैत अछि; quality/DPI slider लागू होइत अछि। Output पैघ भेल तँ असली PDF राखैत अछि — फाइल size बढ़त नहि।<br><span style="color:var(--muted)">ई tool OCR नहि जोड़ैत। जे PDF पहिनेसँ searchable अछि, ओकर text raster compression मे image बनि सकैत अछि; text बचाबय लेल original सुरक्षित राखू।</span>';
     }
   }
   modeC.addEventListener('change', updateModeCNote);
+  modeC.addEventListener('input', updateModeCNote);
   updateModeCNote();
 
   function refreshCButtons(){
@@ -1007,7 +1277,7 @@ window.addEventListener('unhandledrejection', function(ev){
       if(f.size>=HUGE_FILE_BYTES) sawHuge=true;
       else if(f.size>=LARGE_FILE_BYTES) sawLarge=true;
       var item={file:f,status:'queued',outBlob:null,outName:f.name.replace(/\.pdf$/i,'')+'-compressed.pdf',
-                origSize:f.size,newSize:0};
+                origSize:f.size,newSize:0,modeResult:''};
       compressQueue.push(item);
       renderCItem(item);
     });
@@ -1071,18 +1341,6 @@ window.addEventListener('unhandledrejection', function(ev){
     item.status='working';
     item.statEl.textContent='लोड भऽ रहल अछि · loading…';
     var mode=modeC.value || 'smart';
-    if(mode==='preserve'){
-      item.outBlob=item.file;
-      item.newSize=item.origSize;
-      item.outName=item.file.name.replace(/\.pdf$/i,'')+'-text-preserved-original.pdf';
-      item.status='done';
-      item.statEl.innerHTML=fmtBytes(item.origSize)+' → '+fmtBytes(item.origSize)+' · <span class="delta down">search/text preserved · original kept</span>';
-      item.barEl.style.width='100%';
-      var keepUrl=URL.createObjectURL(item.file);
-      item.dlEl.href=keepUrl; item.dlEl.download=item.outName; item.dlEl.classList.remove('disabled');
-      item.dlEl.textContent='⬇️ PDF';
-      return;
-    }
     var quality=(+qC.value)/100, dpi=+dpiC.value, gray=gC.checked;
     var buf=await item.file.arrayBuffer();
     var _o=await openPdf(buf); var pdf=_o.pdf, loadingTask=_o.loadingTask;
@@ -1135,9 +1393,11 @@ window.addEventListener('unhandledrejection', function(ev){
       item.outBlob=item.file;
       item.newSize=item.origSize;
       item.outName=item.file.name.replace(/\.pdf$/i,'')+'-original-kept.pdf';
+      item.modeResult='kept-original';
       item.statEl.innerHTML=fmtBytes(item.origSize)+' → '+fmtBytes(blob.size)+
         ' would be larger · <span class="delta down">original kept, no increase</span>';
     } else {
+      item.modeResult=(mode==='raster')?'raster-output':'smart-compressed';
       var delta=item.origSize>0 ? (1 - item.newSize/item.origSize) : 0;
       var down=delta>=0;
       var pctTxt=(Math.abs(delta)*100).toFixed(1)+'%';
@@ -1179,9 +1439,17 @@ window.addEventListener('unhandledrejection', function(ev){
     var oTot=done.reduce(function(a,x){return a+x.origSize;},0);
     var nTot=done.reduce(function(a,x){return a+x.newSize;},0);
     var saved=oTot-nTot, pct=oTot>0?(saved/oTot*100):0;
-    sum.innerHTML='✅ <b>'+done.length+'</b> फाइल संकुचित · '+
-      fmtBytes(oTot)+' → <b>'+fmtBytes(nTot)+'</b> · '+
-      'बचत · saved <b>'+fmtBytes(Math.max(0,saved))+' ('+pct.toFixed(1)+'%)</b>';
+    var kept=done.filter(function(x){return x.modeResult==='kept-original';}).length;
+    var compressed=done.length-kept;
+    if(compressed===0 && kept){
+      sum.innerHTML='✅ <b>'+done.length+'</b> फाइल सुरक्षित · '+fmtBytes(oTot)+' → <b>'+fmtBytes(nTot)+'</b> · '+
+        '<b>'+kept+'</b> original kept because recompressed PDF would be larger';
+    } else {
+      sum.innerHTML='✅ <b>'+done.length+'</b> फाइल प्रक्रिया पूर्ण · '+
+        fmtBytes(oTot)+' → <b>'+fmtBytes(nTot)+'</b> · '+
+        'बचत · saved <b>'+fmtBytes(Math.max(0,saved))+' ('+Math.max(0,pct).toFixed(1)+'%)</b>'+
+        (kept?(' · '+kept+' original kept'): '');
+    }
     sum.classList.add('show');
     refreshCButtons();
   }
@@ -1353,6 +1621,649 @@ window.addEventListener('unhandledrejection', function(ev){
     document.getElementById('sumV').classList.remove('show'); refreshVButtons();
   });
 
+
+  // ════════════════════ PARSE TEXT (PDF → TXT/HTML) ════════════════════
+  var parseQueue=[]; // {file,status,text,outBlob,outName,htmlBlob,htmlName,el,statEl,barEl,outEl,dlTxtEl,dlHtmlEl}
+  var parsePresetP=document.getElementById('parsePresetP'), scriptP=document.getElementById('scriptP'), pagesP=document.getElementById('pagesP'), layoutP=document.getElementById('layoutP'), cropP=document.getElementById('cropP'), cropCustomRowP=document.getElementById('cropCustomRowP'), cropTopP=document.getElementById('cropTopP'), cropRightP=document.getElementById('cropRightP'), cropBottomP=document.getElementById('cropBottomP'), cropLeftP=document.getElementById('cropLeftP'), cleanP=document.getElementById('cleanP'), junkP=document.getElementById('junkP');
+
+  function updateParseCropCustomRowP(){
+    if(cropCustomRowP) cropCustomRowP.style.display=(cropP && cropP.value==='custom')?'flex':'none';
+  }
+  if(cropP) cropP.addEventListener('change',updateParseCropCustomRowP);
+  updateParseCropCustomRowP();
+
+  function updateParsePresetNote(){
+    var n=document.getElementById('parseNote'); if(!n) return;
+    var p=parsePresetP ? parsePresetP.value : 'book';
+    if(p==='raw'){
+      if(layoutP) layoutP.value='raw'; if(cropP) cropP.value='full'; updateParseCropCustomRowP(); if(cleanP) cleanP.checked=false; if(junkP) junkP.checked=false;
+      n.innerHTML='🔎 <b>Raw parse</b>: PDF text layer जे क्रम मे देत, ओहिना निकालत। Crop full page, cleaning/junk filter बन्द। ई debugging लेल उपयोगी अछि।';
+    } else if(p==='cover'){
+      if(layoutP) layoutP.value='auto'; if(cropP) cropP.value='inner'; updateParseCropCustomRowP(); if(cleanP) cleanP.checked=true; if(junkP) junkP.checked=true;
+      n.innerHTML='🖼️ <b>Cover/graphics parse</b>: cover वा design पन्ना मे embedded text रहितो क्रम/दोहराव खराब भऽ सकैत अछि। जरूरत हो तँ Pages मे 1 लिखू आ Parse Crop/Zone मे left/right/top/bottom चुनू; किताबक असली पाठ लेल Pages मे 2- लिखू।';
+    } else if(p==='mixed'){
+      if(layoutP) layoutP.value='auto'; if(cropP) cropP.value='full'; updateParseCropCustomRowP(); if(cleanP) cleanP.checked=true; if(junkP) junkP.checked=true;
+      if(scriptP && scriptP.value==='both') scriptP.value='devaenglish';
+      n.innerHTML='🔤 <b>Mixed-script parse</b>: English + Devanagari पन्ना लेल line-order सुधार, repeated/footer junk हटाउ, spacing cleanup, आ जरूरत अनुसार Parse Crop/Zone लागू।';
+    } else {
+      if(layoutP) layoutP.value='single'; if(cropP) cropP.value='full'; updateParseCropCustomRowP(); if(cleanP) cleanP.checked=true; if(junkP) junkP.checked=true;
+      n.innerHTML='📖 <b>Clean book/text parse</b>: साफ किताब/लेख पन्ना लेल। Cover छोड़बाक लेल Pages मे <b>2-</b> लिखू। दो-column किताब हो तँ Layout मे Two columns चुनू; border text हटाबय लेल Parse Crop/Zone मे inner चुनू।';
+    }
+  }
+  if(parsePresetP) parsePresetP.addEventListener('change', updateParsePresetNote);
+  updateParsePresetNote();
+
+  function refreshPButtons(){
+    var has=parseQueue.length>0;
+    var anyDone=parseQueue.some(function(x){return x.status==='done'&&x.outBlob;});
+    document.getElementById('runP').disabled=!has;
+    document.getElementById('clearP').disabled=!has;
+    document.getElementById('zipP').disabled=!anyDone;
+  }
+
+  function addParseFiles(fileList){
+    Array.prototype.forEach.call(fileList,function(f){
+      if(f.type!=='application/pdf' && !/\.pdf$/i.test(f.name)) return;
+      var base=f.name.replace(/\.pdf$/i,'');
+      var item={file:f,status:'queued',text:'',outBlob:null,outName:base+'-parsed-text.txt',htmlBlob:null,htmlName:base+'-parsed-text.html'};
+      parseQueue.push(item); renderPItem(item);
+    });
+    refreshPButtons();
+  }
+
+  function renderPItem(item){
+    var div=document.createElement('div'); div.className='file';
+    div.style.flexDirection='column'; div.style.alignItems='stretch';
+    div.innerHTML=
+      '<div style="display:flex;align-items:center;gap:.8rem;width:100%">'+
+        '<div class="ic">📄</div>'+ 
+        '<div class="meta"><div class="name">'+esc(item.file.name)+'</div>'+ 
+        '<div class="stat">'+fmtBytes(item.file.size)+' · प्रतीक्षारत · queued</div>'+ 
+        '<div class="bar"><i></i></div></div>'+ 
+        '<div class="dl" style="display:flex;gap:.35rem;flex-wrap:wrap"><a class="disabled">TXT</a><a class="disabled">HTML</a></div>'+ 
+        '<button class="remove" title="Remove">✕</button>'+ 
+      '</div>'+ 
+      '<div class="parseOut" style="display:none;margin-top:.75rem"></div>';
+    item.el=div; item.statEl=div.querySelector('.stat'); item.barEl=div.querySelector('.bar > i');
+    var links=div.querySelectorAll('.dl a'); item.dlTxtEl=links[0]; item.dlHtmlEl=links[1]; item.outEl=div.querySelector('.parseOut');
+    div.querySelector('.remove').addEventListener('click',function(){
+      var i=parseQueue.indexOf(item); if(i>=0)parseQueue.splice(i,1);
+      if(item.dlTxtEl&&item.dlTxtEl.href) URL.revokeObjectURL(item.dlTxtEl.href);
+      if(item.dlHtmlEl&&item.dlHtmlEl.href) URL.revokeObjectURL(item.dlHtmlEl.href);
+      div.remove(); refreshPButtons(); updatePSummary();
+    });
+    document.getElementById('listP').appendChild(div);
+  }
+
+  function hasDevanagari(s){ return /[ऀ-ॿ꣠-ꣿ᳐-᳿]/.test(s||''); }
+  function hasEnglish(s){ return /[A-Za-z]/.test(s||''); }
+  function hasTirhuta(s){
+    s=String(s||'');
+    for(var i=0;i<s.length;i++){
+      var cp=s.codePointAt(i);
+      if(cp>=0x11480 && cp<=0x114DF) return true;
+      if(cp>0xFFFF) i++;
+    }
+    return false;
+  }
+  function countScriptChars(s){
+    var deva=0,tir=0,eng=0,other=0;
+    s=String(s||'').replace(/^----- Page \d+ -----$/gm,'');
+    for(var i=0;i<s.length;i++){
+      var cp=s.codePointAt(i);
+      if(cp>=0x0900&&cp<=0x097F || cp>=0xA8E0&&cp<=0xA8FF || cp>=0x1CD0&&cp<=0x1CFF) deva++;
+      else if(cp>=0x11480&&cp<=0x114DF){ tir++; if(cp>0xFFFF) i++; }
+      else if((cp>=65&&cp<=90)||(cp>=97&&cp<=122)) eng++;
+      else if(!/\s/.test(String.fromCodePoint(cp))) other++;
+    }
+    return {deva:deva,tir:tir,eng:eng,other:other};
+  }
+  function keepLineForScript(line, mode){
+    if(mode==='all') return true;
+    var d=hasDevanagari(line), t=hasTirhuta(line), e=hasEnglish(line);
+    if(mode==='devanagari') return d;
+    if(mode==='tirhuta') return t;
+    if(mode==='english') return e;
+    if(mode==='devaenglish') return d||e;
+    if(mode==='indicenglish') return d||t||e;
+    return d||t;
+  }
+  function isLikelyDecorativeLine(line, mode, preset){
+    if(preset==='raw') return false;
+    var s=String(line||'').trim();
+    if(!s) return true;
+    if(s.length<=1) return true;
+    var c=countScriptChars(s);
+    var digits=(s.match(/[0-9०-९]/g)||[]).length;
+    var textChars=c.deva+c.tir+c.eng;
+    var nonSpace=s.replace(/\s/g,'').length || 1;
+    if(/(.)\1{6,}/.test(s.replace(/\s+/g,''))) return true;
+    if(/^[=\-_—–~·•|\\/<>\[\]{}() .:;,+*#'"`०-९0-9]+$/.test(s) && textChars<3) return true;
+    if(nonSpace>8 && textChars/nonSpace < 0.22 && digits/nonSpace < 0.45) return true;
+    if((s.match(/[=\-_—–~|\\/<>]/g)||[]).length >= Math.max(6, Math.floor(nonSpace*0.45))) return true;
+    return false;
+  }
+  function removeRepeatedPageNoise(txt){
+    var lines=String(txt||'').split(/\n/);
+    var counts={};
+    lines.forEach(function(l){ var k=l.trim(); if(k && !/^----- Page \d+ -----$/.test(k) && k.length<90) counts[k]=(counts[k]||0)+1; });
+    return lines.filter(function(l){ var k=l.trim(); return !(counts[k]>=3 && k.length<90 && !/[।.!?]$/.test(k)); }).join('\n');
+  }
+  function normalizeParsedText(txt){
+    return String(txt||'')
+      .replace(/[\t\u00A0]+/g,' ')
+      .replace(/ {2,}/g,' ')
+      .replace(/\n[ \t]+/g,'\n')
+      .replace(/[ \t]+\n/g,'\n')
+      .replace(/\n{3,}/g,'\n\n')
+      .trim();
+  }
+  function parseCropPercents(){
+    var mode=(cropP && cropP.value) ? cropP.value : 'full';
+    var l=0,t=0,r=0,b=0;
+    if(mode==='inner'){ l=.06; r=.06; t=.06; b=.06; }
+    else if(mode==='leftHalf'){ l=.02; r=.50; t=.04; b=.04; }
+    else if(mode==='rightHalf'){ l=.50; r=.02; t=.04; b=.04; }
+    else if(mode==='topHalf'){ l=.04; r=.04; t=.02; b=.50; }
+    else if(mode==='bottomHalf'){ l=.04; r=.04; t=.50; b=.02; }
+    else if(mode==='custom'){
+      t=clamp01Pct(cropTopP&&cropTopP.value); r=clamp01Pct(cropRightP&&cropRightP.value);
+      b=clamp01Pct(cropBottomP&&cropBottomP.value); l=clamp01Pct(cropLeftP&&cropLeftP.value);
+    }
+    if(l+r>=.95){ l=.05; r=.05; }
+    if(t+b>=.95){ t=.05; b=.05; }
+    return {l:l,t:t,r:r,b:b,mode:mode};
+  }
+  function filterTextItemsByParseCrop(items, pageWidth, pageHeight){
+    var mode=(cropP && cropP.value) ? cropP.value : 'full';
+    if(!items || mode==='full' || !pageWidth || !pageHeight) return items||[];
+    var p=parseCropPercents();
+    var xMin=pageWidth*p.l, xMax=pageWidth*(1-p.r);
+    // pdf.js text coordinates normally use a bottom-left origin, so top crop removes high y values.
+    var yMin=pageHeight*p.b, yMax=pageHeight*(1-p.t);
+    return (items||[]).filter(function(it){
+      var s=(it.str||'').trim(); if(!s) return false;
+      var tr=it.transform||[1,0,0,1,0,0];
+      var x=Number(tr[4]||0), y=Number(tr[5]||0);
+      var w=Number(it.width||0), h=Math.abs(Number(tr[3]||it.height||0));
+      var cx=x+(isFinite(w)?w/2:0), cy=y+(isFinite(h)?h/2:0);
+      if(!isFinite(cx)||!isFinite(cy)) return true;
+      return cx>=xMin && cx<=xMax && cy>=yMin && cy<=yMax;
+    });
+  }
+  function textItemsToLines(items, layout, pageWidth){
+    layout=layout||'auto';
+    if(layout==='raw'){
+      return (items||[]).map(function(it){return (it.str||'').trim();}).filter(Boolean);
+    }
+    var rows=[];
+    (items||[]).forEach(function(it){
+      var s=(it.str||'').trim(); if(!s) return;
+      var tr=it.transform||[1,0,0,1,0,0];
+      var h=Math.abs(tr[3]||it.height||10)||10;
+      rows.push({x:tr[4]||0,y:tr[5]||0,w:it.width||0,h:h,s:s});
+    });
+    rows.sort(function(a,b){ return Math.abs(b.y-a.y)>Math.max(3,Math.min(a.h,b.h)*0.35) ? b.y-a.y : a.x-b.x; });
+    var lineObjs=[], cur=null;
+    rows.forEach(function(r){
+      var tol=Math.max(3, r.h*0.45);
+      if(!cur || Math.abs(cur.y-r.y)>tol){ cur={y:r.y,parts:[],xMin:r.x,xMax:r.x+(r.w||0)}; lineObjs.push(cur); }
+      cur.parts.push(r); cur.xMin=Math.min(cur.xMin,r.x); cur.xMax=Math.max(cur.xMax,r.x+(r.w||0));
+    });
+    lineObjs.forEach(function(line){
+      line.parts.sort(function(a,b){return a.x-b.x;});
+      line.text=line.parts.map(function(p){return p.s;}).join(' ').replace(/\s+/g,' ').trim();
+    });
+    var useTwo = layout==='two';
+    if(layout==='auto' && lineObjs.length>=12){
+      var xs=lineObjs.map(function(l){return l.xMin;}).sort(function(a,b){return a-b;});
+      var min=xs[0], max=xs[xs.length-1], mid=(min+max)/2;
+      var left=xs.filter(function(x){return x<mid;}).length, right=xs.length-left;
+      var spread=max-min;
+      useTwo = spread>250 && left>=4 && right>=4 && Math.min(left,right)/Math.max(left,right)>0.20;
+    }
+    if(useTwo){
+      var midx = pageWidth ? pageWidth/2 : (lineObjs.reduce(function(a,l){return Math.min(a,l.xMin);},Infinity)+lineObjs.reduce(function(a,l){return Math.max(a,l.xMax);},-Infinity))/2;
+      var leftCol=lineObjs.filter(function(l){return (l.xMin+l.xMax)/2 < midx;}).sort(function(a,b){return b.y-a.y;});
+      var rightCol=lineObjs.filter(function(l){return (l.xMin+l.xMax)/2 >= midx;}).sort(function(a,b){return b.y-a.y;});
+      return leftCol.concat(rightCol).map(function(l){return l.text;}).filter(Boolean);
+    }
+    return lineObjs.map(function(line){return line.text;}).filter(Boolean);
+  }
+  function postProcessParsedLines(lines, mode, preset){
+    var out=[];
+    (lines||[]).forEach(function(line){
+      if(preset!=='raw' && !keepLineForScript(line,mode)) return;
+      if(junkP && junkP.checked && isLikelyDecorativeLine(line, mode, preset)) return;
+      out.push(line);
+    });
+    return out;
+  }
+  function makeParsedHtml(title, text, counts){
+    var safeTitle=esc(title), safeText=esc(text);
+    return '<!DOCTYPE html><html lang="mai"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'+
+      '<title>'+safeTitle+'</title><style>body{font-family:Georgia,\'Noto Serif Devanagari\',\'Noto Sans Tirhuta\',\'Nirmala UI\',Mangal,serif;background:#FAF6EE;color:#2b2b2b;line-height:1.7;margin:0;padding:2rem}.box{max-width:900px;margin:auto;background:#fff;border:1px solid #D8CFC0;border-radius:14px;padding:1.5rem}h1{color:#1F2A44}.meta{color:#8B1A1A;font-weight:700}pre{white-space:pre-wrap;font:1.05rem/1.8 Georgia,\'Noto Serif Devanagari\',\'Noto Sans Tirhuta\',\'Nirmala UI\',Mangal,serif}</style></head><body><div class="box">'+
+      '<h1>'+safeTitle+'</h1><div class="meta">Devanagari chars: '+counts.deva+' · Tirhuta chars: '+counts.tir+' · English chars: '+counts.eng+' · Other chars: '+counts.other+'</div><hr><pre>'+safeText+'</pre></div></body></html>';
+  }
+
+  async function parseOne(item){
+    item.status='working'; item.text=''; item.statEl.textContent='लोड भऽ रहल अछि · loading…'; item.barEl.style.width='0%';
+    var mode=scriptP.value||'both';
+    var preset=parsePresetP ? (parsePresetP.value||'book') : 'book';
+    var layout=layoutP ? (layoutP.value||'auto') : 'auto';
+    var buf=await item.file.arrayBuffer();
+    var _o=await openPdf(buf); var pdf=_o.pdf, loadingTask=_o.loadingTask;
+    var total=pdf.numPages;
+    var wanted=parsePages(pagesP.value,total) || (function(){var a=[];for(var i=1;i<=total;i++)a.push(i);return a;})();
+    var all=[], emptyPages=0, failed=0;
+    for(var idx=0;idx<wanted.length;idx++){
+      var pno=wanted[idx];
+      try{
+        var page=await pdf.getPage(pno);
+        var vp0=null; try{ vp0=page.getViewport({scale:1}); }catch(_e){}
+        var tc=await page.getTextContent({includeMarkedContent:false,disableNormalization:false});
+        var items=filterTextItemsByParseCrop(tc.items||[], vp0?vp0.width:0, vp0?vp0.height:0);
+        var lines=postProcessParsedLines(textItemsToLines(items, layout, vp0?vp0.width:0), mode, preset);
+        if(lines.length){ all.push('----- Page '+pno+' -----\n'+lines.join('\n')); }
+        else emptyPages++;
+        if(page.cleanup) page.cleanup(); page=null;
+      }catch(e){ failed++; }
+      var pct=Math.round((idx+1)/wanted.length*100);
+      item.barEl.style.width=pct+'%';
+      item.statEl.textContent='पन्ना '+(idx+1)+'/'+wanted.length+' ('+pct+'%) · page '+(idx+1)+'/'+wanted.length;
+      await new Promise(function(res){setTimeout(res,0);});
+    }
+    try{ if(pdf.destroy) pdf.destroy(); }catch(e){}
+    try{ if(loadingTask.destroy) loadingTask.destroy(); }catch(e){}
+    buf=null;
+    var text=all.join('\n\n');
+    if(junkP && junkP.checked && preset!=='raw') text=removeRepeatedPageNoise(text);
+    if(cleanP.checked) text=normalizeParsedText(text);
+    var counts=countScriptChars(text);
+    var warning='';
+    if(!text){ warning=' · <span style="color:var(--crimson)">कोनो embedded text नहि भेटल — scan PDF होयत तँ OCR चाही</span>'; }
+    else if(emptyPages){ warning=' · <span style="color:var(--muted)">'+emptyPages+' खाली/बिना मेल पन्ना</span>'; }
+    if(failed){ warning+=' · <span style="color:var(--crimson)">'+failed+' failed</span>'; }
+    item.text=text;
+    item.outBlob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    var htmlText=makeParsedHtml(item.file.name.replace(/\.pdf$/i,''), text, counts);
+    item.htmlBlob=new Blob([htmlText],{type:'text/html;charset=utf-8'});
+    item.status='done'; item.barEl.style.width='100%';
+    var url=URL.createObjectURL(item.outBlob), hurl=URL.createObjectURL(item.htmlBlob);
+    item.dlTxtEl.href=url; item.dlTxtEl.download=item.outName; item.dlTxtEl.classList.remove('disabled'); item.dlTxtEl.textContent='⬇️ TXT';
+    item.dlHtmlEl.href=hurl; item.dlHtmlEl.download=item.htmlName; item.dlHtmlEl.classList.remove('disabled'); item.dlHtmlEl.textContent='⬇️ HTML';
+    item.statEl.innerHTML='<b>'+fmtBytes(item.outBlob.size)+'</b> text · देवनागरी '+counts.deva+' · तिरहुता '+counts.tir+' · English '+counts.eng+warning;
+    item.outEl.style.display='block'; item.outEl.innerHTML='';
+    var ta=document.createElement('textarea');
+    ta.readOnly=true; ta.value=text || 'No embedded text found. This PDF may be scan/image-only and needs OCR.';
+    ta.style.cssText='width:100%;min-height:220px;border:1px solid var(--line);border-radius:9px;padding:.75rem;background:#fff;font:15px/1.65 Georgia,\'Noto Serif Devanagari\',\'Noto Sans Tirhuta\',\'Nirmala UI\',Mangal,serif;color:var(--ink);resize:vertical';
+    item.outEl.appendChild(ta);
+  }
+
+  document.getElementById('runP').addEventListener('click',async function(){
+    var btn=this; btn.disabled=true; document.getElementById('clearP').disabled=true;
+    parseQueue.forEach(function(it){ if(it.status!=='done'){ it.statEl.textContent='⏳ आरम्भ भऽ रहल अछि · starting…'; } });
+    var lbl=btn.textContent; btn.textContent='⏳ चलि रहल अछि… · parsing…';
+    await new Promise(function(res){setTimeout(res,30);});
+    for(var i=0;i<parseQueue.length;i++){
+      if(parseQueue[i].status==='done') continue;
+      try{ await parseOne(parseQueue[i]); }
+      catch(e){ parseQueue[i].status='error'; parseQueue[i].statEl.innerHTML='<span style="color:var(--crimson)">त्रुटि · error: '+esc(e.message||e)+'</span>'; }
+      updatePSummary();
+    }
+    btn.textContent=lbl; btn.disabled=false; document.getElementById('clearP').disabled=false; refreshPButtons();
+  });
+
+  function updatePSummary(){
+    var done=parseQueue.filter(function(x){return x.status==='done';});
+    var sum=document.getElementById('sumP');
+    if(!done.length){ sum.classList.remove('show'); refreshPButtons(); return; }
+    var totalChars=done.reduce(function(a,x){return a+(x.text||'').length;},0);
+    var totalBytes=done.reduce(function(a,x){return a+(x.outBlob?x.outBlob.size:0);},0);
+    var counts=countScriptChars(done.map(function(x){return x.text||'';}).join('\n'));
+    sum.innerHTML='✅ <b>'+done.length+'</b> PDF parsed · '+fmtBytes(totalBytes)+' TXT · '+totalChars+' chars · देवनागरी '+counts.deva+' · तिरहुता '+counts.tir+' · English '+counts.eng;
+    sum.classList.add('show'); refreshPButtons();
+  }
+
+  document.getElementById('zipP').addEventListener('click',async function(){
+    var done=parseQueue.filter(function(x){return x.status==='done'&&x.outBlob;});
+    if(!done.length) return;
+    var zip=new JSZip();
+    done.forEach(function(x){ zip.file(x.outName, x.outBlob); zip.file(x.htmlName, x.htmlBlob); });
+    var blob=await zip.generateAsync({type:'blob',compression:'STORE'});
+    triggerDownload(blob,'videha-parsed-pdf-text.zip');
+  });
+
+  document.getElementById('clearP').addEventListener('click',function(){
+    parseQueue.forEach(function(x){ if(x.dlTxtEl&&x.dlTxtEl.href) URL.revokeObjectURL(x.dlTxtEl.href); if(x.dlHtmlEl&&x.dlHtmlEl.href) URL.revokeObjectURL(x.dlHtmlEl.href); });
+    parseQueue=[]; document.getElementById('listP').innerHTML=''; document.getElementById('sumP').classList.remove('show'); refreshPButtons();
+  });
+
+
+
+  // ════════════════════ OCR SCANS (PDF/IMAGE → TXT/HTML) ════════════════════
+  var ocrQueue=[]; // {file,status,text,outBlob,outName,htmlBlob,htmlName,el,statEl,barEl,outEl,dlTxtEl,dlHtmlEl}
+  var ocrPresetO=document.getElementById('ocrPresetO'), ocrLangO=document.getElementById('ocrLangO'), pagesO=document.getElementById('pagesO'), dpiO=document.getElementById('dpiO'), dpiOval=document.getElementById('dpiOval'), preO=document.getElementById('preO'), psmO=document.getElementById('psmO'), cropO=document.getElementById('cropO'), cropCustomRowO=document.getElementById('cropCustomRowO'), cropTopO=document.getElementById('cropTopO'), cropRightO=document.getElementById('cropRightO'), cropBottomO=document.getElementById('cropBottomO'), cropLeftO=document.getElementById('cropLeftO'), cleanO=document.getElementById('cleanO'), ocrCustomO=document.getElementById('ocrCustomO');
+  var OCR_MAX_PAGE_PIXELS = 5000000;
+  var _ocrWorker=null, _ocrWorkerKey='';
+
+  dpiO.addEventListener('input',function(){ dpiOval.textContent=dpiO.value+' DPI'; });
+  function updateOcrCustomRow(){
+    var row=document.getElementById('ocrCustomRow');
+    if(row) row.style.display = (ocrLangO.value==='custom')?'flex':'none';
+  }
+  ocrLangO.addEventListener('change',updateOcrCustomRow); updateOcrCustomRow();
+  function updateCropCustomRowO(){
+    if(cropCustomRowO) cropCustomRowO.style.display=(cropO && cropO.value==='custom')?'flex':'none';
+  }
+  if(cropO) cropO.addEventListener('change',updateCropCustomRowO);
+  updateCropCustomRowO();
+  function applyOcrPreset(){
+    var v=ocrPresetO ? ocrPresetO.value : 'book';
+    if(v==='book'){
+      ocrLangO.value='hin'; dpiO.value=150; preO.value='threshold'; psmO.value='6'; if(cropO) cropO.value='full';
+    }else if(v==='mixed'){
+      ocrLangO.value='eng+hin'; dpiO.value=150; preO.value='grayContrast'; psmO.value='6'; if(cropO) cropO.value='full';
+    }else if(v==='cover'){
+      ocrLangO.value='eng+hin'; dpiO.value=120; preO.value='grayContrast'; psmO.value='11'; if(cropO) cropO.value='inner';
+    }else if(v==='raw'){
+      dpiO.value=150; preO.value='none'; psmO.value='3'; if(cropO) cropO.value='full';
+    }
+    dpiOval.textContent=dpiO.value+' DPI'; updateOcrCustomRow(); updateCropCustomRowO();
+  }
+  if(ocrPresetO) ocrPresetO.addEventListener('change',applyOcrPreset);
+
+  function getOcrLang(){
+    var v=ocrLangO.value;
+    if(v==='custom') v=(ocrCustomO.value||'').trim();
+    return v || 'eng';
+  }
+
+  function refreshOButtons(){
+    var has=ocrQueue.length>0;
+    var anyDone=ocrQueue.some(function(x){return x.status==='done'&&x.outBlob;});
+    document.getElementById('runO').disabled=!has;
+    document.getElementById('clearO').disabled=!has;
+    document.getElementById('zipO').disabled=!anyDone;
+  }
+
+  function addOcrFiles(fileList){
+    Array.prototype.forEach.call(fileList,function(f){
+      if(!(f.type==='application/pdf' || /^image\//.test(f.type) || /\.(pdf|png|jpe?g|webp|bmp|gif|tif|tiff)$/i.test(f.name))) return;
+      var base=f.name.replace(/\.(pdf|png|jpe?g|webp|bmp|gif|tif|tiff)$/i,'');
+      var item={file:f,status:'queued',text:'',outBlob:null,outName:base+'-ocr.txt',htmlBlob:null,htmlName:base+'-ocr.html'};
+      ocrQueue.push(item); renderOItem(item);
+    });
+    refreshOButtons();
+  }
+
+  function renderOItem(item){
+    var div=document.createElement('div'); div.className='file';
+    div.style.flexDirection='column'; div.style.alignItems='stretch';
+    div.innerHTML=
+      '<div style="display:flex;align-items:center;gap:.8rem;width:100%">'+
+        '<div class="ic">👁️</div>'+ 
+        '<div class="meta"><div class="name">'+esc(item.file.name)+'</div>'+ 
+        '<div class="stat">'+fmtBytes(item.file.size)+' · OCR प्रतीक्षारत · queued</div>'+ 
+        '<div class="bar"><i></i></div></div>'+ 
+        '<div class="dl" style="display:flex;gap:.35rem;flex-wrap:wrap"><a class="disabled">TXT</a><a class="disabled">HTML</a></div>'+ 
+        '<button class="remove" title="Remove">✕</button>'+ 
+      '</div>'+ 
+      '<div class="parseOut" style="display:none;margin-top:.75rem"></div>';
+    item.el=div; item.statEl=div.querySelector('.stat'); item.barEl=div.querySelector('.bar > i');
+    var links=div.querySelectorAll('.dl a'); item.dlTxtEl=links[0]; item.dlHtmlEl=links[1]; item.outEl=div.querySelector('.parseOut');
+    div.querySelector('.remove').addEventListener('click',function(){
+      var i=ocrQueue.indexOf(item); if(i>=0)ocrQueue.splice(i,1);
+      if(item.dlTxtEl&&item.dlTxtEl.href) URL.revokeObjectURL(item.dlTxtEl.href);
+      if(item.dlHtmlEl&&item.dlHtmlEl.href) URL.revokeObjectURL(item.dlHtmlEl.href);
+      div.remove(); refreshOButtons(); updateOSummary();
+    });
+    document.getElementById('listO').appendChild(div);
+  }
+
+  function loadScriptOnce(src){
+    return new Promise(function(resolve,reject){
+      var existing=document.querySelector('script[data-src="'+src+'"]');
+      if(existing){ existing.addEventListener('load',resolve); existing.addEventListener('error',reject); if(existing.dataset.loaded==='1') resolve(); return; }
+      var sc=document.createElement('script'); sc.src=src; sc.dataset.src=src;
+      sc.onload=function(){ sc.dataset.loaded='1'; resolve(); };
+      sc.onerror=function(){ reject(new Error('OCR engine नहि भेटल: '+src+' — assets/ocr folder same place मे राखू')); };
+      document.head.appendChild(sc);
+    });
+  }
+
+  async function ensureTesseract(){
+    if(window.Tesseract && window.Tesseract.recognize) return;
+    if(location.protocol==='file:'){
+      throw new Error('OCR Chrome/Edge मे file:// सँ नहि चलत। एहि folder मे OPEN_VIDEHA_OCR_LOCALHOST.bat चलाउ, फेर http://127.0.0.1:8765/ सँ HTML खोलू। assets folder सही रहला पर English/Devanagari OCR चलत।');
+    }
+    await loadScriptOnce('assets/ocr/tesseract.min.js');
+    if(!(window.Tesseract && window.Tesseract.recognize)) throw new Error('Tesseract.js load भेल, मुदा recognize function नहि भेटल');
+  }
+
+  function ocrLogger(item,label){
+    return function(m){
+      try{
+        if(m && m.status){
+          var pct = m.progress!=null ? ' '+Math.round(m.progress*100)+'%' : '';
+          item.statEl.textContent=(label||'OCR')+' · '+m.status+pct;
+        }
+      }catch(e){}
+    };
+  }
+  async function getOcrWorker(lang,item,label){
+    await ensureTesseract();
+    var psm=(psmO && psmO.value) ? String(psmO.value) : '6';
+    var key=lang+'|'+psm;
+    if(_ocrWorker && _ocrWorkerKey===key) return _ocrWorker;
+    if(_ocrWorker){ try{ await _ocrWorker.terminate(); }catch(e){} _ocrWorker=null; _ocrWorkerKey=''; }
+    var opts={workerPath:'assets/ocr/worker.min.js',corePath:'assets/ocr/tesseract-core.wasm.js',langPath:'assets/ocr/lang',logger:ocrLogger(item,label)};
+    try{
+      _ocrWorker=await window.Tesseract.createWorker(lang, 1, opts);
+    }catch(e){
+      _ocrWorker=await window.Tesseract.createWorker(opts);
+      if(_ocrWorker.loadLanguage) await _ocrWorker.loadLanguage(lang);
+      if(_ocrWorker.initialize) await _ocrWorker.initialize(lang);
+    }
+    try{
+      if(_ocrWorker.setParameters) await _ocrWorker.setParameters({tessedit_pageseg_mode:psm,preserve_interword_spaces:'1'});
+    }catch(e){}
+    _ocrWorkerKey=key;
+    return _ocrWorker;
+  }
+  async function recognizeCanvas(canvas, lang, item, label){
+    var worker=await getOcrWorker(lang,item,label);
+    var res=await worker.recognize(canvas);
+    return (res && res.data && res.data.text) ? res.data.text : '';
+  }
+
+  function clamp01Pct(v){
+    v=Number(v); if(!isFinite(v)) return 0;
+    return Math.max(0,Math.min(90,v))/100;
+  }
+  function cropCanvasForOcr(srcCanvas){
+    var mode=(cropO && cropO.value) ? cropO.value : 'full';
+    if(!srcCanvas || mode==='full') return srcCanvas;
+    var W=srcCanvas.width, H=srcCanvas.height;
+    var l=0,t=0,r=0,b=0;
+    if(mode==='inner'){ l=.06; r=.06; t=.06; b=.06; }
+    else if(mode==='leftHalf'){ l=.02; r=.50; t=.04; b=.04; }
+    else if(mode==='rightHalf'){ l=.50; r=.02; t=.04; b=.04; }
+    else if(mode==='topHalf'){ l=.04; r=.04; t=.02; b=.50; }
+    else if(mode==='bottomHalf'){ l=.04; r=.04; t=.50; b=.02; }
+    else if(mode==='custom'){
+      t=clamp01Pct(cropTopO&&cropTopO.value); r=clamp01Pct(cropRightO&&cropRightO.value);
+      b=clamp01Pct(cropBottomO&&cropBottomO.value); l=clamp01Pct(cropLeftO&&cropLeftO.value);
+    }
+    if(l+r>=.95){ l=.05; r=.05; }
+    if(t+b>=.95){ t=.05; b=.05; }
+    var sx=Math.max(0,Math.floor(W*l)), sy=Math.max(0,Math.floor(H*t));
+    var sw=Math.max(1,Math.floor(W*(1-l-r))), sh=Math.max(1,Math.floor(H*(1-t-b)));
+    var c=document.createElement('canvas'); c.width=sw; c.height=sh;
+    var ctx=c.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,sw,sh);
+    ctx.drawImage(srcCanvas,sx,sy,sw,sh,0,0,sw,sh);
+    return c;
+  }
+  function cleanOcrGarbage(txt){
+    var lines=String(txt||'').split(/\n/), out=[];
+    for(var i=0;i<lines.length;i++){
+      var line=lines[i].trim();
+      if(!line){ if(out.length && out[out.length-1] !== '') out.push(''); continue; }
+      if(/^----- Page \d+ -----$/.test(line)){ out.push(line); continue; }
+      var c=countScriptChars(line), textChars=c.deva+c.tir+c.eng;
+      var nonSpace=line.replace(/\s/g,'').length || 1;
+      if(nonSpace>10 && textChars/nonSpace < 0.28) continue;
+      if(isLikelyDecorativeLine(line,'all','book')) continue;
+      out.push(line);
+    }
+    return removeRepeatedPageNoise(out.join('\n'));
+  }
+
+  function preprocessForOcr(srcCanvas, mode){
+    mode=mode||'grayContrast';
+    if(mode==='none') return srcCanvas;
+    var w=srcCanvas.width, h=srcCanvas.height;
+    var c=document.createElement('canvas'); c.width=w; c.height=h;
+    var ctx=c.getContext('2d'); ctx.drawImage(srcCanvas,0,0);
+    var img=ctx.getImageData(0,0,w,h), d=img.data;
+    var threshold=180;
+    if(mode==='auto') threshold=170;
+    for(var i=0;i<d.length;i+=4){
+      var g=(d[i]*0.299+d[i+1]*0.587+d[i+2]*0.114)|0;
+      if(mode==='grayContrast' || mode==='auto'){
+        g=Math.max(0,Math.min(255,((g-128)*1.35+128)|0));
+        d[i]=d[i+1]=d[i+2]=g;
+      }else if(mode==='threshold'){
+        var v=g<threshold?0:255; d[i]=d[i+1]=d[i+2]=v;
+      }else if(mode==='invertThreshold'){
+        var v2=g<threshold?255:0; d[i]=d[i+1]=d[i+2]=v2;
+      }
+    }
+    ctx.putImageData(img,0,0);
+    return c;
+  }
+
+  function imageFileToCanvas(file, maxPixels){
+    return new Promise(function(resolve,reject){
+      var url=URL.createObjectURL(file), img=new Image();
+      img.onload=function(){
+        try{
+          var w=img.naturalWidth||img.width, h=img.naturalHeight||img.height, scale=1;
+          if(maxPixels && w*h>maxPixels) scale=Math.sqrt(maxPixels/(w*h));
+          var c=document.createElement('canvas'); c.width=Math.max(1,Math.floor(w*scale)); c.height=Math.max(1,Math.floor(h*scale));
+          var ctx=c.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,c.width,c.height); ctx.drawImage(img,0,0,c.width,c.height);
+          URL.revokeObjectURL(url); resolve({canvas:c,ctx:ctx,w:c.width,h:c.height});
+        }catch(e){ URL.revokeObjectURL(url); reject(e); }
+      };
+      img.onerror=function(){ URL.revokeObjectURL(url); reject(new Error('Image load failed')); };
+      img.src=url;
+    });
+  }
+
+  async function ocrOne(item){
+    item.status='working'; item.text=''; item.statEl.textContent='OCR engine जाँचि रहल अछि · checking OCR engine…'; item.barEl.style.width='0%';
+    var lang=getOcrLang(), dpi=+dpiO.value;
+    // Load before rendering so missing engine fails early with a helpful message.
+    await ensureTesseract();
+    var all=[], failed=0;
+    if(item.file.type==='application/pdf' || /\.pdf$/i.test(item.file.name)){
+      var buf=await item.file.arrayBuffer();
+      var _o=await openPdf(buf); var pdf=_o.pdf, loadingTask=_o.loadingTask;
+      var total=pdf.numPages;
+      var wanted=parsePages(pagesO.value,total) || (function(){var a=[];for(var i=1;i<=total;i++)a.push(i);return a;})();
+      for(var idx=0;idx<wanted.length;idx++){
+        var pno=wanted[idx];
+        try{
+          var page=await pdf.getPage(pno);
+          var r=await renderPage(page,dpi,false,OCR_MAX_PAGE_PIXELS);
+          var cc=cropCanvasForOcr(r.canvas);
+          var pc=preprocessForOcr(cc, preO.value);
+          var text=await recognizeCanvas(pc,lang,item,'Page '+pno+' OCR');
+          if(text && text.trim()) all.push('----- Page '+pno+' -----\n'+text.trim());
+          if(pc!==cc) disposeCanvas(pc);
+          if(cc!==r.canvas) disposeCanvas(cc);
+          disposeCanvas(r.canvas); r.canvas=null; r.ctx=null; r=null;
+          if(page.cleanup) page.cleanup(); page=null;
+        }catch(e){ failed++; }
+        var pct=Math.round((idx+1)/wanted.length*100);
+        item.barEl.style.width=pct+'%';
+        item.statEl.textContent='OCR पन्ना '+(idx+1)+'/'+wanted.length+' ('+pct+'%) · page '+(idx+1)+'/'+wanted.length;
+        await new Promise(function(res){setTimeout(res,0);});
+      }
+      try{ if(pdf.destroy) pdf.destroy(); }catch(e){}
+      try{ if(loadingTask.destroy) loadingTask.destroy(); }catch(e){}
+      buf=null;
+    } else {
+      var rimg=await imageFileToCanvas(item.file, OCR_MAX_PAGE_PIXELS);
+      var ccImg=cropCanvasForOcr(rimg.canvas);
+      var pcImg=preprocessForOcr(ccImg, preO.value);
+      var textImg=await recognizeCanvas(pcImg,lang,item,'Image OCR');
+      if(textImg && textImg.trim()) all.push(textImg.trim());
+      if(pcImg!==ccImg) disposeCanvas(pcImg);
+      if(ccImg!==rimg.canvas) disposeCanvas(ccImg);
+      disposeCanvas(rimg.canvas); rimg.canvas=null; rimg.ctx=null; rimg=null;
+      item.barEl.style.width='100%';
+    }
+    var text=all.join('\n\n');
+    if(cleanO.checked) text=normalizeParsedText(cleanOcrGarbage(text));
+    var counts=countScriptChars(text);
+    item.text=text;
+    item.outBlob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    var htmlText=makeParsedHtml(item.file.name.replace(/\.(pdf|png|jpe?g|webp|bmp|gif|tif|tiff)$/i,''), text, counts);
+    item.htmlBlob=new Blob([htmlText],{type:'text/html;charset=utf-8'});
+    item.status='done'; item.barEl.style.width='100%';
+    var url=URL.createObjectURL(item.outBlob), hurl=URL.createObjectURL(item.htmlBlob);
+    item.dlTxtEl.href=url; item.dlTxtEl.download=item.outName; item.dlTxtEl.classList.remove('disabled'); item.dlTxtEl.textContent='⬇️ TXT';
+    item.dlHtmlEl.href=hurl; item.dlHtmlEl.download=item.htmlName; item.dlHtmlEl.classList.remove('disabled'); item.dlHtmlEl.textContent='⬇️ HTML';
+    var warn=!text ? ' · <span style="color:var(--crimson)">OCR text खाली भेटल</span>' : '';
+    if(failed) warn+=' · <span style="color:var(--crimson)">'+failed+' failed</span>';
+    item.statEl.innerHTML='<b>'+fmtBytes(item.outBlob.size)+'</b> OCR text · देवनागरी '+counts.deva+' · तिरहुता '+counts.tir+' · English '+counts.eng+warn;
+    item.outEl.style.display='block'; item.outEl.innerHTML='';
+    var ta=document.createElement('textarea');
+    ta.readOnly=true; ta.value=text || 'No OCR text found. Check language model, DPI, scan quality, and local OCR assets.';
+    ta.style.cssText='width:100%;min-height:220px;border:1px solid var(--line);border-radius:9px;padding:.75rem;background:#fff;font:15px/1.65 Georgia,\'Noto Serif Devanagari\',\'Noto Sans Tirhuta\',\'Nirmala UI\',Mangal,serif;color:var(--ink);resize:vertical';
+    item.outEl.appendChild(ta);
+  }
+
+  document.getElementById('runO').addEventListener('click',async function(){
+    var btn=this; btn.disabled=true; document.getElementById('clearO').disabled=true;
+    ocrQueue.forEach(function(it){ if(it.status!=='done'){ it.statEl.textContent='⏳ OCR आरम्भ भऽ रहल अछि · starting OCR…'; } });
+    var lbl=btn.textContent; btn.textContent='⏳ OCR चलि रहल अछि…';
+    await new Promise(function(res){setTimeout(res,30);});
+    for(var i=0;i<ocrQueue.length;i++){
+      if(ocrQueue[i].status==='done') continue;
+      try{ await ocrOne(ocrQueue[i]); }
+      catch(e){ ocrQueue[i].status='error'; ocrQueue[i].statEl.innerHTML='<span style="color:var(--crimson)">OCR त्रुटि · error: '+esc(e.message||e)+'</span>'; }
+      updateOSummary();
+    }
+    btn.textContent=lbl; btn.disabled=false; document.getElementById('clearO').disabled=false; refreshOButtons();
+  });
+
+  function updateOSummary(){
+    var done=ocrQueue.filter(function(x){return x.status==='done';});
+    var sum=document.getElementById('sumO');
+    if(!done.length){ sum.classList.remove('show'); refreshOButtons(); return; }
+    var totalChars=done.reduce(function(a,x){return a+(x.text||'').length;},0);
+    var totalBytes=done.reduce(function(a,x){return a+(x.outBlob?x.outBlob.size:0);},0);
+    var counts=countScriptChars(done.map(function(x){return x.text||'';}).join('\n'));
+    sum.innerHTML='✅ <b>'+done.length+'</b> OCR file(s) · '+fmtBytes(totalBytes)+' TXT · '+totalChars+' chars · देवनागरी '+counts.deva+' · तिरहुता '+counts.tir+' · English '+counts.eng;
+    sum.classList.add('show'); refreshOButtons();
+  }
+
+  document.getElementById('zipO').addEventListener('click',async function(){
+    var done=ocrQueue.filter(function(x){return x.status==='done'&&x.outBlob;});
+    if(!done.length) return;
+    var zip=new JSZip();
+    done.forEach(function(x){ zip.file(x.outName, x.outBlob); zip.file(x.htmlName, x.htmlBlob); });
+    var blob=await zip.generateAsync({type:'blob',compression:'STORE'});
+    triggerDownload(blob,'videha-ocr-text.zip');
+  });
+
+  document.getElementById('clearO').addEventListener('click',function(){
+    ocrQueue.forEach(function(x){ if(x.dlTxtEl&&x.dlTxtEl.href) URL.revokeObjectURL(x.dlTxtEl.href); if(x.dlHtmlEl&&x.dlHtmlEl.href) URL.revokeObjectURL(x.dlHtmlEl.href); });
+    ocrQueue=[]; document.getElementById('listO').innerHTML=''; document.getElementById('sumO').classList.remove('show'); try{ if(_ocrWorker){ _ocrWorker.terminate(); _ocrWorker=null; _ocrWorkerKey=''; } }catch(e){} refreshOButtons();
+  });
+
   // ---- shared download ----
   function triggerDownload(blob,name){
     var a=document.createElement('a'), url=URL.createObjectURL(blob);
@@ -1375,13 +2286,10 @@ window.addEventListener('unhandledrejection', function(ev){
   }
   wireDrop('dropC','fileC',addCompressFiles);
   wireDrop('dropV','fileV',addConvertFiles);
+  wireDrop('dropP','fileP',addParseFiles);
+  wireDrop('dropO','fileO',addOcrFiles);
 
 })();
 </script>
-
-<footer class="videha-tool-footer" role="contentinfo" aria-label="Videha eJournal footer">
-  <div>© Gajendra Thakur, Editor — Videha eJournal</div>
-  <a class="videha-tool-return" href="https://www.videha.co.in/">Return to Videha ← विदेह ई-जर्नल पर वापस जाउ</a>
-</footer>
 </body>
 </html>
