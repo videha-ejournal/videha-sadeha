@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>विदेह PDF टूल v22 · Videha Header/Footer · Compress · Parse · OCR</title>
+<title>विदेह PDF टूल v26 · Videha Navigation · Compress · Parse · OCR</title>
 <link rel="stylesheet" href="assets/css/videha.css">
 <style>
   :root{
@@ -176,6 +176,21 @@
   .videha-footer-links a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.06)}
   .videha-footer-links a:hover{background:#fff;color:#1F2A44}
   .videha-footer-note{font-size:.76rem;color:#cbbf9f;margin-top:.8rem}
+
+  /* v23: force readable Videha navigation even when external videha.css is loaded online */
+  .videha-site-header{background:#8B1A1A !important;color:#fff !important}
+  .videha-site-header .videha-title,.videha-site-header .videha-subtitle,.videha-site-header .videha-wordmark{color:#fff !important}
+  .videha-site-header .videha-pill{color:#fff !important;background:rgba(31,42,68,.18) !important;border-color:rgba(255,255,255,.55) !important}
+  .videha-site-header .videha-pill:hover,.videha-site-header .videha-pill:focus{color:#8B1A1A !important;background:#fff8e8 !important;border-color:#e3bf68 !important}
+  .videha-site-header .videha-menu summary{color:#8B1A1A !important;background:#fff8e8 !important;border-color:#e3bf68 !important}
+  .videha-site-header .videha-nav a{color:#8B1A1A !important;background:#fff8e8 !important;border:1px solid #e3bf68 !important;text-shadow:none !important;box-shadow:0 1px 3px rgba(0,0,0,.12) !important;font-weight:700 !important}
+  .videha-site-header .videha-nav a:visited{color:#8B1A1A !important}
+  .videha-site-header .videha-nav a:hover,.videha-site-header .videha-nav a:focus{color:#fff !important;background:#1F2A44 !important;border-color:#1F2A44 !important;outline:none !important}
+  .videha-site-footer{background:#1F2A44 !important;color:#f6ead1 !important}
+  .videha-site-footer .videha-footer-title{color:#fff !important}
+  .videha-site-footer .videha-footer-line{color:#ead8b5 !important}
+  .videha-site-footer .videha-footer-links a{color:#fff !important;background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.32) !important}
+  .videha-site-footer .videha-footer-links a:hover,.videha-site-footer .videha-footer-links a:focus{color:#1F2A44 !important;background:#fff8e8 !important}
   @media (min-width:760px){.videha-menu summary{display:none}.videha-menu{padding-top:0}.videha-nav{margin-top:0;justify-content:center}.videha-site-footer{text-align:center}}
   @media (max-width:759px){.videha-brandbar{align-items:flex-start}.videha-utility{justify-content:flex-start}.videha-menu:not([open]) .videha-nav{display:none}.videha-nav{display:flex;flex-direction:column}.videha-nav a{border-radius:10px}.mast:before,.mast:after{display:none}}
 
@@ -191,7 +206,6 @@
 <header class="videha-site-header" aria-label="Videha site header">
   <div class="videha-brandbar">
     <a class="videha-wordmark" href="https://www.videha.co.in/" target="_blank" rel="noopener" aria-label="Videha home">
-      <span class="videha-seal">वि</span>
       <span>
         <span class="videha-title">विदेह</span>
         <span class="videha-subtitle">First Maithili Fortnightly eJournal · ISSN 2229-547X</span>
@@ -200,22 +214,20 @@
     <div class="videha-utility" aria-label="Quick links">
       <a class="videha-pill" href="https://www.videha.co.in/" target="_blank" rel="noopener">www.videha.co.in</a>
       <a class="videha-pill" href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
-      <a class="videha-pill" href="https://videha-ejournal.github.io/videha-sadeha/" target="_blank" rel="noopener">सदेह औजार</a>
     </div>
   </div>
   <details class="videha-menu" open>
     <summary>☰ विदेह मेनू</summary>
     <nav class="videha-nav" aria-label="Videha navigation">
       <a href="https://www.videha.co.in/" target="_blank" rel="noopener">विदेह नूतन अंक</a>
-      <a href="https://www.videha.co.in/videha_archive.htm" target="_blank" rel="noopener">विदेहक पुरान अंक</a>
+      <a href="https://www.videha.co.in/videha.htm" target="_blank" rel="noopener">विदेहक पुरान अंक</a>
       <a href="https://www.videha.co.in/kids.htm" target="_blank" rel="noopener">शिशु उत्सव</a>
-      <a href="https://www.videha.co.in/Audio_Video.htm" target="_blank" rel="noopener">दृश्य-श्रव्य</a>
-      <a href="https://videha-ejournal.github.io/videha-sadeha/VIDEHA-MAITHILI-NATYA-UTSAV.html" target="_blank" rel="noopener">नाट्य उत्सव</a>
+      <a href="https://www.videha.co.in/Audio_Video.htm" target="_blank" rel="noopener">दृश्य-श्रव्य नाट्य उत्सव</a>
       <a href="https://www.videha.co.in/femcorner.htm" target="_blank" rel="noopener">स्त्री कोना</a>
       <a href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
-      <a href="https://videha-ejournal.github.io/videha-sadeha/panji-mool-index.html" target="_blank" rel="noopener">पंजी-मूल</a>
-      <a href="https://videha-ejournal.github.io/videha-sadeha/maithili-thesaurus.html" target="_blank" rel="noopener">मैथिली थिसारस</a>
-      <a href="https://videha-ejournal.github.io/videha-sadeha/maithili-translator.html" target="_blank" rel="noopener">मैथिली अनुवादक</a>
+      <a href="https://www.videha.co.in/panji-mool-index.html" target="_blank" rel="noopener">पंजी-मूल</a>
+      <a href="https://www.videha.co.in/maithili-thesaurus.html" target="_blank" rel="noopener">मैथिली थिसारस</a>
+      <a href="https://www.videha.co.in/maithili-translator.html" target="_blank" rel="noopener">मैथिली अनुवादक</a>
     </nav>
   </details>
 </header>
@@ -223,7 +235,7 @@
 <header class="mast">
   <div class="eyebrow">Videha · विदेह — offline browser utility</div>
   <h1>PDF टूल<span class="en">Smart Compress PDFs · Convert PDF to PNG/JPG · Parse Crop/Zone · OCR Crop/Zone</span></h1>
-  <div style="margin-top:.6rem;font-size:13px;color:#8B1A1A;font-weight:700">✦ VERSION 22 · Videha header/footer · compression · conversion · parse crop/zone · OCR crop/zone ✦</div>
+  <div style="margin-top:.6rem;font-size:13px;color:#8B1A1A;font-weight:700">✦ VERSION 26 · Videha navigation corrected · compression · conversion · parse crop/zone · OCR crop/zone ✦</div>
   <div class="offline-badge"><span class="dot"></span> 100% offline — कोनो फाइल अपलोड नहि होइत · nothing leaves your device</div>
 </header>
 
@@ -555,7 +567,6 @@
     <div class="videha-footer-links">
       <a href="https://www.videha.co.in/" target="_blank" rel="noopener">videha.co.in</a>
       <a href="https://www.videha.co.in/videha-elearning.htm" target="_blank" rel="noopener">विदेह ई-लर्निङ्ग</a>
-      <a href="https://videha-ejournal.github.io/videha-sadeha/" target="_blank" rel="noopener">Videha Sadeha Tools</a>
     </div>
     <div class="videha-footer-note">OCR लेल online GitHub Pages पर HTTPS पर्याप्त अछि; local computer पर OCR चलएबाक लेल localhost BAT प्रयोग करू।</div>
   </div>
