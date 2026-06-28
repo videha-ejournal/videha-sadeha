@@ -1,0 +1,6 @@
+(function(){
+var D=window.VIDEHA_THESAURUS_DATA=window.VIDEHA_THESAURUS_DATA||{};
+D['maithili_english_synonyms']=D['maithili_english_synonyms']||[];
+var r=[["ढाहब","उखाड़ब","demolish","overthrow"],["ढाहब","ढाहब","demolish","raze"],["ढाहब","नष्ट करब","demolish","destroy"],["ढाहब","पलटब","demolish","overturn"],["ढाहब","बर्बाद करब","demolish","ruin"],["ढिठाई","forwardता","impudence","forwardness"],["ढिठाई","incivilता","impudence","incivility"],["ढिठाई","intrusiveता","impudence","intrusiveness"],["ढिठाई","officiousता","impudence","officiousness"],["ढिठाई","pertता","impudence","pertness"],["ढिठाई","presumptन","impudence","presumption"],["ढिठाई","sauciता","impudence","sauciness"],["ढिठाई","shamelessता","effrontery","shamelessness"],["ढिठाई","अशिष्टता","impudence","rudeness"],["ढिठाई","आश्वासन","effrontery","assurance"],["ढिठाई","आश्वासन","impudence","assurance"],["ढिठाई","ढिठाई","effrontery","impudence"],["ढिठाई","ढिठाई","impudence","effrontery"],["ढिठाई","ढिठाई","impudence","impertinence"],["ढिठाई","धृष्टता","effrontery","insolence"],["ढिठाई","धृष्टता","impudence","insolence"],["ढिठाई","पीतल","effrontery","brass"],["ढिठाई","साहस","effrontery","audacity"],["ढिठाई","साहस","effrontery","boldness"],["ढिठाई","साहस","effrontery","hardihood"],["ढिठाई","साहस","impudence","boldness"]];
+Array.prototype.push.apply(D['maithili_english_synonyms'],r);
+})();

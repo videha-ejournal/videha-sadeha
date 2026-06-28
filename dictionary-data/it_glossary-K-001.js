@@ -1,0 +1,6 @@
+(function(){
+var D=window.VIDEHA_THESAURUS_DATA=window.VIDEHA_THESAURUS_DATA||{};
+D['it_glossary']=D['it_glossary']||[];
+var r=[["Kb","[n]","सहसाङ्क",""],["KB","[n]","सहसाटक",""],["Kbps","[n]","प्रतिसहसाङ्क","प्रतिक्षण सहसाङ्क"],["Keep Aligned","[n]","सोझ राखू","संरेखित राखू"],["Kernel","[n]","हृद्य","गर्भ"],["Key","[n]","कील","कुणी"],["Keyboard","[n]","कीलफलक","यान्त्रिक पिञ्जक समूह"],["Keyboard","[n]","कुञीपटल",""],["Keyboard Layout","[n]","कीलफलक रचना","कीलफलक विधान"],["Keyboard Shortcuts","[n]","कुञीपटल लघुपथ","कुञीपटल शार्टकट"],["Keyring Manager","[n]","कुञी झाबा प्रबंधक","कीरिंग प्रबंधक"],["Keystroke","[n]","कीलनोद","कीलक नोदन"],["Keyword","[n]","कीलपद","मुख्यपद"],["KHz","[n]","सहसहटर्ज",""],["Kilo","[n]","सहस","1000.0"],["Kilobit","[n]","सहसाङ्क","१०२४ अङ्क"],["Kilobyte-KB","[n]","सहसाटक",""],["Kilohertz-KHz","[n]","सहसहटर्ज",""],["Kiosk","[n]","सूचना स्थानक","लोकसूचना देबाक लेल स्थानक"],["Knowledge","[n]","विज्ञान","प्रमेय"],["Knowledge Acquisition","[n]","विज्ञानप्राप्ति","भान"],["Knowledge Base","[n]","विज्ञाननिधि",""],["Knowledge Engineer","[n]","विज्ञानतन्त्रज्ञ","शास्त्रानिपुण"],["Knowledge Representation","[n]","विज्ञानवर्णन","विज्ञाननिरूपण"]];
+Array.prototype.push.apply(D['it_glossary'],r);
+})();
