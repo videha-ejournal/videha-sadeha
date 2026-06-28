@@ -1,0 +1,32 @@
+{
+  "source": "Panji_Genealogy_Merged(2).xlsx",
+  "runtime_policy": "compact key-sheet JSON; full text PDF sheet omitted; six English books are in panji_english_books_corpus.json",
+  "rows": 79636,
+  "catalog_entries": 686,
+  "sheet_stats": [
+    {
+      "sheet": "VB2_Search_Master",
+      "rows": 78178
+    },
+    {
+      "sheet": "VB3_Notable_Persons_Index",
+      "rows": 817
+    },
+    {
+      "sheet": "VB2_Honorifics_Index",
+      "rows": 10
+    },
+    {
+      "sheet": "VB2_Mool_Index",
+      "rows": 193
+    },
+    {
+      "sheet": "VB3_Village_Gazetteer",
+      "rows": 418
+    },
+    {
+      "sheet": "Gotra-Mool Thesaurus",
+      "rows": 20
+    }
+  ]
+}

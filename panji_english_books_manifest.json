@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Videha Panji English Books Corpus",
+    "books": 6,
+    "pages": 4868,
+    "chars": 19754293,
+    "generated_from": "1-6 KINDLE.zip"
+  },
+  "books": [
+    {
+      "book_id": "B01",
+      "volume": "Volume I, Khand 1",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_I_Khand_1_Kindle_PDF_Final.pdf",
+      "pages": 2726,
+      "text_pages": 2726,
+      "chars": 16163393
+    },
+    {
+      "book_id": "B02",
+      "volume": "Volume II, Khand 1",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_II_Khand_1_Kindle_PDF_Final.pdf",
+      "pages": 527,
+      "text_pages": 527,
+      "chars": 750653
+    },
+    {
+      "book_id": "B03",
+      "volume": "Volume III",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_III_Kindle_Readable.pdf",
+      "pages": 322,
+      "text_pages": 322,
+      "chars": 571142
+    },
+    {
+      "book_id": "B04",
+      "volume": "Volume IV",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_IV_Kindle_6x9_REPAIRED.pdf",
+      "pages": 769,
+      "text_pages": 769,
+      "chars": 1275321
+    },
+    {
+      "book_id": "B05",
+      "volume": "Volume V",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_V_Kindle.pdf",
+      "pages": 305,
+      "text_pages": 305,
+      "chars": 596618
+    },
+    {
+      "book_id": "B06",
+      "volume": "Volume VI",
+      "source_file": "Decoding_the_Panji_of_Mithila_Volume_VI_Kindle.pdf",
+      "pages": 219,
+      "text_pages": 219,
+      "chars": 397166
+    }
+  ]
+}

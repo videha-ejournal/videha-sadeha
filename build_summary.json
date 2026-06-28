@@ -1,0 +1,57 @@
+{
+  "books": {
+    "title": "Videha Panji English Books Corpus",
+    "books": 6,
+    "pages": 4868,
+    "chars": 19754293,
+    "generated_from": "1-6 KINDLE.zip"
+  },
+  "excel": {
+    "source": "Panji_Genealogy_Merged(2).xlsx",
+    "runtime_policy": "compact key-sheet JSON; full text PDF sheet omitted; six English books are in panji_english_books_corpus.json",
+    "rows": 79636,
+    "catalog_entries": 686,
+    "sheet_stats": [
+      {
+        "sheet": "VB2_Search_Master",
+        "rows": 78178
+      },
+      {
+        "sheet": "VB3_Notable_Persons_Index",
+        "rows": 817
+      },
+      {
+        "sheet": "VB2_Honorifics_Index",
+        "rows": 10
+      },
+      {
+        "sheet": "VB2_Mool_Index",
+        "rows": 193
+      },
+      {
+        "sheet": "VB3_Village_Gazetteer",
+        "rows": 418
+      },
+      {
+        "sheet": "Gotra-Mool Thesaurus",
+        "rows": 20
+      }
+    ]
+  },
+  "patched_html": [
+    "panji-mool-index.html",
+    "VIDEHA-PANJI-MOOL-BIJI-PURUSH-SEARCH.html",
+    "VIDEHA-PANJI-PRABANDHA-SEARCH-HUB.html",
+    "panji-mool-index_external.html",
+    "panji-mool-index_prototype.html",
+    "panji_search_external.html",
+    "panji_search_prototype.html"
+  ],
+  "sizes": {
+    "panji_english_books_corpus.json": "22.9 MB",
+    "panji_search_index.json": "48.6 MB",
+    "panji_mool_mulagram_catalog.json": "123.1 KB",
+    "panji_english_books_manifest.json": "1.5 KB",
+    "panji_excel_manifest.json": "664 B"
+  }
+}
