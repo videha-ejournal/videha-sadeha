@@ -1,0 +1,109 @@
+{
+  "elapsed_sec": 18.5,
+  "db_record_count": 78198,
+  "pdf_record_count": 10600,
+  "db_index_count": 308,
+  "largest_db_indexes": [
+    [
+      "ap",
+      68329
+    ],
+    [
+      "d092a",
+      68329
+    ],
+    [
+      "d092b",
+      68326
+    ],
+    [
+      "apa",
+      67349
+    ],
+    [
+      "d091a",
+      65324
+    ],
+    [
+      "ac",
+      65324
+    ],
+    [
+      "d091b",
+      65324
+    ],
+    [
+      "ach",
+      64888
+    ],
+    [
+      "d092e",
+      45467
+    ],
+    [
+      "am",
+      45467
+    ],
+    [
+      "as",
+      35661
+    ],
+    [
+      "d0938",
+      35661
+    ],
+    [
+      "d0936",
+      35660
+    ],
+    [
+      "d0937",
+      35660
+    ],
+    [
+      "d092c",
+      32413
+    ],
+    [
+      "d092d",
+      32413
+    ],
+    [
+      "ab",
+      32413
+    ],
+    [
+      "ama",
+      31492
+    ],
+    [
+      "d0915",
+      30529
+    ],
+    [
+      "ak",
+      30529
+    ]
+  ],
+  "sheets": [
+    {
+      "name": "Gotra-Mool Thesaurus",
+      "kind": "db1",
+      "rows": 20
+    },
+    {
+      "name": "VB2_Search_Master",
+      "kind": "db2",
+      "rows": 78178
+    },
+    {
+      "name": "_PDF_FullText",
+      "kind": "pdf",
+      "rows": 10600
+    }
+  ],
+  "pdf_index_keys": 640,
+  "pdf_index_record_count": 10600,
+  "pdf_chunk_size": 50,
+  "pdf_chunks": 212
+}

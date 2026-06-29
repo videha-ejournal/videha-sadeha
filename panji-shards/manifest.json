@@ -1,0 +1,3920 @@
+{
+  "version": "2026-06-29-panji-shards-v1",
+  "source_file": "Panji_Genealogy_Merged(1).xlsb",
+  "created_utc": "2026-06-29T03:18:20Z",
+  "strategy": "Gotra-Mool + VB2 Search Master are prefix-indexed. PDF full text is chunked and loaded only when PDF search is run. HTML never fetches XLSB for normal search.",
+  "min_search_chars": 2,
+  "db_chunk_size": 500,
+  "pdf_chunk_size": 50,
+  "db_record_count": 78198,
+  "pdf_record_count": 10600,
+  "db_index_keys": {
+    "d091c": {
+      "file": "panji-shards/index/db/d091c.json",
+      "count": 10565
+    },
+    "ame": {
+      "file": "panji-shards/index/db/ame.json",
+      "count": 33
+    },
+    "ach": {
+      "file": "panji-shards/index/db/ach.json",
+      "count": 64888
+    },
+    "d0906": {
+      "file": "panji-shards/index/db/d0906.json",
+      "count": 10446
+    },
+    "aka": {
+      "file": "panji-shards/index/db/aka.json",
+      "count": 15323
+    },
+    "d092e": {
+      "file": "panji-shards/index/db/d092e.json",
+      "count": 45467
+    },
+    "apa": {
+      "file": "panji-shards/index/db/apa.json",
+      "count": 67349
+    },
+    "d0928": {
+      "file": "panji-shards/index/db/d0928.json",
+      "count": 9645
+    },
+    "d0917": {
+      "file": "panji-shards/index/db/d0917.json",
+      "count": 12842
+    },
+    "aj": {
+      "file": "panji-shards/index/db/aj.json",
+      "count": 10565
+    },
+    "au": {
+      "file": "panji-shards/index/db/au.json",
+      "count": 2840
+    },
+    "ana": {
+      "file": "panji-shards/index/db/ana.json",
+      "count": 6976
+    },
+    "d092c": {
+      "file": "panji-shards/index/db/d092c.json",
+      "count": 32413
+    },
+    "agh": {
+      "file": "panji-shards/index/db/agh.json",
+      "count": 1689
+    },
+    "d0905": {
+      "file": "panji-shards/index/db/d0905.json",
+      "count": 10446
+    },
+    "ag": {
+      "file": "panji-shards/index/db/ag.json",
+      "count": 12842
+    },
+    "as": {
+      "file": "panji-shards/index/db/as.json",
+      "count": 35661
+    },
+    "d0915": {
+      "file": "panji-shards/index/db/d0915.json",
+      "count": 30529
+    },
+    "d0909": {
+      "file": "panji-shards/index/db/d0909.json",
+      "count": 2840
+    },
+    "av": {
+      "file": "panji-shards/index/db/av.json",
+      "count": 15309
+    },
+    "aa": {
+      "file": "panji-shards/index/db/aa.json",
+      "count": 10446
+    },
+    "d0939": {
+      "file": "panji-shards/index/db/d0939.json",
+      "count": 12215
+    },
+    "ak": {
+      "file": "panji-shards/index/db/ak.json",
+      "count": 30529
+    },
+    "d091a": {
+      "file": "panji-shards/index/db/d091a.json",
+      "count": 65324
+    },
+    "d092b": {
+      "file": "panji-shards/index/db/d092b.json",
+      "count": 68326
+    },
+    "d0925": {
+      "file": "panji-shards/index/db/d0925.json",
+      "count": 13241
+    },
+    "d0916": {
+      "file": "panji-shards/index/db/d0916.json",
+      "count": 30525
+    },
+    "ad": {
+      "file": "panji-shards/index/db/ad.json",
+      "count": 26650
+    },
+    "d092d": {
+      "file": "panji-shards/index/db/d092d.json",
+      "count": 32413
+    },
+    "ash": {
+      "file": "panji-shards/index/db/ash.json",
+      "count": 1
+    },
+    "ase": {
+      "file": "panji-shards/index/db/ase.json",
+      "count": 7956
+    },
+    "abu": {
+      "file": "panji-shards/index/db/abu.json",
+      "count": 5701
+    },
+    "d0935": {
+      "file": "panji-shards/index/db/d0935.json",
+      "count": 15310
+    },
+    "ata": {
+      "file": "panji-shards/index/db/ata.json",
+      "count": 6660
+    },
+    "ati": {
+      "file": "panji-shards/index/db/ati.json",
+      "count": 1220
+    },
+    "aut": {
+      "file": "panji-shards/index/db/aut.json",
+      "count": 48
+    },
+    "ama": {
+      "file": "panji-shards/index/db/ama.json",
+      "count": 31492
+    },
+    "abr": {
+      "file": "panji-shards/index/db/abr.json",
+      "count": 567
+    },
+    "ako": {
+      "file": "panji-shards/index/db/ako.json",
+      "count": 792
+    },
+    "d0927": {
+      "file": "panji-shards/index/db/d0927.json",
+      "count": 26638
+    },
+    "d0920": {
+      "file": "panji-shards/index/db/d0920.json",
+      "count": 13350
+    },
+    "akh": {
+      "file": "panji-shards/index/db/akh.json",
+      "count": 11660
+    },
+    "d0922": {
+      "file": "panji-shards/index/db/d0922.json",
+      "count": 26641
+    },
+    "amo": {
+      "file": "panji-shards/index/db/amo.json",
+      "count": 1545
+    },
+    "asi": {
+      "file": "panji-shards/index/db/asi.json",
+      "count": 619
+    },
+    "d091f": {
+      "file": "panji-shards/index/db/d091f.json",
+      "count": 13245
+    },
+    "d0936": {
+      "file": "panji-shards/index/db/d0936.json",
+      "count": 35660
+    },
+    "d0926": {
+      "file": "panji-shards/index/db/d0926.json",
+      "count": 26643
+    },
+    "abh": {
+      "file": "panji-shards/index/db/abh.json",
+      "count": 9374
+    },
+    "avi": {
+      "file": "panji-shards/index/db/avi.json",
+      "count": 1599
+    },
+    "adi": {
+      "file": "panji-shards/index/db/adi.json",
+      "count": 661
+    },
+    "aba": {
+      "file": "panji-shards/index/db/aba.json",
+      "count": 16339
+    },
+    "d091d": {
+      "file": "panji-shards/index/db/d091d.json",
+      "count": 10565
+    },
+    "asa": {
+      "file": "panji-shards/index/db/asa.json",
+      "count": 14731
+    },
+    "d091e": {
+      "file": "panji-shards/index/db/d091e.json",
+      "count": 9645
+    },
+    "d0918": {
+      "file": "panji-shards/index/db/d0918.json",
+      "count": 12842
+    },
+    "d0938": {
+      "file": "panji-shards/index/db/d0938.json",
+      "count": 35661
+    },
+    "ac": {
+      "file": "panji-shards/index/db/ac.json",
+      "count": 65324
+    },
+    "aal": {
+      "file": "panji-shards/index/db/aal.json",
+      "count": 513
+    },
+    "aan": {
+      "file": "panji-shards/index/db/aan.json",
+      "count": 1856
+    },
+    "d091b": {
+      "file": "panji-shards/index/db/d091b.json",
+      "count": 65324
+    },
+    "d090a": {
+      "file": "panji-shards/index/db/d090a.json",
+      "count": 2838
+    },
+    "aga": {
+      "file": "panji-shards/index/db/aga.json",
+      "count": 5120
+    },
+    "aho": {
+      "file": "panji-shards/index/db/aho.json",
+      "count": 181
+    },
+    "ap": {
+      "file": "panji-shards/index/db/ap.json",
+      "count": 68329
+    },
+    "d0921": {
+      "file": "panji-shards/index/db/d0921.json",
+      "count": 26642
+    },
+    "d0937": {
+      "file": "panji-shards/index/db/d0937.json",
+      "count": 35660
+    },
+    "ab": {
+      "file": "panji-shards/index/db/ab.json",
+      "count": 32413
+    },
+    "aji": {
+      "file": "panji-shards/index/db/aji.json",
+      "count": 924
+    },
+    "d0919": {
+      "file": "panji-shards/index/db/d0919.json",
+      "count": 9645
+    },
+    "d0924": {
+      "file": "panji-shards/index/db/d0924.json",
+      "count": 13241
+    },
+    "am": {
+      "file": "panji-shards/index/db/am.json",
+      "count": 45467
+    },
+    "an": {
+      "file": "panji-shards/index/db/an.json",
+      "count": 9645
+    },
+    "d092a": {
+      "file": "panji-shards/index/db/d092a.json",
+      "count": 68329
+    },
+    "ah": {
+      "file": "panji-shards/index/db/ah.json",
+      "count": 12215
+    },
+    "at": {
+      "file": "panji-shards/index/db/at.json",
+      "count": 13354
+    },
+    "aso": {
+      "file": "panji-shards/index/db/aso.json",
+      "count": 4333
+    },
+    "d0923": {
+      "file": "panji-shards/index/db/d0923.json",
+      "count": 9645
+    },
+    "ala": {
+      "file": "panji-shards/index/db/ala.json",
+      "count": 5954
+    },
+    "api": {
+      "file": "panji-shards/index/db/api.json",
+      "count": 493
+    },
+    "al": {
+      "file": "panji-shards/index/db/al.json",
+      "count": 12173
+    },
+    "ara": {
+      "file": "panji-shards/index/db/ara.json",
+      "count": 9235
+    },
+    "ava": {
+      "file": "panji-shards/index/db/ava.json",
+      "count": 13416
+    },
+    "d0932": {
+      "file": "panji-shards/index/db/d0932.json",
+      "count": 12173
+    },
+    "ar": {
+      "file": "panji-shards/index/db/ar.json",
+      "count": 24615
+    },
+    "d0930": {
+      "file": "panji-shards/index/db/d0930.json",
+      "count": 24615
+    },
+    "abi": {
+      "file": "panji-shards/index/db/abi.json",
+      "count": 386
+    },
+    "aha": {
+      "file": "panji-shards/index/db/aha.json",
+      "count": 11322
+    },
+    "aph": {
+      "file": "panji-shards/index/db/aph.json",
+      "count": 1788
+    },
+    "auc": {
+      "file": "panji-shards/index/db/auc.json",
+      "count": 141
+    },
+    "aad": {
+      "file": "panji-shards/index/db/aad.json",
+      "count": 1336
+    },
+    "d090b": {
+      "file": "panji-shards/index/db/d090b.json",
+      "count": 24600
+    },
+    "aud": {
+      "file": "panji-shards/index/db/aud.json",
+      "count": 696
+    },
+    "aja": {
+      "file": "panji-shards/index/db/aja.json",
+      "count": 7960
+    },
+    "ada": {
+      "file": "panji-shards/index/db/ada.json",
+      "count": 8669
+    },
+    "aau": {
+      "file": "panji-shards/index/db/aau.json",
+      "count": 1916
+    },
+    "ath": {
+      "file": "panji-shards/index/db/ath.json",
+      "count": 725
+    },
+    "akr": {
+      "file": "panji-shards/index/db/akr.json",
+      "count": 1411
+    },
+    "aku": {
+      "file": "panji-shards/index/db/aku.json",
+      "count": 3766
+    },
+    "ado": {
+      "file": "panji-shards/index/db/ado.json",
+      "count": 3643
+    },
+    "aap": {
+      "file": "panji-shards/index/db/aap.json",
+      "count": 1640
+    },
+    "asu": {
+      "file": "panji-shards/index/db/asu.json",
+      "count": 12664
+    },
+    "abe": {
+      "file": "panji-shards/index/db/abe.json",
+      "count": 4465
+    },
+    "ae": {
+      "file": "panji-shards/index/db/ae.json",
+      "count": 5757
+    },
+    "d090f": {
+      "file": "panji-shards/index/db/d090f.json",
+      "count": 5757
+    },
+    "aek": {
+      "file": "panji-shards/index/db/aek.json",
+      "count": 5656
+    },
+    "ago": {
+      "file": "panji-shards/index/db/ago.json",
+      "count": 4433
+    },
+    "ade": {
+      "file": "panji-shards/index/db/ade.json",
+      "count": 10297
+    },
+    "aw": {
+      "file": "panji-shards/index/db/aw.json",
+      "count": 1
+    },
+    "awa": {
+      "file": "panji-shards/index/db/awa.json",
+      "count": 1
+    },
+    "ani": {
+      "file": "panji-shards/index/db/ani.json",
+      "count": 1511
+    },
+    "aur": {
+      "file": "panji-shards/index/db/aur.json",
+      "count": 67
+    },
+    "ano": {
+      "file": "panji-shards/index/db/ano.json",
+      "count": 202
+    },
+    "ai": {
+      "file": "panji-shards/index/db/ai.json",
+      "count": 12992
+    },
+    "ain": {
+      "file": "panji-shards/index/db/ain.json",
+      "count": 1209
+    },
+    "aup": {
+      "file": "panji-shards/index/db/aup.json",
+      "count": 81
+    },
+    "apr": {
+      "file": "panji-shards/index/db/apr.json",
+      "count": 3013
+    },
+    "d0907": {
+      "file": "panji-shards/index/db/d0907.json",
+      "count": 12992
+    },
+    "ali": {
+      "file": "panji-shards/index/db/ali.json",
+      "count": 5961
+    },
+    "d0908": {
+      "file": "panji-shards/index/db/d0908.json",
+      "count": 12992
+    },
+    "alo": {
+      "file": "panji-shards/index/db/alo.json",
+      "count": 536
+    },
+    "ait": {
+      "file": "panji-shards/index/db/ait.json",
+      "count": 685
+    },
+    "d093f": {
+      "file": "panji-shards/index/db/d093f.json",
+      "count": 8534
+    },
+    "asv": {
+      "file": "panji-shards/index/db/asv.json",
+      "count": 3793
+    },
+    "aul": {
+      "file": "panji-shards/index/db/aul.json",
+      "count": 99
+    },
+    "aig": {
+      "file": "panji-shards/index/db/aig.json",
+      "count": 160
+    },
+    "aii": {
+      "file": "panji-shards/index/db/aii.json",
+      "count": 468
+    },
+    "aki": {
+      "file": "panji-shards/index/db/aki.json",
+      "count": 799
+    },
+    "aia": {
+      "file": "panji-shards/index/db/aia.json",
+      "count": 3773
+    },
+    "aai": {
+      "file": "panji-shards/index/db/aai.json",
+      "count": 372
+    },
+    "ahi": {
+      "file": "panji-shards/index/db/ahi.json",
+      "count": 419
+    },
+    "ayo": {
+      "file": "panji-shards/index/db/ayo.json",
+      "count": 620
+    },
+    "ay": {
+      "file": "panji-shards/index/db/ay.json",
+      "count": 2920
+    },
+    "d092f": {
+      "file": "panji-shards/index/db/d092f.json",
+      "count": 2920
+    },
+    "agu": {
+      "file": "panji-shards/index/db/agu.json",
+      "count": 2939
+    },
+    "ail": {
+      "file": "panji-shards/index/db/ail.json",
+      "count": 153
+    },
+    "ave": {
+      "file": "panji-shards/index/db/ave.json",
+      "count": 126
+    },
+    "aya": {
+      "file": "panji-shards/index/db/aya.json",
+      "count": 2019
+    },
+    "adh": {
+      "file": "panji-shards/index/db/adh.json",
+      "count": 2383
+    },
+    "aui": {
+      "file": "panji-shards/index/db/aui.json",
+      "count": 30
+    },
+    "apu": {
+      "file": "panji-shards/index/db/apu.json",
+      "count": 1889
+    },
+    "aru": {
+      "file": "panji-shards/index/db/aru.json",
+      "count": 1974
+    },
+    "asr": {
+      "file": "panji-shards/index/db/asr.json",
+      "count": 2558
+    },
+    "aiu": {
+      "file": "panji-shards/index/db/aiu.json",
+      "count": 440
+    },
+    "agr": {
+      "file": "panji-shards/index/db/agr.json",
+      "count": 138
+    },
+    "aih": {
+      "file": "panji-shards/index/db/aih.json",
+      "count": 46
+    },
+    "aid": {
+      "file": "panji-shards/index/db/aid.json",
+      "count": 90
+    },
+    "adu": {
+      "file": "panji-shards/index/db/adu.json",
+      "count": 2638
+    },
+    "aju": {
+      "file": "panji-shards/index/db/aju.json",
+      "count": 178
+    },
+    "atr": {
+      "file": "panji-shards/index/db/atr.json",
+      "count": 618
+    },
+    "amu": {
+      "file": "panji-shards/index/db/amu.json",
+      "count": 20212
+    },
+    "d093c": {
+      "file": "panji-shards/index/db/d093c.json",
+      "count": 84
+    },
+    "ajh": {
+      "file": "panji-shards/index/db/ajh.json",
+      "count": 1185
+    },
+    "aas": {
+      "file": "panji-shards/index/db/aas.json",
+      "count": 288
+    },
+    "ake": {
+      "file": "panji-shards/index/db/ake.json",
+      "count": 707
+    },
+    "aao": {
+      "file": "panji-shards/index/db/aao.json",
+      "count": 14
+    },
+    "aik": {
+      "file": "panji-shards/index/db/aik.json",
+      "count": 559
+    },
+    "agi": {
+      "file": "panji-shards/index/db/agi.json",
+      "count": 405
+    },
+    "aak": {
+      "file": "panji-shards/index/db/aak.json",
+      "count": 96
+    },
+    "ais": {
+      "file": "panji-shards/index/db/ais.json",
+      "count": 290
+    },
+    "air": {
+      "file": "panji-shards/index/db/air.json",
+      "count": 2361
+    },
+    "ami": {
+      "file": "panji-shards/index/db/ami.json",
+      "count": 462
+    },
+    "avu": {
+      "file": "panji-shards/index/db/avu.json",
+      "count": 348
+    },
+    "aav": {
+      "file": "panji-shards/index/db/aav.json",
+      "count": 415
+    },
+    "abo": {
+      "file": "panji-shards/index/db/abo.json",
+      "count": 588
+    },
+    "age": {
+      "file": "panji-shards/index/db/age.json",
+      "count": 132
+    },
+    "aio": {
+      "file": "panji-shards/index/db/aio.json",
+      "count": 456
+    },
+    "avo": {
+      "file": "panji-shards/index/db/avo.json",
+      "count": 9
+    },
+    "are": {
+      "file": "panji-shards/index/db/are.json",
+      "count": 13289
+    },
+    "d0949": {
+      "file": "panji-shards/index/db/d0949.json",
+      "count": 78
+    },
+    "auk": {
+      "file": "panji-shards/index/db/auk.json",
+      "count": 8
+    },
+    "asy": {
+      "file": "panji-shards/index/db/asy.json",
+      "count": 723
+    },
+    "ayi": {
+      "file": "panji-shards/index/db/ayi.json",
+      "count": 111
+    },
+    "ajn": {
+      "file": "panji-shards/index/db/ajn.json",
+      "count": 391
+    },
+    "ahr": {
+      "file": "panji-shards/index/db/ahr.json",
+      "count": 289
+    },
+    "apo": {
+      "file": "panji-shards/index/db/apo.json",
+      "count": 179
+    },
+    "aag": {
+      "file": "panji-shards/index/db/aag.json",
+      "count": 60
+    },
+    "aij": {
+      "file": "panji-shards/index/db/aij.json",
+      "count": 19
+    },
+    "aiv": {
+      "file": "panji-shards/index/db/aiv.json",
+      "count": 165
+    },
+    "aeo": {
+      "file": "panji-shards/index/db/aeo.json",
+      "count": 3
+    },
+    "aat": {
+      "file": "panji-shards/index/db/aat.json",
+      "count": 181
+    },
+    "d0914": {
+      "file": "panji-shards/index/db/d0914.json",
+      "count": 1957
+    },
+    "d0913": {
+      "file": "panji-shards/index/db/d0913.json",
+      "count": 1951
+    },
+    "ao": {
+      "file": "panji-shards/index/db/ao.json",
+      "count": 1957
+    },
+    "aib": {
+      "file": "panji-shards/index/db/aib.json",
+      "count": 73
+    },
+    "aim": {
+      "file": "panji-shards/index/db/aim.json",
+      "count": 247
+    },
+    "aam": {
+      "file": "panji-shards/index/db/aam.json",
+      "count": 595
+    },
+    "add": {
+      "file": "panji-shards/index/db/add.json",
+      "count": 146
+    },
+    "ahe": {
+      "file": "panji-shards/index/db/ahe.json",
+      "count": 53
+    },
+    "aar": {
+      "file": "panji-shards/index/db/aar.json",
+      "count": 343
+    },
+    "ajo": {
+      "file": "panji-shards/index/db/ajo.json",
+      "count": 77
+    },
+    "auj": {
+      "file": "panji-shards/index/db/auj.json",
+      "count": 32
+    },
+    "ari": {
+      "file": "panji-shards/index/db/ari.json",
+      "count": 351
+    },
+    "aoi": {
+      "file": "panji-shards/index/db/aoi.json",
+      "count": 71
+    },
+    "arv": {
+      "file": "panji-shards/index/db/arv.json",
+      "count": 1617
+    },
+    "aac": {
+      "file": "panji-shards/index/db/aac.json",
+      "count": 343
+    },
+    "aie": {
+      "file": "panji-shards/index/db/aie.json",
+      "count": 2229
+    },
+    "atu": {
+      "file": "panji-shards/index/db/atu.json",
+      "count": 261
+    },
+    "aug": {
+      "file": "panji-shards/index/db/aug.json",
+      "count": 374
+    },
+    "ajy": {
+      "file": "panji-shards/index/db/ajy.json",
+      "count": 72
+    },
+    "aaj": {
+      "file": "panji-shards/index/db/aaj.json",
+      "count": 445
+    },
+    "ady": {
+      "file": "panji-shards/index/db/ady.json",
+      "count": 1377
+    },
+    "aor": {
+      "file": "panji-shards/index/db/aor.json",
+      "count": 16
+    },
+    "aca": {
+      "file": "panji-shards/index/db/aca.json",
+      "count": 3007
+    },
+    "avr": {
+      "file": "panji-shards/index/db/avr.json",
+      "count": 5
+    },
+    "aay": {
+      "file": "panji-shards/index/db/aay.json",
+      "count": 41
+    },
+    "aci": {
+      "file": "panji-shards/index/db/aci.json",
+      "count": 144
+    },
+    "ate": {
+      "file": "panji-shards/index/db/ate.json",
+      "count": 4245
+    },
+    "aog": {
+      "file": "panji-shards/index/db/aog.json",
+      "count": 345
+    },
+    "aro": {
+      "file": "panji-shards/index/db/aro.json",
+      "count": 698
+    },
+    "aum": {
+      "file": "panji-shards/index/db/aum.json",
+      "count": 351
+    },
+    "aq": {
+      "file": "panji-shards/index/db/aq.json",
+      "count": 2
+    },
+    "aqa": {
+      "file": "panji-shards/index/db/aqa.json",
+      "count": 1
+    },
+    "aab": {
+      "file": "panji-shards/index/db/aab.json",
+      "count": 278
+    },
+    "anu": {
+      "file": "panji-shards/index/db/anu.json",
+      "count": 256
+    },
+    "apy": {
+      "file": "panji-shards/index/db/apy.json",
+      "count": 59
+    },
+    "acu": {
+      "file": "panji-shards/index/db/acu.json",
+      "count": 269
+    },
+    "alu": {
+      "file": "panji-shards/index/db/alu.json",
+      "count": 139
+    },
+    "aks": {
+      "file": "panji-shards/index/db/aks.json",
+      "count": 39
+    },
+    "auh": {
+      "file": "panji-shards/index/db/auh.json",
+      "count": 9
+    },
+    "anr": {
+      "file": "panji-shards/index/db/anr.json",
+      "count": 429
+    },
+    "aev": {
+      "file": "panji-shards/index/db/aev.json",
+      "count": 13
+    },
+    "aoh": {
+      "file": "panji-shards/index/db/aoh.json",
+      "count": 10
+    },
+    "aus": {
+      "file": "panji-shards/index/db/aus.json",
+      "count": 62
+    },
+    "ane": {
+      "file": "panji-shards/index/db/ane.json",
+      "count": 52
+    },
+    "ans": {
+      "file": "panji-shards/index/db/ans.json",
+      "count": 2
+    },
+    "aod": {
+      "file": "panji-shards/index/db/aod.json",
+      "count": 102
+    },
+    "ahd": {
+      "file": "panji-shards/index/db/ahd.json",
+      "count": 8
+    },
+    "d093e": {
+      "file": "panji-shards/index/db/d093e.json",
+      "count": 6
+    },
+    "aet": {
+      "file": "panji-shards/index/db/aet.json",
+      "count": 7
+    },
+    "ace": {
+      "file": "panji-shards/index/db/ace.json",
+      "count": 17
+    },
+    "arb": {
+      "file": "panji-shards/index/db/arb.json",
+      "count": 67
+    },
+    "arh": {
+      "file": "panji-shards/index/db/arh.json",
+      "count": 24
+    },
+    "art": {
+      "file": "panji-shards/index/db/art.json",
+      "count": 49
+    },
+    "arg": {
+      "file": "panji-shards/index/db/arg.json",
+      "count": 91
+    },
+    "adv": {
+      "file": "panji-shards/index/db/adv.json",
+      "count": 136
+    },
+    "aah": {
+      "file": "panji-shards/index/db/aah.json",
+      "count": 68
+    },
+    "aua": {
+      "file": "panji-shards/index/db/aua.json",
+      "count": 103
+    },
+    "ark": {
+      "file": "panji-shards/index/db/ark.json",
+      "count": 5
+    },
+    "ato": {
+      "file": "panji-shards/index/db/ato.json",
+      "count": 267
+    },
+    "ayu": {
+      "file": "panji-shards/index/db/ayu.json",
+      "count": 196
+    },
+    "arm": {
+      "file": "panji-shards/index/db/arm.json",
+      "count": 25
+    },
+    "aaa": {
+      "file": "panji-shards/index/db/aaa.json",
+      "count": 41
+    },
+    "agv": {
+      "file": "panji-shards/index/db/agv.json",
+      "count": 1
+    },
+    "ars": {
+      "file": "panji-shards/index/db/ars.json",
+      "count": 8
+    },
+    "arr": {
+      "file": "panji-shards/index/db/arr.json",
+      "count": 35
+    },
+    "and": {
+      "file": "panji-shards/index/db/and.json",
+      "count": 353
+    },
+    "arp": {
+      "file": "panji-shards/index/db/arp.json",
+      "count": 8
+    },
+    "ale": {
+      "file": "panji-shards/index/db/ale.json",
+      "count": 39
+    },
+    "ard": {
+      "file": "panji-shards/index/db/ard.json",
+      "count": 12
+    },
+    "aco": {
+      "file": "panji-shards/index/db/aco.json",
+      "count": 74
+    },
+    "all": {
+      "file": "panji-shards/index/db/all.json",
+      "count": 2
+    },
+    "aot": {
+      "file": "panji-shards/index/db/aot.json",
+      "count": 6
+    },
+    "d094b": {
+      "file": "panji-shards/index/db/d094b.json",
+      "count": 5
+    },
+    "aip": {
+      "file": "panji-shards/index/db/aip.json",
+      "count": 209
+    },
+    "akc": {
+      "file": "panji-shards/index/db/akc.json",
+      "count": 1
+    },
+    "auo": {
+      "file": "panji-shards/index/db/auo.json",
+      "count": 4
+    },
+    "arn": {
+      "file": "panji-shards/index/db/arn.json",
+      "count": 23
+    },
+    "aon": {
+      "file": "panji-shards/index/db/aon.json",
+      "count": 1
+    },
+    "auv": {
+      "file": "panji-shards/index/db/auv.json",
+      "count": 8
+    },
+    "arc": {
+      "file": "panji-shards/index/db/arc.json",
+      "count": 2
+    },
+    "aob": {
+      "file": "panji-shards/index/db/aob.json",
+      "count": 2
+    },
+    "asn": {
+      "file": "panji-shards/index/db/asn.json",
+      "count": 10
+    },
+    "d0941": {
+      "file": "panji-shards/index/db/d0941.json",
+      "count": 40
+    },
+    "d0910": {
+      "file": "panji-shards/index/db/d0910.json",
+      "count": 9
+    },
+    "ant": {
+      "file": "panji-shards/index/db/ant.json",
+      "count": 4
+    },
+    "aub": {
+      "file": "panji-shards/index/db/aub.json",
+      "count": 15
+    },
+    "ahu": {
+      "file": "panji-shards/index/db/ahu.json",
+      "count": 36
+    },
+    "aic": {
+      "file": "panji-shards/index/db/aic.json",
+      "count": 24
+    },
+    "d0945": {
+      "file": "panji-shards/index/db/d0945.json",
+      "count": 4172
+    },
+    "d0965": {
+      "file": "panji-shards/index/db/d0965.json",
+      "count": 63
+    },
+    "aoj": {
+      "file": "panji-shards/index/db/aoj.json",
+      "count": 42
+    },
+    "ajv": {
+      "file": "panji-shards/index/db/ajv.json",
+      "count": 4
+    },
+    "arl": {
+      "file": "panji-shards/index/db/arl.json",
+      "count": 23
+    },
+    "ary": {
+      "file": "panji-shards/index/db/ary.json",
+      "count": 30
+    },
+    "aiy": {
+      "file": "panji-shards/index/db/aiy.json",
+      "count": 5
+    },
+    "att": {
+      "file": "panji-shards/index/db/att.json",
+      "count": 2
+    },
+    "aqr": {
+      "file": "panji-shards/index/db/aqr.json",
+      "count": 1
+    },
+    "ast": {
+      "file": "panji-shards/index/db/ast.json",
+      "count": 2
+    },
+    "anj": {
+      "file": "panji-shards/index/db/anj.json",
+      "count": 6
+    },
+    "asd": {
+      "file": "panji-shards/index/db/asd.json",
+      "count": 1
+    },
+    "aje": {
+      "file": "panji-shards/index/db/aje.json",
+      "count": 2
+    },
+    "arj": {
+      "file": "panji-shards/index/db/arj.json",
+      "count": 2
+    },
+    "anh": {
+      "file": "panji-shards/index/db/anh.json",
+      "count": 14
+    },
+    "aem": {
+      "file": "panji-shards/index/db/aem.json",
+      "count": 3
+    },
+    "ael": {
+      "file": "panji-shards/index/db/ael.json",
+      "count": 1
+    },
+    "aok": {
+      "file": "panji-shards/index/db/aok.json",
+      "count": 4
+    },
+    "alh": {
+      "file": "panji-shards/index/db/alh.json",
+      "count": 31
+    },
+    "aen": {
+      "file": "panji-shards/index/db/aen.json",
+      "count": 9
+    },
+    "d095d": {
+      "file": "panji-shards/index/db/d095d.json",
+      "count": 1098
+    },
+    "agp": {
+      "file": "panji-shards/index/db/agp.json",
+      "count": 16
+    },
+    "avy": {
+      "file": "panji-shards/index/db/avy.json",
+      "count": 8
+    },
+    "adr": {
+      "file": "panji-shards/index/db/adr.json",
+      "count": 5
+    },
+    "d0970": {
+      "file": "panji-shards/index/db/d0970.json",
+      "count": 29
+    },
+    "any": {
+      "file": "panji-shards/index/db/any.json",
+      "count": 1
+    },
+    "aee": {
+      "file": "panji-shards/index/db/aee.json",
+      "count": 2
+    },
+    "aky": {
+      "file": "panji-shards/index/db/aky.json",
+      "count": 10
+    },
+    "amr": {
+      "file": "panji-shards/index/db/amr.json",
+      "count": 17
+    },
+    "amn": {
+      "file": "panji-shards/index/db/amn.json",
+      "count": 5
+    },
+    "aeh": {
+      "file": "panji-shards/index/db/aeh.json",
+      "count": 2
+    },
+    "aby": {
+      "file": "panji-shards/index/db/aby.json",
+      "count": 1
+    },
+    "d0903": {
+      "file": "panji-shards/index/db/d0903.json",
+      "count": 1
+    },
+    "alk": {
+      "file": "panji-shards/index/db/alk.json",
+      "count": 1
+    },
+    "aol": {
+      "file": "panji-shards/index/db/aol.json",
+      "count": 920
+    },
+    "aun": {
+      "file": "panji-shards/index/db/aun.json",
+      "count": 1
+    },
+    "atl": {
+      "file": "panji-shards/index/db/atl.json",
+      "count": 1
+    },
+    "aae": {
+      "file": "panji-shards/index/db/aae.json",
+      "count": 1
+    },
+    "ank": {
+      "file": "panji-shards/index/db/ank.json",
+      "count": 1
+    }
+  },
+  "record_paths": {
+    "db": "panji-shards/records/db_{chunk}.json",
+    "pdf": "panji-shards/records/pdf_{chunk}.json"
+  },
+  "sheets": [
+    {
+      "name": "Gotra-Mool Thesaurus",
+      "kind": "db1",
+      "rows": 20
+    },
+    {
+      "name": "VB2_Search_Master",
+      "kind": "db2",
+      "rows": 78178
+    },
+    {
+      "name": "_PDF_FullText",
+      "kind": "pdf",
+      "rows": 10600
+    }
+  ],
+  "query_initial_equivalents": {
+    "a": [
+      "अ",
+      "आ"
+    ],
+    "i": [
+      "इ",
+      "ई"
+    ],
+    "u": [
+      "उ",
+      "ऊ"
+    ],
+    "e": [
+      "ए"
+    ],
+    "o": [
+      "ओ",
+      "औ"
+    ],
+    "k": [
+      "क",
+      "ख"
+    ],
+    "g": [
+      "ग",
+      "घ"
+    ],
+    "c": [
+      "च",
+      "छ"
+    ],
+    "j": [
+      "ज",
+      "झ"
+    ],
+    "t": [
+      "त",
+      "थ",
+      "ट",
+      "ठ"
+    ],
+    "d": [
+      "द",
+      "ध",
+      "ड",
+      "ढ"
+    ],
+    "n": [
+      "न",
+      "ण",
+      "ङ",
+      "ञ"
+    ],
+    "p": [
+      "प",
+      "फ"
+    ],
+    "b": [
+      "ब",
+      "भ"
+    ],
+    "m": [
+      "म"
+    ],
+    "y": [
+      "य"
+    ],
+    "r": [
+      "र",
+      "ऋ"
+    ],
+    "l": [
+      "ल"
+    ],
+    "v": [
+      "व"
+    ],
+    "w": [
+      "व"
+    ],
+    "s": [
+      "स",
+      "श",
+      "ष"
+    ],
+    "h": [
+      "ह"
+    ]
+  },
+  "pdf_index_keys": {
+    "a0": {
+      "file": "panji-shards/index/pdf/a0.json",
+      "count": 7638
+    },
+    "a00": {
+      "file": "panji-shards/index/pdf/a00.json",
+      "count": 75
+    },
+    "a01": {
+      "file": "panji-shards/index/pdf/a01.json",
+      "count": 916
+    },
+    "a02": {
+      "file": "panji-shards/index/pdf/a02.json",
+      "count": 1240
+    },
+    "a03": {
+      "file": "panji-shards/index/pdf/a03.json",
+      "count": 1386
+    },
+    "a04": {
+      "file": "panji-shards/index/pdf/a04.json",
+      "count": 998
+    },
+    "a05": {
+      "file": "panji-shards/index/pdf/a05.json",
+      "count": 1024
+    },
+    "a06": {
+      "file": "panji-shards/index/pdf/a06.json",
+      "count": 994
+    },
+    "a07": {
+      "file": "panji-shards/index/pdf/a07.json",
+      "count": 1031
+    },
+    "a08": {
+      "file": "panji-shards/index/pdf/a08.json",
+      "count": 963
+    },
+    "a09": {
+      "file": "panji-shards/index/pdf/a09.json",
+      "count": 5056
+    },
+    "a1": {
+      "file": "panji-shards/index/pdf/a1.json",
+      "count": 7205
+    },
+    "a10": {
+      "file": "panji-shards/index/pdf/a10.json",
+      "count": 3315
+    },
+    "a11": {
+      "file": "panji-shards/index/pdf/a11.json",
+      "count": 1188
+    },
+    "a12": {
+      "file": "panji-shards/index/pdf/a12.json",
+      "count": 1350
+    },
+    "a13": {
+      "file": "panji-shards/index/pdf/a13.json",
+      "count": 2234
+    },
+    "a14": {
+      "file": "panji-shards/index/pdf/a14.json",
+      "count": 3213
+    },
+    "a15": {
+      "file": "panji-shards/index/pdf/a15.json",
+      "count": 930
+    },
+    "a16": {
+      "file": "panji-shards/index/pdf/a16.json",
+      "count": 1219
+    },
+    "a17": {
+      "file": "panji-shards/index/pdf/a17.json",
+      "count": 1067
+    },
+    "a18": {
+      "file": "panji-shards/index/pdf/a18.json",
+      "count": 1121
+    },
+    "a19": {
+      "file": "panji-shards/index/pdf/a19.json",
+      "count": 1158
+    },
+    "a2": {
+      "file": "panji-shards/index/pdf/a2.json",
+      "count": 4531
+    },
+    "a20": {
+      "file": "panji-shards/index/pdf/a20.json",
+      "count": 1341
+    },
+    "a21": {
+      "file": "panji-shards/index/pdf/a21.json",
+      "count": 882
+    },
+    "a22": {
+      "file": "panji-shards/index/pdf/a22.json",
+      "count": 740
+    },
+    "a23": {
+      "file": "panji-shards/index/pdf/a23.json",
+      "count": 708
+    },
+    "a24": {
+      "file": "panji-shards/index/pdf/a24.json",
+      "count": 703
+    },
+    "a25": {
+      "file": "panji-shards/index/pdf/a25.json",
+      "count": 675
+    },
+    "a26": {
+      "file": "panji-shards/index/pdf/a26.json",
+      "count": 595
+    },
+    "a27": {
+      "file": "panji-shards/index/pdf/a27.json",
+      "count": 650
+    },
+    "a28": {
+      "file": "panji-shards/index/pdf/a28.json",
+      "count": 658
+    },
+    "a29": {
+      "file": "panji-shards/index/pdf/a29.json",
+      "count": 586
+    },
+    "a3": {
+      "file": "panji-shards/index/pdf/a3.json",
+      "count": 5488
+    },
+    "a30": {
+      "file": "panji-shards/index/pdf/a30.json",
+      "count": 605
+    },
+    "a31": {
+      "file": "panji-shards/index/pdf/a31.json",
+      "count": 571
+    },
+    "a32": {
+      "file": "panji-shards/index/pdf/a32.json",
+      "count": 815
+    },
+    "a33": {
+      "file": "panji-shards/index/pdf/a33.json",
+      "count": 494
+    },
+    "a34": {
+      "file": "panji-shards/index/pdf/a34.json",
+      "count": 493
+    },
+    "a35": {
+      "file": "panji-shards/index/pdf/a35.json",
+      "count": 3864
+    },
+    "a36": {
+      "file": "panji-shards/index/pdf/a36.json",
+      "count": 328
+    },
+    "a37": {
+      "file": "panji-shards/index/pdf/a37.json",
+      "count": 327
+    },
+    "a38": {
+      "file": "panji-shards/index/pdf/a38.json",
+      "count": 320
+    },
+    "a39": {
+      "file": "panji-shards/index/pdf/a39.json",
+      "count": 346
+    },
+    "a4": {
+      "file": "panji-shards/index/pdf/a4.json",
+      "count": 1914
+    },
+    "a40": {
+      "file": "panji-shards/index/pdf/a40.json",
+      "count": 366
+    },
+    "a41": {
+      "file": "panji-shards/index/pdf/a41.json",
+      "count": 276
+    },
+    "a42": {
+      "file": "panji-shards/index/pdf/a42.json",
+      "count": 294
+    },
+    "a43": {
+      "file": "panji-shards/index/pdf/a43.json",
+      "count": 267
+    },
+    "a44": {
+      "file": "panji-shards/index/pdf/a44.json",
+      "count": 241
+    },
+    "a45": {
+      "file": "panji-shards/index/pdf/a45.json",
+      "count": 456
+    },
+    "a46": {
+      "file": "panji-shards/index/pdf/a46.json",
+      "count": 263
+    },
+    "a47": {
+      "file": "panji-shards/index/pdf/a47.json",
+      "count": 277
+    },
+    "a48": {
+      "file": "panji-shards/index/pdf/a48.json",
+      "count": 269
+    },
+    "a49": {
+      "file": "panji-shards/index/pdf/a49.json",
+      "count": 282
+    },
+    "a5": {
+      "file": "panji-shards/index/pdf/a5.json",
+      "count": 1770
+    },
+    "a50": {
+      "file": "panji-shards/index/pdf/a50.json",
+      "count": 304
+    },
+    "a51": {
+      "file": "panji-shards/index/pdf/a51.json",
+      "count": 255
+    },
+    "a52": {
+      "file": "panji-shards/index/pdf/a52.json",
+      "count": 285
+    },
+    "a53": {
+      "file": "panji-shards/index/pdf/a53.json",
+      "count": 269
+    },
+    "a54": {
+      "file": "panji-shards/index/pdf/a54.json",
+      "count": 251
+    },
+    "a55": {
+      "file": "panji-shards/index/pdf/a55.json",
+      "count": 254
+    },
+    "a56": {
+      "file": "panji-shards/index/pdf/a56.json",
+      "count": 277
+    },
+    "a57": {
+      "file": "panji-shards/index/pdf/a57.json",
+      "count": 255
+    },
+    "a58": {
+      "file": "panji-shards/index/pdf/a58.json",
+      "count": 250
+    },
+    "a59": {
+      "file": "panji-shards/index/pdf/a59.json",
+      "count": 242
+    },
+    "a6": {
+      "file": "panji-shards/index/pdf/a6.json",
+      "count": 3679
+    },
+    "a60": {
+      "file": "panji-shards/index/pdf/a60.json",
+      "count": 267
+    },
+    "a61": {
+      "file": "panji-shards/index/pdf/a61.json",
+      "count": 248
+    },
+    "a62": {
+      "file": "panji-shards/index/pdf/a62.json",
+      "count": 234
+    },
+    "a63": {
+      "file": "panji-shards/index/pdf/a63.json",
+      "count": 236
+    },
+    "a64": {
+      "file": "panji-shards/index/pdf/a64.json",
+      "count": 266
+    },
+    "a65": {
+      "file": "panji-shards/index/pdf/a65.json",
+      "count": 244
+    },
+    "a66": {
+      "file": "panji-shards/index/pdf/a66.json",
+      "count": 281
+    },
+    "a67": {
+      "file": "panji-shards/index/pdf/a67.json",
+      "count": 228
+    },
+    "a68": {
+      "file": "panji-shards/index/pdf/a68.json",
+      "count": 179
+    },
+    "a69": {
+      "file": "panji-shards/index/pdf/a69.json",
+      "count": 2827
+    },
+    "a7": {
+      "file": "panji-shards/index/pdf/a7.json",
+      "count": 1567
+    },
+    "a70": {
+      "file": "panji-shards/index/pdf/a70.json",
+      "count": 199
+    },
+    "a71": {
+      "file": "panji-shards/index/pdf/a71.json",
+      "count": 184
+    },
+    "a72": {
+      "file": "panji-shards/index/pdf/a72.json",
+      "count": 226
+    },
+    "a73": {
+      "file": "panji-shards/index/pdf/a73.json",
+      "count": 234
+    },
+    "a74": {
+      "file": "panji-shards/index/pdf/a74.json",
+      "count": 269
+    },
+    "a75": {
+      "file": "panji-shards/index/pdf/a75.json",
+      "count": 218
+    },
+    "a76": {
+      "file": "panji-shards/index/pdf/a76.json",
+      "count": 219
+    },
+    "a77": {
+      "file": "panji-shards/index/pdf/a77.json",
+      "count": 209
+    },
+    "a78": {
+      "file": "panji-shards/index/pdf/a78.json",
+      "count": 210
+    },
+    "a79": {
+      "file": "panji-shards/index/pdf/a79.json",
+      "count": 203
+    },
+    "a8": {
+      "file": "panji-shards/index/pdf/a8.json",
+      "count": 1455
+    },
+    "a80": {
+      "file": "panji-shards/index/pdf/a80.json",
+      "count": 223
+    },
+    "a81": {
+      "file": "panji-shards/index/pdf/a81.json",
+      "count": 235
+    },
+    "a82": {
+      "file": "panji-shards/index/pdf/a82.json",
+      "count": 228
+    },
+    "a83": {
+      "file": "panji-shards/index/pdf/a83.json",
+      "count": 196
+    },
+    "a84": {
+      "file": "panji-shards/index/pdf/a84.json",
+      "count": 223
+    },
+    "a85": {
+      "file": "panji-shards/index/pdf/a85.json",
+      "count": 217
+    },
+    "a86": {
+      "file": "panji-shards/index/pdf/a86.json",
+      "count": 189
+    },
+    "a87": {
+      "file": "panji-shards/index/pdf/a87.json",
+      "count": 199
+    },
+    "a88": {
+      "file": "panji-shards/index/pdf/a88.json",
+      "count": 182
+    },
+    "a89": {
+      "file": "panji-shards/index/pdf/a89.json",
+      "count": 197
+    },
+    "a9": {
+      "file": "panji-shards/index/pdf/a9.json",
+      "count": 1377
+    },
+    "a90": {
+      "file": "panji-shards/index/pdf/a90.json",
+      "count": 227
+    },
+    "a91": {
+      "file": "panji-shards/index/pdf/a91.json",
+      "count": 221
+    },
+    "a92": {
+      "file": "panji-shards/index/pdf/a92.json",
+      "count": 199
+    },
+    "a93": {
+      "file": "panji-shards/index/pdf/a93.json",
+      "count": 228
+    },
+    "a94": {
+      "file": "panji-shards/index/pdf/a94.json",
+      "count": 224
+    },
+    "a95": {
+      "file": "panji-shards/index/pdf/a95.json",
+      "count": 217
+    },
+    "a96": {
+      "file": "panji-shards/index/pdf/a96.json",
+      "count": 208
+    },
+    "a97": {
+      "file": "panji-shards/index/pdf/a97.json",
+      "count": 227
+    },
+    "a98": {
+      "file": "panji-shards/index/pdf/a98.json",
+      "count": 176
+    },
+    "a99": {
+      "file": "panji-shards/index/pdf/a99.json",
+      "count": 195
+    },
+    "aa": {
+      "file": "panji-shards/index/pdf/aa.json",
+      "count": 10455
+    },
+    "aaa": {
+      "file": "panji-shards/index/pdf/aaa.json",
+      "count": 54
+    },
+    "aab": {
+      "file": "panji-shards/index/pdf/aab.json",
+      "count": 879
+    },
+    "aac": {
+      "file": "panji-shards/index/pdf/aac.json",
+      "count": 1336
+    },
+    "aad": {
+      "file": "panji-shards/index/pdf/aad.json",
+      "count": 1469
+    },
+    "aae": {
+      "file": "panji-shards/index/pdf/aae.json",
+      "count": 11
+    },
+    "aaf": {
+      "file": "panji-shards/index/pdf/aaf.json",
+      "count": 284
+    },
+    "aag": {
+      "file": "panji-shards/index/pdf/aag.json",
+      "count": 285
+    },
+    "aah": {
+      "file": "panji-shards/index/pdf/aah.json",
+      "count": 253
+    },
+    "aai": {
+      "file": "panji-shards/index/pdf/aai.json",
+      "count": 345
+    },
+    "aaj": {
+      "file": "panji-shards/index/pdf/aaj.json",
+      "count": 493
+    },
+    "aak": {
+      "file": "panji-shards/index/pdf/aak.json",
+      "count": 623
+    },
+    "aal": {
+      "file": "panji-shards/index/pdf/aal.json",
+      "count": 1634
+    },
+    "aam": {
+      "file": "panji-shards/index/pdf/aam.json",
+      "count": 1272
+    },
+    "aan": {
+      "file": "panji-shards/index/pdf/aan.json",
+      "count": 2234
+    },
+    "aao": {
+      "file": "panji-shards/index/pdf/aao.json",
+      "count": 7
+    },
+    "aap": {
+      "file": "panji-shards/index/pdf/aap.json",
+      "count": 1614
+    },
+    "aar": {
+      "file": "panji-shards/index/pdf/aar.json",
+      "count": 1683
+    },
+    "aas": {
+      "file": "panji-shards/index/pdf/aas.json",
+      "count": 1622
+    },
+    "aat": {
+      "file": "panji-shards/index/pdf/aat.json",
+      "count": 1058
+    },
+    "aau": {
+      "file": "panji-shards/index/pdf/aau.json",
+      "count": 520
+    },
+    "aav": {
+      "file": "panji-shards/index/pdf/aav.json",
+      "count": 645
+    },
+    "aaw": {
+      "file": "panji-shards/index/pdf/aaw.json",
+      "count": 112
+    },
+    "aax": {
+      "file": "panji-shards/index/pdf/aax.json",
+      "count": 6
+    },
+    "aay": {
+      "file": "panji-shards/index/pdf/aay.json",
+      "count": 291
+    },
+    "aaz": {
+      "file": "panji-shards/index/pdf/aaz.json",
+      "count": 3
+    },
+    "ab": {
+      "file": "panji-shards/index/pdf/ab.json",
+      "count": 10579
+    },
+    "aba": {
+      "file": "panji-shards/index/pdf/aba.json",
+      "count": 4474
+    },
+    "abb": {
+      "file": "panji-shards/index/pdf/abb.json",
+      "count": 17
+    },
+    "abc": {
+      "file": "panji-shards/index/pdf/abc.json",
+      "count": 4
+    },
+    "abd": {
+      "file": "panji-shards/index/pdf/abd.json",
+      "count": 19
+    },
+    "abe": {
+      "file": "panji-shards/index/pdf/abe.json",
+      "count": 5092
+    },
+    "abh": {
+      "file": "panji-shards/index/pdf/abh.json",
+      "count": 2336
+    },
+    "abi": {
+      "file": "panji-shards/index/pdf/abi.json",
+      "count": 2634
+    },
+    "abj": {
+      "file": "panji-shards/index/pdf/abj.json",
+      "count": 11
+    },
+    "abl": {
+      "file": "panji-shards/index/pdf/abl.json",
+      "count": 3964
+    },
+    "abm": {
+      "file": "panji-shards/index/pdf/abm.json",
+      "count": 123
+    },
+    "abn": {
+      "file": "panji-shards/index/pdf/abn.json",
+      "count": 1
+    },
+    "abo": {
+      "file": "panji-shards/index/pdf/abo.json",
+      "count": 2143
+    },
+    "abp": {
+      "file": "panji-shards/index/pdf/abp.json",
+      "count": 2
+    },
+    "abr": {
+      "file": "panji-shards/index/pdf/abr.json",
+      "count": 2873
+    },
+    "abs": {
+      "file": "panji-shards/index/pdf/abs.json",
+      "count": 22
+    },
+    "abt": {
+      "file": "panji-shards/index/pdf/abt.json",
+      "count": 4
+    },
+    "abu": {
+      "file": "panji-shards/index/pdf/abu.json",
+      "count": 4812
+    },
+    "aby": {
+      "file": "panji-shards/index/pdf/aby.json",
+      "count": 781
+    },
+    "ac": {
+      "file": "panji-shards/index/pdf/ac.json",
+      "count": 10301
+    },
+    "aca": {
+      "file": "panji-shards/index/pdf/aca.json",
+      "count": 3107
+    },
+    "acb": {
+      "file": "panji-shards/index/pdf/acb.json",
+      "count": 4
+    },
+    "acc": {
+      "file": "panji-shards/index/pdf/acc.json",
+      "count": 714
+    },
+    "acd": {
+      "file": "panji-shards/index/pdf/acd.json",
+      "count": 1
+    },
+    "ace": {
+      "file": "panji-shards/index/pdf/ace.json",
+      "count": 1105
+    },
+    "ach": {
+      "file": "panji-shards/index/pdf/ach.json",
+      "count": 1897
+    },
+    "aci": {
+      "file": "panji-shards/index/pdf/aci.json",
+      "count": 2795
+    },
+    "acj": {
+      "file": "panji-shards/index/pdf/acj.json",
+      "count": 100
+    },
+    "ack": {
+      "file": "panji-shards/index/pdf/ack.json",
+      "count": 2
+    },
+    "acl": {
+      "file": "panji-shards/index/pdf/acl.json",
+      "count": 726
+    },
+    "acm": {
+      "file": "panji-shards/index/pdf/acm.json",
+      "count": 46
+    },
+    "aco": {
+      "file": "panji-shards/index/pdf/aco.json",
+      "count": 1628
+    },
+    "acp": {
+      "file": "panji-shards/index/pdf/acp.json",
+      "count": 2
+    },
+    "acr": {
+      "file": "panji-shards/index/pdf/acr.json",
+      "count": 546
+    },
+    "acs": {
+      "file": "panji-shards/index/pdf/acs.json",
+      "count": 4
+    },
+    "act": {
+      "file": "panji-shards/index/pdf/act.json",
+      "count": 1
+    },
+    "acu": {
+      "file": "panji-shards/index/pdf/acu.json",
+      "count": 1674
+    },
+    "acy": {
+      "file": "panji-shards/index/pdf/acy.json",
+      "count": 17
+    },
+    "ad": {
+      "file": "panji-shards/index/pdf/ad.json",
+      "count": 10582
+    },
+    "ada": {
+      "file": "panji-shards/index/pdf/ada.json",
+      "count": 2408
+    },
+    "add": {
+      "file": "panji-shards/index/pdf/add.json",
+      "count": 188
+    },
+    "ade": {
+      "file": "panji-shards/index/pdf/ade.json",
+      "count": 2458
+    },
+    "adf": {
+      "file": "panji-shards/index/pdf/adf.json",
+      "count": 1
+    },
+    "adg": {
+      "file": "panji-shards/index/pdf/adg.json",
+      "count": 19
+    },
+    "adh": {
+      "file": "panji-shards/index/pdf/adh.json",
+      "count": 1569
+    },
+    "adi": {
+      "file": "panji-shards/index/pdf/adi.json",
+      "count": 2177
+    },
+    "adj": {
+      "file": "panji-shards/index/pdf/adj.json",
+      "count": 29
+    },
+    "adl": {
+      "file": "panji-shards/index/pdf/adl.json",
+      "count": 1
+    },
+    "adm": {
+      "file": "panji-shards/index/pdf/adm.json",
+      "count": 9
+    },
+    "adn": {
+      "file": "panji-shards/index/pdf/adn.json",
+      "count": 19
+    },
+    "ado": {
+      "file": "panji-shards/index/pdf/ado.json",
+      "count": 1288
+    },
+    "adp": {
+      "file": "panji-shards/index/pdf/adp.json",
+      "count": 1
+    },
+    "adr": {
+      "file": "panji-shards/index/pdf/adr.json",
+      "count": 528
+    },
+    "ads": {
+      "file": "panji-shards/index/pdf/ads.json",
+      "count": 5
+    },
+    "adu": {
+      "file": "panji-shards/index/pdf/adu.json",
+      "count": 2022
+    },
+    "adv": {
+      "file": "panji-shards/index/pdf/adv.json",
+      "count": 287
+    },
+    "adw": {
+      "file": "panji-shards/index/pdf/adw.json",
+      "count": 84
+    },
+    "ady": {
+      "file": "panji-shards/index/pdf/ady.json",
+      "count": 316
+    },
+    "ae": {
+      "file": "panji-shards/index/pdf/ae.json",
+      "count": 9841
+    },
+    "aea": {
+      "file": "panji-shards/index/pdf/aea.json",
+      "count": 436
+    },
+    "aec": {
+      "file": "panji-shards/index/pdf/aec.json",
+      "count": 64
+    },
+    "aed": {
+      "file": "panji-shards/index/pdf/aed.json",
+      "count": 200
+    },
+    "aef": {
+      "file": "panji-shards/index/pdf/aef.json",
+      "count": 61
+    },
+    "aeg": {
+      "file": "panji-shards/index/pdf/aeg.json",
+      "count": 20
+    },
+    "aeh": {
+      "file": "panji-shards/index/pdf/aeh.json",
+      "count": 22
+    },
+    "aei": {
+      "file": "panji-shards/index/pdf/aei.json",
+      "count": 141
+    },
+    "aej": {
+      "file": "panji-shards/index/pdf/aej.json",
+      "count": 6
+    },
+    "aek": {
+      "file": "panji-shards/index/pdf/aek.json",
+      "count": 1175
+    },
+    "ael": {
+      "file": "panji-shards/index/pdf/ael.json",
+      "count": 521
+    },
+    "aem": {
+      "file": "panji-shards/index/pdf/aem.json",
+      "count": 359
+    },
+    "aen": {
+      "file": "panji-shards/index/pdf/aen.json",
+      "count": 878
+    },
+    "aep": {
+      "file": "panji-shards/index/pdf/aep.json",
+      "count": 90
+    },
+    "aeq": {
+      "file": "panji-shards/index/pdf/aeq.json",
+      "count": 76
+    },
+    "aer": {
+      "file": "panji-shards/index/pdf/aer.json",
+      "count": 162
+    },
+    "aes": {
+      "file": "panji-shards/index/pdf/aes.json",
+      "count": 388
+    },
+    "aet": {
+      "file": "panji-shards/index/pdf/aet.json",
+      "count": 124
+    },
+    "aeu": {
+      "file": "panji-shards/index/pdf/aeu.json",
+      "count": 13
+    },
+    "aev": {
+      "file": "panji-shards/index/pdf/aev.json",
+      "count": 377
+    },
+    "aex": {
+      "file": "panji-shards/index/pdf/aex.json",
+      "count": 769
+    },
+    "aey": {
+      "file": "panji-shards/index/pdf/aey.json",
+      "count": 7
+    },
+    "af": {
+      "file": "panji-shards/index/pdf/af.json",
+      "count": 1357
+    },
+    "afa": {
+      "file": "panji-shards/index/pdf/afa.json",
+      "count": 1128
+    },
+    "afe": {
+      "file": "panji-shards/index/pdf/afe.json",
+      "count": 210
+    },
+    "afh": {
+      "file": "panji-shards/index/pdf/afh.json",
+      "count": 1
+    },
+    "afi": {
+      "file": "panji-shards/index/pdf/afi.json",
+      "count": 865
+    },
+    "afl": {
+      "file": "panji-shards/index/pdf/afl.json",
+      "count": 297
+    },
+    "afn": {
+      "file": "panji-shards/index/pdf/afn.json",
+      "count": 1
+    },
+    "afo": {
+      "file": "panji-shards/index/pdf/afo.json",
+      "count": 1121
+    },
+    "afr": {
+      "file": "panji-shards/index/pdf/afr.json",
+      "count": 1072
+    },
+    "aft": {
+      "file": "panji-shards/index/pdf/aft.json",
+      "count": 1
+    },
+    "afu": {
+      "file": "panji-shards/index/pdf/afu.json",
+      "count": 416
+    },
+    "ag": {
+      "file": "panji-shards/index/pdf/ag.json",
+      "count": 10522
+    },
+    "aga": {
+      "file": "panji-shards/index/pdf/aga.json",
+      "count": 3555
+    },
+    "age": {
+      "file": "panji-shards/index/pdf/age.json",
+      "count": 6102
+    },
+    "agg": {
+      "file": "panji-shards/index/pdf/agg.json",
+      "count": 12
+    },
+    "agh": {
+      "file": "panji-shards/index/pdf/agh.json",
+      "count": 1155
+    },
+    "agi": {
+      "file": "panji-shards/index/pdf/agi.json",
+      "count": 3497
+    },
+    "agj": {
+      "file": "panji-shards/index/pdf/agj.json",
+      "count": 19
+    },
+    "agl": {
+      "file": "panji-shards/index/pdf/agl.json",
+      "count": 33
+    },
+    "agm": {
+      "file": "panji-shards/index/pdf/agm.json",
+      "count": 746
+    },
+    "agn": {
+      "file": "panji-shards/index/pdf/agn.json",
+      "count": 32
+    },
+    "ago": {
+      "file": "panji-shards/index/pdf/ago.json",
+      "count": 5500
+    },
+    "agp": {
+      "file": "panji-shards/index/pdf/agp.json",
+      "count": 4
+    },
+    "agr": {
+      "file": "panji-shards/index/pdf/agr.json",
+      "count": 2372
+    },
+    "agu": {
+      "file": "panji-shards/index/pdf/agu.json",
+      "count": 3622
+    },
+    "agv": {
+      "file": "panji-shards/index/pdf/agv.json",
+      "count": 3
+    },
+    "agy": {
+      "file": "panji-shards/index/pdf/agy.json",
+      "count": 25
+    },
+    "ah": {
+      "file": "panji-shards/index/pdf/ah.json",
+      "count": 6945
+    },
+    "aha": {
+      "file": "panji-shards/index/pdf/aha.json",
+      "count": 2380
+    },
+    "ahc": {
+      "file": "panji-shards/index/pdf/ahc.json",
+      "count": 1
+    },
+    "ahd": {
+      "file": "panji-shards/index/pdf/ahd.json",
+      "count": 1
+    },
+    "ahe": {
+      "file": "panji-shards/index/pdf/ahe.json",
+      "count": 1052
+    },
+    "ahi": {
+      "file": "panji-shards/index/pdf/ahi.json",
+      "count": 1512
+    },
+    "ahl": {
+      "file": "panji-shards/index/pdf/ahl.json",
+      "count": 1
+    },
+    "ahm": {
+      "file": "panji-shards/index/pdf/ahm.json",
+      "count": 46
+    },
+    "aho": {
+      "file": "panji-shards/index/pdf/aho.json",
+      "count": 1025
+    },
+    "ahq": {
+      "file": "panji-shards/index/pdf/ahq.json",
+      "count": 2
+    },
+    "ahr": {
+      "file": "panji-shards/index/pdf/ahr.json",
+      "count": 431
+    },
+    "ahs": {
+      "file": "panji-shards/index/pdf/ahs.json",
+      "count": 1
+    },
+    "aht": {
+      "file": "panji-shards/index/pdf/aht.json",
+      "count": 16
+    },
+    "ahu": {
+      "file": "panji-shards/index/pdf/ahu.json",
+      "count": 212
+    },
+    "ahy": {
+      "file": "panji-shards/index/pdf/ahy.json",
+      "count": 163
+    },
+    "ai": {
+      "file": "panji-shards/index/pdf/ai.json",
+      "count": 9792
+    },
+    "aia": {
+      "file": "panji-shards/index/pdf/aia.json",
+      "count": 2726
+    },
+    "aib": {
+      "file": "panji-shards/index/pdf/aib.json",
+      "count": 241
+    },
+    "aic": {
+      "file": "panji-shards/index/pdf/aic.json",
+      "count": 16
+    },
+    "aid": {
+      "file": "panji-shards/index/pdf/aid.json",
+      "count": 2566
+    },
+    "aie": {
+      "file": "panji-shards/index/pdf/aie.json",
+      "count": 25
+    },
+    "aif": {
+      "file": "panji-shards/index/pdf/aif.json",
+      "count": 260
+    },
+    "aig": {
+      "file": "panji-shards/index/pdf/aig.json",
+      "count": 1313
+    },
+    "aih": {
+      "file": "panji-shards/index/pdf/aih.json",
+      "count": 2
+    },
+    "aii": {
+      "file": "panji-shards/index/pdf/aii.json",
+      "count": 185
+    },
+    "aij": {
+      "file": "panji-shards/index/pdf/aij.json",
+      "count": 3429
+    },
+    "aik": {
+      "file": "panji-shards/index/pdf/aik.json",
+      "count": 2053
+    },
+    "ail": {
+      "file": "panji-shards/index/pdf/ail.json",
+      "count": 2133
+    },
+    "aim": {
+      "file": "panji-shards/index/pdf/aim.json",
+      "count": 778
+    },
+    "ain": {
+      "file": "panji-shards/index/pdf/ain.json",
+      "count": 5480
+    },
+    "aio": {
+      "file": "panji-shards/index/pdf/aio.json",
+      "count": 76
+    },
+    "aip": {
+      "file": "panji-shards/index/pdf/aip.json",
+      "count": 4960
+    },
+    "air": {
+      "file": "panji-shards/index/pdf/air.json",
+      "count": 2115
+    },
+    "ais": {
+      "file": "panji-shards/index/pdf/ais.json",
+      "count": 1741
+    },
+    "ait": {
+      "file": "panji-shards/index/pdf/ait.json",
+      "count": 2195
+    },
+    "aiu": {
+      "file": "panji-shards/index/pdf/aiu.json",
+      "count": 23
+    },
+    "aiv": {
+      "file": "panji-shards/index/pdf/aiv.json",
+      "count": 3225
+    },
+    "aix": {
+      "file": "panji-shards/index/pdf/aix.json",
+      "count": 8
+    },
+    "aiy": {
+      "file": "panji-shards/index/pdf/aiy.json",
+      "count": 252
+    },
+    "aj": {
+      "file": "panji-shards/index/pdf/aj.json",
+      "count": 10212
+    },
+    "aja": {
+      "file": "panji-shards/index/pdf/aja.json",
+      "count": 2364
+    },
+    "aje": {
+      "file": "panji-shards/index/pdf/aje.json",
+      "count": 173
+    },
+    "ajh": {
+      "file": "panji-shards/index/pdf/ajh.json",
+      "count": 1333
+    },
+    "aji": {
+      "file": "panji-shards/index/pdf/aji.json",
+      "count": 978
+    },
+    "ajj": {
+      "file": "panji-shards/index/pdf/ajj.json",
+      "count": 240
+    },
+    "ajm": {
+      "file": "panji-shards/index/pdf/ajm.json",
+      "count": 44
+    },
+    "ajn": {
+      "file": "panji-shards/index/pdf/ajn.json",
+      "count": 63
+    },
+    "ajo": {
+      "file": "panji-shards/index/pdf/ajo.json",
+      "count": 2069
+    },
+    "ajp": {
+      "file": "panji-shards/index/pdf/ajp.json",
+      "count": 3
+    },
+    "aju": {
+      "file": "panji-shards/index/pdf/aju.json",
+      "count": 1129
+    },
+    "ajv": {
+      "file": "panji-shards/index/pdf/ajv.json",
+      "count": 12
+    },
+    "ajw": {
+      "file": "panji-shards/index/pdf/ajw.json",
+      "count": 2
+    },
+    "ajy": {
+      "file": "panji-shards/index/pdf/ajy.json",
+      "count": 210
+    },
+    "ak": {
+      "file": "panji-shards/index/pdf/ak.json",
+      "count": 10594
+    },
+    "aka": {
+      "file": "panji-shards/index/pdf/aka.json",
+      "count": 4186
+    },
+    "akb": {
+      "file": "panji-shards/index/pdf/akb.json",
+      "count": 1
+    },
+    "akc": {
+      "file": "panji-shards/index/pdf/akc.json",
+      "count": 3
+    },
+    "ake": {
+      "file": "panji-shards/index/pdf/ake.json",
+      "count": 2876
+    },
+    "akh": {
+      "file": "panji-shards/index/pdf/akh.json",
+      "count": 2609
+    },
+    "aki": {
+      "file": "panji-shards/index/pdf/aki.json",
+      "count": 3923
+    },
+    "akj": {
+      "file": "panji-shards/index/pdf/akj.json",
+      "count": 6
+    },
+    "akk": {
+      "file": "panji-shards/index/pdf/akk.json",
+      "count": 180
+    },
+    "akl": {
+      "file": "panji-shards/index/pdf/akl.json",
+      "count": 6
+    },
+    "akm": {
+      "file": "panji-shards/index/pdf/akm.json",
+      "count": 214
+    },
+    "akn": {
+      "file": "panji-shards/index/pdf/akn.json",
+      "count": 614
+    },
+    "ako": {
+      "file": "panji-shards/index/pdf/ako.json",
+      "count": 2162
+    },
+    "akr": {
+      "file": "panji-shards/index/pdf/akr.json",
+      "count": 1670
+    },
+    "aks": {
+      "file": "panji-shards/index/pdf/aks.json",
+      "count": 378
+    },
+    "akt": {
+      "file": "panji-shards/index/pdf/akt.json",
+      "count": 457
+    },
+    "aku": {
+      "file": "panji-shards/index/pdf/aku.json",
+      "count": 5850
+    },
+    "akv": {
+      "file": "panji-shards/index/pdf/akv.json",
+      "count": 6
+    },
+    "al": {
+      "file": "panji-shards/index/pdf/al.json",
+      "count": 10122
+    },
+    "ala": {
+      "file": "panji-shards/index/pdf/ala.json",
+      "count": 2496
+    },
+    "alb": {
+      "file": "panji-shards/index/pdf/alb.json",
+      "count": 2
+    },
+    "alc": {
+      "file": "panji-shards/index/pdf/alc.json",
+      "count": 1
+    },
+    "ald": {
+      "file": "panji-shards/index/pdf/ald.json",
+      "count": 167
+    },
+    "ale": {
+      "file": "panji-shards/index/pdf/ale.json",
+      "count": 1396
+    },
+    "alg": {
+      "file": "panji-shards/index/pdf/alg.json",
+      "count": 26
+    },
+    "alh": {
+      "file": "panji-shards/index/pdf/alh.json",
+      "count": 283
+    },
+    "ali": {
+      "file": "panji-shards/index/pdf/ali.json",
+      "count": 5950
+    },
+    "alj": {
+      "file": "panji-shards/index/pdf/alj.json",
+      "count": 118
+    },
+    "alk": {
+      "file": "panji-shards/index/pdf/alk.json",
+      "count": 6
+    },
+    "all": {
+      "file": "panji-shards/index/pdf/all.json",
+      "count": 331
+    },
+    "alm": {
+      "file": "panji-shards/index/pdf/alm.json",
+      "count": 8
+    },
+    "alo": {
+      "file": "panji-shards/index/pdf/alo.json",
+      "count": 2359
+    },
+    "alp": {
+      "file": "panji-shards/index/pdf/alp.json",
+      "count": 184
+    },
+    "alr": {
+      "file": "panji-shards/index/pdf/alr.json",
+      "count": 1
+    },
+    "als": {
+      "file": "panji-shards/index/pdf/als.json",
+      "count": 2
+    },
+    "alt": {
+      "file": "panji-shards/index/pdf/alt.json",
+      "count": 16
+    },
+    "alu": {
+      "file": "panji-shards/index/pdf/alu.json",
+      "count": 1005
+    },
+    "alv": {
+      "file": "panji-shards/index/pdf/alv.json",
+      "count": 2
+    },
+    "am": {
+      "file": "panji-shards/index/pdf/am.json",
+      "count": 10582
+    },
+    "ama": {
+      "file": "panji-shards/index/pdf/ama.json",
+      "count": 7622
+    },
+    "amb": {
+      "file": "panji-shards/index/pdf/amb.json",
+      "count": 1158
+    },
+    "amc": {
+      "file": "panji-shards/index/pdf/amc.json",
+      "count": 127
+    },
+    "amd": {
+      "file": "panji-shards/index/pdf/amd.json",
+      "count": 49
+    },
+    "ame": {
+      "file": "panji-shards/index/pdf/ame.json",
+      "count": 2929
+    },
+    "amg": {
+      "file": "panji-shards/index/pdf/amg.json",
+      "count": 153
+    },
+    "amh": {
+      "file": "panji-shards/index/pdf/amh.json",
+      "count": 253
+    },
+    "ami": {
+      "file": "panji-shards/index/pdf/ami.json",
+      "count": 5141
+    },
+    "amj": {
+      "file": "panji-shards/index/pdf/amj.json",
+      "count": 28
+    },
+    "amk": {
+      "file": "panji-shards/index/pdf/amk.json",
+      "count": 74
+    },
+    "aml": {
+      "file": "panji-shards/index/pdf/aml.json",
+      "count": 9
+    },
+    "amm": {
+      "file": "panji-shards/index/pdf/amm.json",
+      "count": 574
+    },
+    "amn": {
+      "file": "panji-shards/index/pdf/amn.json",
+      "count": 54
+    },
+    "amo": {
+      "file": "panji-shards/index/pdf/amo.json",
+      "count": 5170
+    },
+    "amp": {
+      "file": "panji-shards/index/pdf/amp.json",
+      "count": 170
+    },
+    "amr": {
+      "file": "panji-shards/index/pdf/amr.json",
+      "count": 134
+    },
+    "ams": {
+      "file": "panji-shards/index/pdf/ams.json",
+      "count": 103
+    },
+    "amt": {
+      "file": "panji-shards/index/pdf/amt.json",
+      "count": 64
+    },
+    "amu": {
+      "file": "panji-shards/index/pdf/amu.json",
+      "count": 5068
+    },
+    "amv": {
+      "file": "panji-shards/index/pdf/amv.json",
+      "count": 14
+    },
+    "amy": {
+      "file": "panji-shards/index/pdf/amy.json",
+      "count": 20
+    },
+    "an": {
+      "file": "panji-shards/index/pdf/an.json",
+      "count": 10525
+    },
+    "ana": {
+      "file": "panji-shards/index/pdf/ana.json",
+      "count": 3217
+    },
+    "anc": {
+      "file": "panji-shards/index/pdf/anc.json",
+      "count": 3
+    },
+    "and": {
+      "file": "panji-shards/index/pdf/and.json",
+      "count": 3070
+    },
+    "ane": {
+      "file": "panji-shards/index/pdf/ane.json",
+      "count": 3177
+    },
+    "ang": {
+      "file": "panji-shards/index/pdf/ang.json",
+      "count": 49
+    },
+    "anh": {
+      "file": "panji-shards/index/pdf/anh.json",
+      "count": 329
+    },
+    "ani": {
+      "file": "panji-shards/index/pdf/ani.json",
+      "count": 5938
+    },
+    "anj": {
+      "file": "panji-shards/index/pdf/anj.json",
+      "count": 331
+    },
+    "ank": {
+      "file": "panji-shards/index/pdf/ank.json",
+      "count": 1
+    },
+    "anl": {
+      "file": "panji-shards/index/pdf/anl.json",
+      "count": 1
+    },
+    "anm": {
+      "file": "panji-shards/index/pdf/anm.json",
+      "count": 24
+    },
+    "ann": {
+      "file": "panji-shards/index/pdf/ann.json",
+      "count": 913
+    },
+    "ano": {
+      "file": "panji-shards/index/pdf/ano.json",
+      "count": 2805
+    },
+    "anp": {
+      "file": "panji-shards/index/pdf/anp.json",
+      "count": 2
+    },
+    "anr": {
+      "file": "panji-shards/index/pdf/anr.json",
+      "count": 82
+    },
+    "ans": {
+      "file": "panji-shards/index/pdf/ans.json",
+      "count": 2
+    },
+    "ant": {
+      "file": "panji-shards/index/pdf/ant.json",
+      "count": 2176
+    },
+    "anu": {
+      "file": "panji-shards/index/pdf/anu.json",
+      "count": 3058
+    },
+    "anv": {
+      "file": "panji-shards/index/pdf/anv.json",
+      "count": 3
+    },
+    "any": {
+      "file": "panji-shards/index/pdf/any.json",
+      "count": 102
+    },
+    "ao": {
+      "file": "panji-shards/index/pdf/ao.json",
+      "count": 8230
+    },
+    "aoa": {
+      "file": "panji-shards/index/pdf/aoa.json",
+      "count": 2
+    },
+    "aob": {
+      "file": "panji-shards/index/pdf/aob.json",
+      "count": 126
+    },
+    "aoc": {
+      "file": "panji-shards/index/pdf/aoc.json",
+      "count": 184
+    },
+    "aod": {
+      "file": "panji-shards/index/pdf/aod.json",
+      "count": 152
+    },
+    "aof": {
+      "file": "panji-shards/index/pdf/aof.json",
+      "count": 1327
+    },
+    "aog": {
+      "file": "panji-shards/index/pdf/aog.json",
+      "count": 29
+    },
+    "aoh": {
+      "file": "panji-shards/index/pdf/aoh.json",
+      "count": 24
+    },
+    "aoi": {
+      "file": "panji-shards/index/pdf/aoi.json",
+      "count": 373
+    },
+    "aoj": {
+      "file": "panji-shards/index/pdf/aoj.json",
+      "count": 96
+    },
+    "aok": {
+      "file": "panji-shards/index/pdf/aok.json",
+      "count": 18
+    },
+    "aol": {
+      "file": "panji-shards/index/pdf/aol.json",
+      "count": 70
+    },
+    "aom": {
+      "file": "panji-shards/index/pdf/aom.json",
+      "count": 176
+    },
+    "aon": {
+      "file": "panji-shards/index/pdf/aon.json",
+      "count": 740
+    },
+    "aoo": {
+      "file": "panji-shards/index/pdf/aoo.json",
+      "count": 4
+    },
+    "aop": {
+      "file": "panji-shards/index/pdf/aop.json",
+      "count": 138
+    },
+    "aor": {
+      "file": "panji-shards/index/pdf/aor.json",
+      "count": 1007
+    },
+    "aos": {
+      "file": "panji-shards/index/pdf/aos.json",
+      "count": 11
+    },
+    "aot": {
+      "file": "panji-shards/index/pdf/aot.json",
+      "count": 231
+    },
+    "aou": {
+      "file": "panji-shards/index/pdf/aou.json",
+      "count": 222
+    },
+    "aov": {
+      "file": "panji-shards/index/pdf/aov.json",
+      "count": 293
+    },
+    "aow": {
+      "file": "panji-shards/index/pdf/aow.json",
+      "count": 78
+    },
+    "aox": {
+      "file": "panji-shards/index/pdf/aox.json",
+      "count": 20
+    },
+    "aoy": {
+      "file": "panji-shards/index/pdf/aoy.json",
+      "count": 25
+    },
+    "aoz": {
+      "file": "panji-shards/index/pdf/aoz.json",
+      "count": 1
+    },
+    "ap": {
+      "file": "panji-shards/index/pdf/ap.json",
+      "count": 10600
+    },
+    "apa": {
+      "file": "panji-shards/index/pdf/apa.json",
+      "count": 3753
+    },
+    "apd": {
+      "file": "panji-shards/index/pdf/apd.json",
+      "count": 10600
+    },
+    "ape": {
+      "file": "panji-shards/index/pdf/ape.json",
+      "count": 1070
+    },
+    "apg": {
+      "file": "panji-shards/index/pdf/apg.json",
+      "count": 2
+    },
+    "aph": {
+      "file": "panji-shards/index/pdf/aph.json",
+      "count": 1367
+    },
+    "api": {
+      "file": "panji-shards/index/pdf/api.json",
+      "count": 2559
+    },
+    "apj": {
+      "file": "panji-shards/index/pdf/apj.json",
+      "count": 215
+    },
+    "apl": {
+      "file": "panji-shards/index/pdf/apl.json",
+      "count": 248
+    },
+    "apm": {
+      "file": "panji-shards/index/pdf/apm.json",
+      "count": 247
+    },
+    "apn": {
+      "file": "panji-shards/index/pdf/apn.json",
+      "count": 2
+    },
+    "apo": {
+      "file": "panji-shards/index/pdf/apo.json",
+      "count": 1658
+    },
+    "app": {
+      "file": "panji-shards/index/pdf/app.json",
+      "count": 69
+    },
+    "apr": {
+      "file": "panji-shards/index/pdf/apr.json",
+      "count": 6729
+    },
+    "aps": {
+      "file": "panji-shards/index/pdf/aps.json",
+      "count": 8
+    },
+    "apt": {
+      "file": "panji-shards/index/pdf/apt.json",
+      "count": 84
+    },
+    "apu": {
+      "file": "panji-shards/index/pdf/apu.json",
+      "count": 6822
+    },
+    "apy": {
+      "file": "panji-shards/index/pdf/apy.json",
+      "count": 57
+    },
+    "aq": {
+      "file": "panji-shards/index/pdf/aq.json",
+      "count": 182
+    },
+    "aqu": {
+      "file": "panji-shards/index/pdf/aqu.json",
+      "count": 174
+    },
+    "ar": {
+      "file": "panji-shards/index/pdf/ar.json",
+      "count": 10508
+    },
+    "ara": {
+      "file": "panji-shards/index/pdf/ara.json",
+      "count": 4511
+    },
+    "arb": {
+      "file": "panji-shards/index/pdf/arb.json",
+      "count": 35
+    },
+    "arc": {
+      "file": "panji-shards/index/pdf/arc.json",
+      "count": 89
+    },
+    "ard": {
+      "file": "panji-shards/index/pdf/ard.json",
+      "count": 721
+    },
+    "are": {
+      "file": "panji-shards/index/pdf/are.json",
+      "count": 3446
+    },
+    "arg": {
+      "file": "panji-shards/index/pdf/arg.json",
+      "count": 49
+    },
+    "arh": {
+      "file": "panji-shards/index/pdf/arh.json",
+      "count": 623
+    },
+    "ari": {
+      "file": "panji-shards/index/pdf/ari.json",
+      "count": 5550
+    },
+    "arj": {
+      "file": "panji-shards/index/pdf/arj.json",
+      "count": 849
+    },
+    "ark": {
+      "file": "panji-shards/index/pdf/ark.json",
+      "count": 216
+    },
+    "arl": {
+      "file": "panji-shards/index/pdf/arl.json",
+      "count": 4
+    },
+    "arm": {
+      "file": "panji-shards/index/pdf/arm.json",
+      "count": 1483
+    },
+    "arn": {
+      "file": "panji-shards/index/pdf/arn.json",
+      "count": 60
+    },
+    "aro": {
+      "file": "panji-shards/index/pdf/aro.json",
+      "count": 2261
+    },
+    "arp": {
+      "file": "panji-shards/index/pdf/arp.json",
+      "count": 126
+    },
+    "arr": {
+      "file": "panji-shards/index/pdf/arr.json",
+      "count": 6
+    },
+    "ars": {
+      "file": "panji-shards/index/pdf/ars.json",
+      "count": 184
+    },
+    "art": {
+      "file": "panji-shards/index/pdf/art.json",
+      "count": 1050
+    },
+    "aru": {
+      "file": "panji-shards/index/pdf/aru.json",
+      "count": 4610
+    },
+    "arv": {
+      "file": "panji-shards/index/pdf/arv.json",
+      "count": 838
+    },
+    "ary": {
+      "file": "panji-shards/index/pdf/ary.json",
+      "count": 14
+    },
+    "as": {
+      "file": "panji-shards/index/pdf/as.json",
+      "count": 10572
+    },
+    "asa": {
+      "file": "panji-shards/index/pdf/asa.json",
+      "count": 2954
+    },
+    "asb": {
+      "file": "panji-shards/index/pdf/asb.json",
+      "count": 1
+    },
+    "asc": {
+      "file": "panji-shards/index/pdf/asc.json",
+      "count": 829
+    },
+    "asd": {
+      "file": "panji-shards/index/pdf/asd.json",
+      "count": 16
+    },
+    "ase": {
+      "file": "panji-shards/index/pdf/ase.json",
+      "count": 2057
+    },
+    "asg": {
+      "file": "panji-shards/index/pdf/asg.json",
+      "count": 1
+    },
+    "ash": {
+      "file": "panji-shards/index/pdf/ash.json",
+      "count": 1066
+    },
+    "asi": {
+      "file": "panji-shards/index/pdf/asi.json",
+      "count": 6150
+    },
+    "asj": {
+      "file": "panji-shards/index/pdf/asj.json",
+      "count": 616
+    },
+    "ask": {
+      "file": "panji-shards/index/pdf/ask.json",
+      "count": 113
+    },
+    "asl": {
+      "file": "panji-shards/index/pdf/asl.json",
+      "count": 15
+    },
+    "asm": {
+      "file": "panji-shards/index/pdf/asm.json",
+      "count": 965
+    },
+    "asn": {
+      "file": "panji-shards/index/pdf/asn.json",
+      "count": 103
+    },
+    "aso": {
+      "file": "panji-shards/index/pdf/aso.json",
+      "count": 6474
+    },
+    "asp": {
+      "file": "panji-shards/index/pdf/asp.json",
+      "count": 911
+    },
+    "asq": {
+      "file": "panji-shards/index/pdf/asq.json",
+      "count": 3
+    },
+    "asr": {
+      "file": "panji-shards/index/pdf/asr.json",
+      "count": 1220
+    },
+    "ass": {
+      "file": "panji-shards/index/pdf/ass.json",
+      "count": 1
+    },
+    "ast": {
+      "file": "panji-shards/index/pdf/ast.json",
+      "count": 1243
+    },
+    "asu": {
+      "file": "panji-shards/index/pdf/asu.json",
+      "count": 7418
+    },
+    "asv": {
+      "file": "panji-shards/index/pdf/asv.json",
+      "count": 470
+    },
+    "asw": {
+      "file": "panji-shards/index/pdf/asw.json",
+      "count": 133
+    },
+    "asy": {
+      "file": "panji-shards/index/pdf/asy.json",
+      "count": 859
+    },
+    "at": {
+      "file": "panji-shards/index/pdf/at.json",
+      "count": 10464
+    },
+    "ata": {
+      "file": "panji-shards/index/pdf/ata.json",
+      "count": 1620
+    },
+    "ate": {
+      "file": "panji-shards/index/pdf/ate.json",
+      "count": 1529
+    },
+    "ath": {
+      "file": "panji-shards/index/pdf/ath.json",
+      "count": 2046
+    },
+    "ati": {
+      "file": "panji-shards/index/pdf/ati.json",
+      "count": 1616
+    },
+    "atm": {
+      "file": "panji-shards/index/pdf/atm.json",
+      "count": 44
+    },
+    "atn": {
+      "file": "panji-shards/index/pdf/atn.json",
+      "count": 2
+    },
+    "ato": {
+      "file": "panji-shards/index/pdf/ato.json",
+      "count": 1524
+    },
+    "atr": {
+      "file": "panji-shards/index/pdf/atr.json",
+      "count": 1274
+    },
+    "att": {
+      "file": "panji-shards/index/pdf/att.json",
+      "count": 25
+    },
+    "atu": {
+      "file": "panji-shards/index/pdf/atu.json",
+      "count": 476
+    },
+    "atv": {
+      "file": "panji-shards/index/pdf/atv.json",
+      "count": 1
+    },
+    "atw": {
+      "file": "panji-shards/index/pdf/atw.json",
+      "count": 660
+    },
+    "atx": {
+      "file": "panji-shards/index/pdf/atx.json",
+      "count": 1
+    },
+    "aty": {
+      "file": "panji-shards/index/pdf/aty.json",
+      "count": 301
+    },
+    "au": {
+      "file": "panji-shards/index/pdf/au.json",
+      "count": 9748
+    },
+    "aua": {
+      "file": "panji-shards/index/pdf/aua.json",
+      "count": 21
+    },
+    "aub": {
+      "file": "panji-shards/index/pdf/aub.json",
+      "count": 713
+    },
+    "auc": {
+      "file": "panji-shards/index/pdf/auc.json",
+      "count": 735
+    },
+    "aud": {
+      "file": "panji-shards/index/pdf/aud.json",
+      "count": 2004
+    },
+    "aue": {
+      "file": "panji-shards/index/pdf/aue.json",
+      "count": 2
+    },
+    "auf": {
+      "file": "panji-shards/index/pdf/auf.json",
+      "count": 4
+    },
+    "aug": {
+      "file": "panji-shards/index/pdf/aug.json",
+      "count": 893
+    },
+    "auh": {
+      "file": "panji-shards/index/pdf/auh.json",
+      "count": 15
+    },
+    "aui": {
+      "file": "panji-shards/index/pdf/aui.json",
+      "count": 46
+    },
+    "auj": {
+      "file": "panji-shards/index/pdf/auj.json",
+      "count": 85
+    },
+    "auk": {
+      "file": "panji-shards/index/pdf/auk.json",
+      "count": 1860
+    },
+    "aul": {
+      "file": "panji-shards/index/pdf/aul.json",
+      "count": 4112
+    },
+    "aum": {
+      "file": "panji-shards/index/pdf/aum.json",
+      "count": 1840
+    },
+    "aun": {
+      "file": "panji-shards/index/pdf/aun.json",
+      "count": 4477
+    },
+    "auo": {
+      "file": "panji-shards/index/pdf/auo.json",
+      "count": 950
+    },
+    "aup": {
+      "file": "panji-shards/index/pdf/aup.json",
+      "count": 2400
+    },
+    "aur": {
+      "file": "panji-shards/index/pdf/aur.json",
+      "count": 3700
+    },
+    "aus": {
+      "file": "panji-shards/index/pdf/aus.json",
+      "count": 1944
+    },
+    "aut": {
+      "file": "panji-shards/index/pdf/aut.json",
+      "count": 2238
+    },
+    "auu": {
+      "file": "panji-shards/index/pdf/auu.json",
+      "count": 6
+    },
+    "auv": {
+      "file": "panji-shards/index/pdf/auv.json",
+      "count": 1047
+    },
+    "auy": {
+      "file": "panji-shards/index/pdf/auy.json",
+      "count": 27
+    },
+    "av": {
+      "file": "panji-shards/index/pdf/av.json",
+      "count": 10515
+    },
+    "ava": {
+      "file": "panji-shards/index/pdf/ava.json",
+      "count": 4391
+    },
+    "avc": {
+      "file": "panji-shards/index/pdf/avc.json",
+      "count": 4
+    },
+    "ave": {
+      "file": "panji-shards/index/pdf/ave.json",
+      "count": 3117
+    },
+    "avh": {
+      "file": "panji-shards/index/pdf/avh.json",
+      "count": 133
+    },
+    "avi": {
+      "file": "panji-shards/index/pdf/avi.json",
+      "count": 6909
+    },
+    "avj": {
+      "file": "panji-shards/index/pdf/avj.json",
+      "count": 85
+    },
+    "avm": {
+      "file": "panji-shards/index/pdf/avm.json",
+      "count": 401
+    },
+    "avn": {
+      "file": "panji-shards/index/pdf/avn.json",
+      "count": 2
+    },
+    "avo": {
+      "file": "panji-shards/index/pdf/avo.json",
+      "count": 456
+    },
+    "avr": {
+      "file": "panji-shards/index/pdf/avr.json",
+      "count": 206
+    },
+    "avs": {
+      "file": "panji-shards/index/pdf/avs.json",
+      "count": 11
+    },
+    "avu": {
+      "file": "panji-shards/index/pdf/avu.json",
+      "count": 1673
+    },
+    "avx": {
+      "file": "panji-shards/index/pdf/avx.json",
+      "count": 2
+    },
+    "avy": {
+      "file": "panji-shards/index/pdf/avy.json",
+      "count": 93
+    },
+    "aw": {
+      "file": "panji-shards/index/pdf/aw.json",
+      "count": 1243
+    },
+    "awa": {
+      "file": "panji-shards/index/pdf/awa.json",
+      "count": 840
+    },
+    "awe": {
+      "file": "panji-shards/index/pdf/awe.json",
+      "count": 727
+    },
+    "awh": {
+      "file": "panji-shards/index/pdf/awh.json",
+      "count": 1059
+    },
+    "awi": {
+      "file": "panji-shards/index/pdf/awi.json",
+      "count": 1087
+    },
+    "awo": {
+      "file": "panji-shards/index/pdf/awo.json",
+      "count": 400
+    },
+    "awr": {
+      "file": "panji-shards/index/pdf/awr.json",
+      "count": 289
+    },
+    "awu": {
+      "file": "panji-shards/index/pdf/awu.json",
+      "count": 1
+    },
+    "aww": {
+      "file": "panji-shards/index/pdf/aww.json",
+      "count": 8
+    },
+    "ax": {
+      "file": "panji-shards/index/pdf/ax.json",
+      "count": 86
+    },
+    "axi": {
+      "file": "panji-shards/index/pdf/axi.json",
+      "count": 10
+    },
+    "axl": {
+      "file": "panji-shards/index/pdf/axl.json",
+      "count": 4
+    },
+    "axv": {
+      "file": "panji-shards/index/pdf/axv.json",
+      "count": 4
+    },
+    "axx": {
+      "file": "panji-shards/index/pdf/axx.json",
+      "count": 23
+    },
+    "ay": {
+      "file": "panji-shards/index/pdf/ay.json",
+      "count": 4572
+    },
+    "aya": {
+      "file": "panji-shards/index/pdf/aya.json",
+      "count": 1273
+    },
+    "aye": {
+      "file": "panji-shards/index/pdf/aye.json",
+      "count": 420
+    },
+    "ayh": {
+      "file": "panji-shards/index/pdf/ayh.json",
+      "count": 222
+    },
+    "ayi": {
+      "file": "panji-shards/index/pdf/ayi.json",
+      "count": 258
+    },
+    "aym": {
+      "file": "panji-shards/index/pdf/aym.json",
+      "count": 2
+    },
+    "ayn": {
+      "file": "panji-shards/index/pdf/ayn.json",
+      "count": 41
+    },
+    "ayo": {
+      "file": "panji-shards/index/pdf/ayo.json",
+      "count": 694
+    },
+    "ayr": {
+      "file": "panji-shards/index/pdf/ayr.json",
+      "count": 1
+    },
+    "ayt": {
+      "file": "panji-shards/index/pdf/ayt.json",
+      "count": 2
+    },
+    "ayu": {
+      "file": "panji-shards/index/pdf/ayu.json",
+      "count": 106
+    },
+    "ayx": {
+      "file": "panji-shards/index/pdf/ayx.json",
+      "count": 2
+    },
+    "ayy": {
+      "file": "panji-shards/index/pdf/ayy.json",
+      "count": 37
+    },
+    "az": {
+      "file": "panji-shards/index/pdf/az.json",
+      "count": 105
+    },
+    "aza": {
+      "file": "panji-shards/index/pdf/aza.json",
+      "count": 27
+    },
+    "aze": {
+      "file": "panji-shards/index/pdf/aze.json",
+      "count": 4
+    },
+    "azi": {
+      "file": "panji-shards/index/pdf/azi.json",
+      "count": 4
+    },
+    "azj": {
+      "file": "panji-shards/index/pdf/azj.json",
+      "count": 2
+    },
+    "azo": {
+      "file": "panji-shards/index/pdf/azo.json",
+      "count": 46
+    },
+    "azu": {
+      "file": "panji-shards/index/pdf/azu.json",
+      "count": 4
+    },
+    "azw": {
+      "file": "panji-shards/index/pdf/azw.json",
+      "count": 1
+    },
+    "azz": {
+      "file": "panji-shards/index/pdf/azz.json",
+      "count": 3
+    },
+    "d0901": {
+      "file": "panji-shards/index/pdf/d0901.json",
+      "count": 7
+    },
+    "d0902": {
+      "file": "panji-shards/index/pdf/d0902.json",
+      "count": 194
+    },
+    "d0903": {
+      "file": "panji-shards/index/pdf/d0903.json",
+      "count": 2804
+    },
+    "d0905": {
+      "file": "panji-shards/index/pdf/d0905.json",
+      "count": 2811
+    },
+    "d0906": {
+      "file": "panji-shards/index/pdf/d0906.json",
+      "count": 2167
+    },
+    "d0907": {
+      "file": "panji-shards/index/pdf/d0907.json",
+      "count": 1684
+    },
+    "d0908": {
+      "file": "panji-shards/index/pdf/d0908.json",
+      "count": 326
+    },
+    "d0909": {
+      "file": "panji-shards/index/pdf/d0909.json",
+      "count": 2557
+    },
+    "d090a": {
+      "file": "panji-shards/index/pdf/d090a.json",
+      "count": 39
+    },
+    "d090b": {
+      "file": "panji-shards/index/pdf/d090b.json",
+      "count": 454
+    },
+    "d090f": {
+      "file": "panji-shards/index/pdf/d090f.json",
+      "count": 2696
+    },
+    "d0910": {
+      "file": "panji-shards/index/pdf/d0910.json",
+      "count": 99
+    },
+    "d0911": {
+      "file": "panji-shards/index/pdf/d0911.json",
+      "count": 66
+    },
+    "d0913": {
+      "file": "panji-shards/index/pdf/d0913.json",
+      "count": 999
+    },
+    "d0914": {
+      "file": "panji-shards/index/pdf/d0914.json",
+      "count": 41
+    },
+    "d0915": {
+      "file": "panji-shards/index/pdf/d0915.json",
+      "count": 2951
+    },
+    "d0916": {
+      "file": "panji-shards/index/pdf/d0916.json",
+      "count": 5494
+    },
+    "d0917": {
+      "file": "panji-shards/index/pdf/d0917.json",
+      "count": 2879
+    },
+    "d0918": {
+      "file": "panji-shards/index/pdf/d0918.json",
+      "count": 1937
+    },
+    "d0919": {
+      "file": "panji-shards/index/pdf/d0919.json",
+      "count": 7
+    },
+    "d091a": {
+      "file": "panji-shards/index/pdf/d091a.json",
+      "count": 2593
+    },
+    "d091b": {
+      "file": "panji-shards/index/pdf/d091b.json",
+      "count": 2025
+    },
+    "d091c": {
+      "file": "panji-shards/index/pdf/d091c.json",
+      "count": 2885
+    },
+    "d091d": {
+      "file": "panji-shards/index/pdf/d091d.json",
+      "count": 1608
+    },
+    "d091e": {
+      "file": "panji-shards/index/pdf/d091e.json",
+      "count": 1136
+    },
+    "d091f": {
+      "file": "panji-shards/index/pdf/d091f.json",
+      "count": 1683
+    },
+    "d0920": {
+      "file": "panji-shards/index/pdf/d0920.json",
+      "count": 2060
+    },
+    "d0921": {
+      "file": "panji-shards/index/pdf/d0921.json",
+      "count": 2682
+    },
+    "d0922": {
+      "file": "panji-shards/index/pdf/d0922.json",
+      "count": 420
+    },
+    "d0923": {
+      "file": "panji-shards/index/pdf/d0923.json",
+      "count": 1383
+    },
+    "d0924": {
+      "file": "panji-shards/index/pdf/d0924.json",
+      "count": 2758
+    },
+    "d0925": {
+      "file": "panji-shards/index/pdf/d0925.json",
+      "count": 1017
+    },
+    "d0926": {
+      "file": "panji-shards/index/pdf/d0926.json",
+      "count": 2945
+    },
+    "d0927": {
+      "file": "panji-shards/index/pdf/d0927.json",
+      "count": 2644
+    },
+    "d0928": {
+      "file": "panji-shards/index/pdf/d0928.json",
+      "count": 2935
+    },
+    "d092a": {
+      "file": "panji-shards/index/pdf/d092a.json",
+      "count": 10600
+    },
+    "d092b": {
+      "file": "panji-shards/index/pdf/d092b.json",
+      "count": 2019
+    },
+    "d092c": {
+      "file": "panji-shards/index/pdf/d092c.json",
+      "count": 2923
+    },
+    "d092d": {
+      "file": "panji-shards/index/pdf/d092d.json",
+      "count": 2875
+    },
+    "d092e": {
+      "file": "panji-shards/index/pdf/d092e.json",
+      "count": 2970
+    },
+    "d092f": {
+      "file": "panji-shards/index/pdf/d092f.json",
+      "count": 2622
+    },
+    "d0930": {
+      "file": "panji-shards/index/pdf/d0930.json",
+      "count": 2914
+    },
+    "d0932": {
+      "file": "panji-shards/index/pdf/d0932.json",
+      "count": 2686
+    },
+    "d0935": {
+      "file": "panji-shards/index/pdf/d0935.json",
+      "count": 2957
+    },
+    "d0936": {
+      "file": "panji-shards/index/pdf/d0936.json",
+      "count": 2831
+    },
+    "d0937": {
+      "file": "panji-shards/index/pdf/d0937.json",
+      "count": 400
+    },
+    "d0938": {
+      "file": "panji-shards/index/pdf/d0938.json",
+      "count": 2960
+    },
+    "d0939": {
+      "file": "panji-shards/index/pdf/d0939.json",
+      "count": 2959
+    },
+    "d093c": {
+      "file": "panji-shards/index/pdf/d093c.json",
+      "count": 2360
+    },
+    "d093d": {
+      "file": "panji-shards/index/pdf/d093d.json",
+      "count": 7
+    },
+    "d093e": {
+      "file": "panji-shards/index/pdf/d093e.json",
+      "count": 1041
+    },
+    "d093f": {
+      "file": "panji-shards/index/pdf/d093f.json",
+      "count": 2749
+    },
+    "d0940": {
+      "file": "panji-shards/index/pdf/d0940.json",
+      "count": 983
+    },
+    "d0941": {
+      "file": "panji-shards/index/pdf/d0941.json",
+      "count": 375
+    },
+    "d0942": {
+      "file": "panji-shards/index/pdf/d0942.json",
+      "count": 264
+    },
+    "d0943": {
+      "file": "panji-shards/index/pdf/d0943.json",
+      "count": 46
+    },
+    "d0945": {
+      "file": "panji-shards/index/pdf/d0945.json",
+      "count": 8
+    },
+    "d0947": {
+      "file": "panji-shards/index/pdf/d0947.json",
+      "count": 531
+    },
+    "d0948": {
+      "file": "panji-shards/index/pdf/d0948.json",
+      "count": 61
+    },
+    "d0949": {
+      "file": "panji-shards/index/pdf/d0949.json",
+      "count": 103
+    },
+    "d094b": {
+      "file": "panji-shards/index/pdf/d094b.json",
+      "count": 437
+    },
+    "d094c": {
+      "file": "panji-shards/index/pdf/d094c.json",
+      "count": 764
+    },
+    "d094d": {
+      "file": "panji-shards/index/pdf/d094d.json",
+      "count": 98
+    },
+    "d0950": {
+      "file": "panji-shards/index/pdf/d0950.json",
+      "count": 500
+    },
+    "d0958": {
+      "file": "panji-shards/index/pdf/d0958.json",
+      "count": 3
+    },
+    "d095b": {
+      "file": "panji-shards/index/pdf/d095b.json",
+      "count": 4
+    },
+    "d095c": {
+      "file": "panji-shards/index/pdf/d095c.json",
+      "count": 8
+    },
+    "d095d": {
+      "file": "panji-shards/index/pdf/d095d.json",
+      "count": 54
+    },
+    "d0964": {
+      "file": "panji-shards/index/pdf/d0964.json",
+      "count": 4294
+    },
+    "d0965": {
+      "file": "panji-shards/index/pdf/d0965.json",
+      "count": 1288
+    },
+    "d0966": {
+      "file": "panji-shards/index/pdf/d0966.json",
+      "count": 991
+    },
+    "d0967": {
+      "file": "panji-shards/index/pdf/d0967.json",
+      "count": 1639
+    },
+    "d0968": {
+      "file": "panji-shards/index/pdf/d0968.json",
+      "count": 2584
+    },
+    "d0969": {
+      "file": "panji-shards/index/pdf/d0969.json",
+      "count": 1478
+    },
+    "d096a": {
+      "file": "panji-shards/index/pdf/d096a.json",
+      "count": 2351
+    },
+    "d096b": {
+      "file": "panji-shards/index/pdf/d096b.json",
+      "count": 1104
+    },
+    "d096c": {
+      "file": "panji-shards/index/pdf/d096c.json",
+      "count": 1078
+    },
+    "d096d": {
+      "file": "panji-shards/index/pdf/d096d.json",
+      "count": 944
+    },
+    "d096e": {
+      "file": "panji-shards/index/pdf/d096e.json",
+      "count": 852
+    },
+    "d096f": {
+      "file": "panji-shards/index/pdf/d096f.json",
+      "count": 875
+    },
+    "d0970": {
+      "file": "panji-shards/index/pdf/d0970.json",
+      "count": 368
+    },
+    "d0971": {
+      "file": "panji-shards/index/pdf/d0971.json",
+      "count": 1
+    },
+    "d0972": {
+      "file": "panji-shards/index/pdf/d0972.json",
+      "count": 2
+    }
+  },
+  "pdf_index_strategy": "token initial + two-letter Roman/IAST/ISO/Devanagari initial; PDF chunks load only for candidate pages",
+  "pdf_chunk_strategy": "50-page chunks for mobile-safe candidate loading"
+}
