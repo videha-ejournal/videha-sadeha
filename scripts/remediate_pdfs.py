@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Compatibility launcher and veraPDF raw-report normalizer for the hardened remediation engine.
 
-The launcher also applies two narrow runtime hardenings to the v2 engine before execution:
-transient GitHub/raw fetch retry/backoff, and explicit Noto routing for major Indic scripts.
-The PDF/UA acceptance checks themselves are unchanged.
+The launcher applies narrow runtime hardenings to the v2 engine before execution:
+transient GitHub/raw fetch retry/backoff, explicit Noto routing for major Indic scripts,
+and glyph-aware font selection for extracted Unicode text. The PDF/UA acceptance checks
+themselves are unchanged.
 """
 from __future__ import annotations
 import json
@@ -33,7 +34,7 @@ def option_value(name: str, default: str) -> str:
 def fetch_engine(url: str, attempts: int = 4) -> str:
     last: Exception | None = None
     for attempt in range(1, attempts + 1):
-        request = urllib.request.Request(url, headers={"User-Agent": "Videha-PDF-UA-Remediator-Launcher/2.2"})
+        request = urllib.request.Request(url, headers={"User-Agent": "Videha-PDF-UA-Remediator-Launcher/2.3"})
         try:
             with urllib.request.urlopen(request, timeout=120) as response:
                 return response.read().decode("utf-8")
@@ -67,6 +68,12 @@ def harden_engine(source: str) -> str:
     if old_scripts not in source:
         raise RuntimeError("Expected script-routing engine block not found; refusing an unverified runtime patch")
     source = source.replace(old_scripts, new_scripts, 1)
+
+    old_escape = '''def script_aware_escape(value: str) -> str:\n    """Escape HTML while assigning non-Latin scripts to fonts that actually cover them."""\n    if not value:\n        return ""\n    pieces: list[str] = []\n    run_chars: list[str] = []\n    run_kind = script_kind(value[0])\n    for ch in value:\n        kind = script_kind(ch)\n        if kind != run_kind and run_chars:\n            escaped = html.escape("".join(run_chars))\n            pieces.append(escaped if run_kind == "base" else f'<span class="script-{run_kind}">{escaped}</span>')\n            run_chars = []\n            run_kind = kind\n        run_chars.append(ch)\n    if run_chars:\n        escaped = html.escape("".join(run_chars))\n        pieces.append(escaped if run_kind == "base" else f'<span class="script-{run_kind}">{escaped}</span>')\n    return "".join(pieces)\n'''
+    new_escape = '''_FONT_FAMILY_CACHE: dict[int, str | None] = {}\n\ndef _font_family_for_char(ch: str) -> str | None:\n    cp = ord(ch)\n    if cp < 0x80:\n        return ""\n    if cp in _FONT_FAMILY_CACHE:\n        return _FONT_FAMILY_CACHE[cp]\n    result = run(["fc-list", f":charset={cp:04x}", "-f", "%{family[0]}\\n"], check=False)\n    family = next((line.strip() for line in (result.stdout or "").splitlines() if line.strip()), None)\n    _FONT_FAMILY_CACHE[cp] = family\n    return family\n\ndef script_aware_escape(value: str) -> str:\n    """Escape HTML and pin each Unicode run to an installed font that reports glyph coverage."""\n    if not value:\n        return ""\n    pieces: list[str] = []\n    run_chars: list[str] = []\n    run_family: str | None = None\n\n    def flush() -> None:\n        nonlocal run_chars\n        if not run_chars:\n            return\n        escaped = html.escape("".join(run_chars))\n        if run_family:\n            family = html.escape(run_family, quote=True)\n            pieces.append(f'<span style="font-family:&quot;{family}&quot;">{escaped}</span>')\n        else:\n            pieces.append(escaped)\n        run_chars = []\n\n    for ch in value:\n        family = _font_family_for_char(ch)\n        rendered = ch\n        if ord(ch) >= 0x80 and family is None:\n            rendered = f"[U+{ord(ch):04X}]"\n            family = ""\n        if family != run_family and run_chars:\n            flush()\n        run_family = family\n        run_chars.append(rendered)\n    flush()\n    return "".join(pieces)\n'''
+    if old_escape not in source:
+        raise RuntimeError("Expected script-aware escape block not found; refusing an unverified glyph patch")
+    source = source.replace(old_escape, new_escape, 1)
 
     old_css = '''.script-deva {{ font-family:"Noto Sans Devanagari","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-tirhuta {{ font-family:"Noto Sans Tirhuta","Noto Sans","DejaVu Sans",sans-serif; }}\n'''
     new_css = '''.script-deva {{ font-family:"Noto Sans Devanagari","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-beng {{ font-family:"Noto Sans Bengali","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-guru {{ font-family:"Noto Sans Gurmukhi","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-gujr {{ font-family:"Noto Sans Gujarati","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-orya {{ font-family:"Noto Sans Oriya","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-taml {{ font-family:"Noto Sans Tamil","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-telu {{ font-family:"Noto Sans Telugu","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-knda {{ font-family:"Noto Sans Kannada","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-mlym {{ font-family:"Noto Sans Malayalam","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-sinh {{ font-family:"Noto Sans Sinhala","Noto Sans","DejaVu Sans",sans-serif; }}\n.script-tirhuta {{ font-family:"Noto Sans Tirhuta","Noto Sans","DejaVu Sans",sans-serif; }}\n'''
