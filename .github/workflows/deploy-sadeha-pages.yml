@@ -1,0 +1,49 @@
+name: Deploy Videha-Sadeha Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sadeha-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Build lightweight web publication
+        run: |
+          mkdir -p _site
+          rsync -a --delete \
+            --exclude='.git/' --exclude='.github/' \
+            --exclude='*.pdf' --exclude='*.docx' --exclude='*.zip' \
+            --exclude='*.csv' --exclude='*.jsonl' \
+            --exclude='panji_*.json' --exclude='panji_*.csv' \
+            --exclude='panji_*.jsonl' --exclude='pdf_index_part*.json' \
+            --exclude='english_maithili-*.js' --exclude='maithili_english-*.js' \
+            --exclude='dictionary-petar-ocr-batch-*.js' \
+            --exclude='dictionary-petar-ocr-batch-*.txt' \
+            ./ _site/
+          test -f _site/videha-bhasha-nikhar-v2.html
+          find _site -type f -printf '%s %p\n' | sort -nr | head -20
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
