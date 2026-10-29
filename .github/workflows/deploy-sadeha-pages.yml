@@ -33,6 +33,8 @@ jobs:
             --exclude='dictionary-petar-ocr-batch-*.js' \
             --exclude='dictionary-petar-ocr-batch-*.txt' \
             ./ _site/
+          # Explicitly publish the current issue PDF without packaging the full PDF corpus.
+          if [ -f "Videha 452.pdf" ]; then cp "Videha 452.pdf" _site/; fi
           test -f _site/videha-bhasha-nikhar-v2.html
           find _site -type f -printf '%s %p\n' | sort -nr | head -20
       - uses: actions/upload-pages-artifact@v3
